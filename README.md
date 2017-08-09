@@ -1,6 +1,6 @@
 # PDColorPicker
 
-[![CI Status](http://img.shields.io/travis/dilorenzopl@gmail.com/PDColorPicker.svg?style=flat)](https://travis-ci.org/dilorenzopl@gmail.com/PDColorPicker)
+[![CI Status](http://img.shields.io/travis/pdil/PDColorPicker.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker)
 [![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
