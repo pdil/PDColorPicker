@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
+<center><img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/colorpicker.jpg" width=400></center>
+
 ## 📲 Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
