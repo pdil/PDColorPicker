@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'PDColorPicker'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of PDColorPicker.'
+  s.summary          = 'A clean, fast color picker for iOS apps.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,18 +17,16 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'PDColorPicker provides the ability to easily add a color selection interface to an iOS app. The provided view allows the user to select any 16-bit color by sliding across the different hue, saturation, and brightness values. The user interface\'s colors and fonts are easily customized to to suit the appearance of any app in which PDColorPicker is used.'
 
-  s.homepage         = 'https://github.com/dilorenzopl@gmail.com/PDColorPicker'
+  s.homepage         = 'https://github.com/pdil/PDColorPicker'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'dilorenzopl@gmail.com' => 'dilorenzopl@gmail.com' }
-  s.source           = { :git => 'https://github.com/dilorenzopl@gmail.com/PDColorPicker.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.license          = { :type => 'GPL-3.0', :file => 'LICENSE' }
+  s.author           = { 'Paolo Di Lorenzo' => 'paolo@dilorenzo.pl' }
+  s.source           = { :git => 'https://github.com/pdil/PDColorPicker.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/dilorenzopl'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'PDColorPicker/Classes/**/*'
   
@@ -37,6 +35,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
