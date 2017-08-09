@@ -78,7 +78,7 @@ class MyViewController: UIViewController, Dimmable {
 
 ## 🙋‍♂️ Author
 
-Paolo Di Lorenzo, paolo@dilorenzo.pl
+Paolo Di Lorenzo [[Email](mailto:paolo@dilorenzo.pl?subject=PDColorPicker)] [[Website](https://dilorenzo.pl)] [[Twitter](https://twitter.com/dilorenzopl)] [[StackOverflow](https://stackoverflow.com/users/7264964/paolo)]
 
 ## ⚖️ License
 
