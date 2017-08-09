@@ -26,29 +26,55 @@ pod "PDColorPicker"
 
 1. Instantiate a new `PDColorPickerViewController`:
 ```swift
-let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) {
-  [weak self] newColor in
+class MyViewController: UIViewController {
+  
+  func presentColorPicker() {
+    let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) {
+      [weak self] newColor in
 
-  guard let color = newColor else {
-    print("User tapped cancel")
+      guard let color = newColor else {
+        print("User tapped cancel")
+      }
+
+      print("A new color was selected! red: \(color.red), green: \(color.green), blue: \(color.blue)")
+    }
   }
-
-  print("A new color was selected! red: \(color.red), green: \(color.green), blue: \(color.blue)")
+ 
+  // ...
+  
 }
 ```
 
-2. Dim the current view controller (optional but highly recommended):
+2. Implement the `Dimmable` protocol and dim the presenting view controller (optional but highly recommended):
 ```swift
-dim()
+class MyViewController: UIViewController, Dimmable {
+  
+  func presentColorPicker() {
+    let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) { ... /* see step 1. */ }
+  
+    dim() // see Dimmable documentation for extra options
+  }
+  
+}
 ```
 
 3. Present the color picker as a modal view controller:
 ```swift
-colorPickerVC.modalPresentationStyle = .overCurrentContext
-present(colorPickerVC, animated: true)
+class MyViewController: UIViewController, Dimmable {
+  
+  func presentColorPicker() {
+    let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) { ... /* see step 1. */ }
+  
+    dim() // see Dimmable documentation for extra options
+    
+    colorPickerVC.modalPresentationStyle = .overCurrentContext
+    present(colorPickerVC, animated: true)
+  }
+  
+}
 ```
 
-4. Use the color picker to select a color. When Save or Cancel is tapped, the completion handler specified in the initializer will automatically provide the new color. If the user taps cancel, `nil` is returned.
+4. Use the color picker to select a color. When **Save** or **Cancel** is tapped, the completion handler specified in the initializer will automatically provide the new color. If the user taps cancel, `nil` is returned.
 
 ## Author
 
