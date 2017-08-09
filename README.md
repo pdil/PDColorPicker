@@ -25,7 +25,7 @@ pod "PDColorPicker"
 ## Usage
 
 1. Instantiate a new `PDColorPickerViewController`:
-```
+```swift
 let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) {
   [weak self] newColor in
 
@@ -38,12 +38,12 @@ let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .blac
 ```
 
 2. Dim the current view controller (optional but highly recommended):
-```
+```swift
 dim()
 ```
 
 3. Present the color picker as a modal view controller:
-```
+```swift
 colorPickerVC.modalPresentationStyle = .overCurrentContext
 present(colorPickerVC, animated: true)
 ```
