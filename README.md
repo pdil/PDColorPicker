@@ -1,19 +1,19 @@
-# PDColorPicker
+# 🎨 PDColorPicker
 
 [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker)
 [![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
-## Example
+## 📲 Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## 📄 Requirements
 
 * iOS version 9.0 or greater
 
-## Installation
+## 💻 Installation
 
 PDColorPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -22,7 +22,7 @@ it, simply add the following line to your Podfile:
 pod "PDColorPicker"
 ```
 
-## Usage
+## 📝 Usage
 
 1. Instantiate a new `PDColorPickerViewController`:
 ```swift
@@ -76,10 +76,10 @@ class MyViewController: UIViewController, Dimmable {
 
 4. Use the color picker to select a color. When **Save** or **Cancel** is tapped, the completion handler specified in the initializer will automatically provide the new color. If the user taps cancel, `nil` is returned.
 
-## Author
+## 🙋‍♂️ Author
 
 Paolo Di Lorenzo, paolo@dilorenzo.pl
 
-## License
+## ⚖️ License
 
 PDColorPicker is available under the GPL-3.0 license. See the LICENSE file for more info.
