@@ -36,7 +36,7 @@ class MyViewController: UIViewController, Dimmable {
                 print("User tapped cancel")
             }
 
-            print("A new color was selected! red: \(color.red), green: \(color.green), blue: \(color.blue)")
+            print("A new color was selected! RGB: \(color.red), \(color.green), \(color.blue)")
          }
   
          // 2.
