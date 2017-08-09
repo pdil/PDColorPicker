@@ -25,29 +25,29 @@ pod "PDColorPicker"
 ```swift
 class MyViewController: UIViewController, Dimmable {
   
-  // ...
+    // ...
   
-  func presentColorPicker() {
-    // 1.
-    let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) {
-      [weak self] newColor in
+    func presentColorPicker() {
+        // 1.
+        let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) {
+            [weak self] newColor in
 
-      guard let color = newColor else {
-        print("User tapped cancel")
-      }
+            guard let color = newColor else {
+                print("User tapped cancel")
+            }
 
-      print("A new color was selected! red: \(color.red), green: \(color.green), blue: \(color.blue)")
+            print("A new color was selected! red: \(color.red), green: \(color.green), blue: \(color.blue)")
+         }
+  
+         // 2.
+         dim() // see Dimmable documentation for extra options
+    
+         // 3.
+         colorPickerVC.modalPresentationStyle = .overCurrentContext
+         present(colorPickerVC, animated: true)
     }
   
-    // 2.
-    dim() // see Dimmable documentation for extra options
-    
-    // 3.
-    colorPickerVC.modalPresentationStyle = .overCurrentContext
-    present(colorPickerVC, animated: true)
-  }
-  
-  // ...
+    // ...
   
 }
 ```
