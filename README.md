@@ -7,10 +7,6 @@
 
 <img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/colorpicker.jpg" width=300>
 
-## 📲 Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## 📄 Requirements
 
 * iOS version 9.0 or greater
@@ -26,11 +22,13 @@ pod "PDColorPicker"
 
 ## 📝 Usage
 
-1. Instantiate a new `PDColorPickerViewController`:
 ```swift
-class MyViewController: UIViewController {
+class MyViewController: UIViewController, Dimmable {
+  
+  // ...
   
   func presentColorPicker() {
+    // 1.
     let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) {
       [weak self] newColor in
 
@@ -40,43 +38,28 @@ class MyViewController: UIViewController {
 
       print("A new color was selected! red: \(color.red), green: \(color.green), blue: \(color.blue)")
     }
+  
+    // 2.
+    dim() // see Dimmable documentation for extra options
+    
+    // 3.
+    colorPickerVC.modalPresentationStyle = .overCurrentContext
+    present(colorPickerVC, animated: true)
   }
- 
+  
   // ...
   
 }
 ```
 
-2. Implement the `Dimmable` protocol and dim the presenting view controller (optional but highly recommended):
-```swift
-class MyViewController: UIViewController, Dimmable {
-  
-  func presentColorPicker() {
-    let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) { ... /* see step 1. */ }
-  
-    dim() // see Dimmable documentation for extra options
-  }
-  
-}
-```
-
-3. Present the color picker as a modal view controller:
-```swift
-class MyViewController: UIViewController, Dimmable {
-  
-  func presentColorPicker() {
-    let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) { ... /* see step 1. */ }
-  
-    dim() // see Dimmable documentation for extra options
-    
-    colorPickerVC.modalPresentationStyle = .overCurrentContext
-    present(colorPickerVC, animated: true)
-  }
-  
-}
-```
-
+1. Instantiate a new `PDColorPickerViewController`.
+2. Implement the `Dimmable` protocol and dim the presenting view controller (optional but highly recommended).
+3. Present the color picker as a modal view controller.
 4. Use the color picker to select a color. When **Save** or **Cancel** is tapped, the completion handler specified in the initializer will automatically provide the new color. If the user taps cancel, `nil` is returned.
+
+## 📲 Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory.
 
 ## 🙋‍♂️ Author
 
