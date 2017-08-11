@@ -1,12 +1,14 @@
 use_frameworks!
 
+platform :ios, '9.0'
+
 target 'PDColorPicker_Example' do
   pod 'PDColorPicker', :path => '../'
 
   target 'PDColorPicker_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 1.0.0'
-    pod 'Nimble', '~> 5.1.1'
+    pod 'Quick'
+    pod 'Nimble', :inhibit_warnings => true
   end
 end
