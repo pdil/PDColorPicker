@@ -1,14 +1,15 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
-osx_image: xcode9
 language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
+osx_image: xcode9
+
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/PDColorPicker.xcworkspace -scheme PDColorPicker-Example -sdk iphonesimulator11.0 -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0' ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/PDColorPicker.xcworkspace
+  -scheme PDColorPicker-Example -sdk iphonesimulator11.0 -destination 'platform=iOS
+  Simulator,name=iPhone 7,OS=11.0' ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
+
+notifications:
+  pushover:
+    api_key:
+      secure: gyjYU6srgxtyY01aZ6Lvbxvb0nBxrKHMN1b9pySzGRHv1iPxObNjCtg7pWyH0FpHgtJ9c/kcemtfXq1Cug65dLPanTPqOk9BU306Rdrg7vBKp/7/CwsFGtcKZw6cKVthCFjQihiZfZMoeR4Jl/5DVXAKL5q36OvbKJ7FGJT2SL79IJxSo2/+YGvA+6mEPGPWigfJAtHhpkxH0xtWsTKHPeKEidRD0qrz55HxiYUcu1evBjXdQ24FolLd93cS/j+wBSsB+tA8bLaVQouAFYEaUJpSEn4sA56W4TLVHMl/r8123ZqWI6+VpAvUpkDxaWt/M/IGtlghAjMf1HK302fIqzf+PnKb+67W/jpB/Of/ktqCJFraMsqhFsNW2VfXPOBChhlTWLafxtJwiL75uh0Veump4az15pcJTJgc4AHwqy6v3LmHm8iew3VpqCExL71H7fsTqKAv2u0Dcq/MC9W2B6G4KE4SanOqbsDc4fKzSYHfeVv5C7fFX9W1q/Qd1l+jR4efOxniY2yZ3K2Ja/n+EZinolN5mXAUJnxeaAxi3RvXY3naEgiQTpEo722foBzOApM0mIJ/s6h08Ylxbvo6fmo9pH2XoHOmCm/VGOoiZpTtFPv/fYHJZe3YYyzrOyUBXIiT2jBNRdzjQa074Z3jrVVyIBz1k5/rbWJqtsD5XZE=
+    users:
+      secure: YCoTq3a1+qvJ2Cyy53Wu4V9wVTqw8kb27eeosscfJHBBGFohZkdHp3tpwm6De36ZtyKUN2J5NhbIS1b60WC4Ax6j6EZrhhNQeuhP9x+3jynsk8yVfH/+jJxIXp4fK6i3eO8dqFEBFqXBxVAejxDy7Xu1+rmmYjdhmabn/LyTTF01T7JT3fThgVcDPKyYQM6tsliCXhZ8vqFQU5C06c75wnI0WSBnMSX1Mq23m5aRTXmDYwxVFlMLAqIg7331bYotiNN2L2tLZFX8hOk+X5CT9cMZdu4fN4U1RSFr6worc9Rpgtq2GClqAwOODLia187p9pcTDZtOgRyLKSjHqGHPOySzp2PGllxmSDnWUZZokNREylyvGS/3qRUOhc3Gy2hvorkcIt59ePtMcRRnYpb4R2h/aTItTiHS0c9rqR0Iz8WPLSDrg7iYAuv49tPUiC6qoHA5vl7iiAobprlmqggUxwJGXQ3YEAoRuvB/R08sFBP09VQ5H43Oy/ogCqmCdm5R6UqnIvNFL7d343qtPsrWxAb2LiCgJE0gUw/gU8ZwT6db9g04kEQHTEx1l+9NvbunrRk6D/FYfucTA2DssWmw5fzlG/TNl1XnyYLgE3cYPUpCkO9V6Slt5ks+ZyW0VJfOiPqCkkKk/Rq64TZXMlnxTIaAEjNzZcNyB1gae4CDaJE=
