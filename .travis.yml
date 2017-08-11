@@ -2,10 +2,12 @@ language: objective-c
 osx_image: xcode9
 
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/PDColorPicker.xcworkspace
-  -scheme PDColorPicker-Example -sdk iphonesimulator11.0 -destination 'platform=iOS
-  Simulator,name=iPhone 7,OS=11.0' ONLY_ACTIVE_ARCH=NO | xcpretty
+- xcodebuild -version
+- xcodebuild -workspace Example/PDColorPicker.xcworkspace -scheme PDColorPicker-Example -sdk iphonesimulator11.0 -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO test
 - pod lib lint
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   pushover:
