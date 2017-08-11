@@ -9,7 +9,8 @@
 
 ## 📄 Requirements
 
-* iOS version 9.0 or greater
+* iOS 9.0 or greater
+* Xcode 7 or greater
 
 ## 💻 Installation
 
