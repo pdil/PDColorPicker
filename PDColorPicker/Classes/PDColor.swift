@@ -20,11 +20,7 @@ public struct PDColor {
     return UIColor(hue: hue, saturation: sat, brightness: br, alpha: a)
   }
 
-  public var defaultsString: String {
-    return "\(hue)-\(sat)-\(br)-\(a)"
-  }
-
-  init(fromColor: UIColor) {
+  public init(fromColor: UIColor) {
     var h: CGFloat = 0
     var s: CGFloat = 0
     var b: CGFloat = 0
@@ -38,23 +34,32 @@ public struct PDColor {
     self.a = alpha
   }
 
-  init(fromString string: String) {
+  public init?(fromString string: String) {
     let components = string.components(separatedBy: "-")
 
-    hue = CGFloat(Double(components[0]) ?? 0)
-    sat = CGFloat(Double(components[1]) ?? 0)
-    br = CGFloat(Double(components[2]) ?? 0)
-    a = CGFloat(Double(components[3]) ?? 1)
+    if components.count >= 3 {
+      hue = CGFloat(Double(components[0]) ?? 0)
+      sat = CGFloat(Double(components[1]) ?? 0)
+      br = CGFloat(Double(components[2]) ?? 0)
+
+      if components.count >= 4 {
+        a = CGFloat(Double(components[3]) ?? 1)
+      } else {
+        a = 1
+      }
+    } else {
+      return nil
+    }
   }
 
-  init(hue: CGFloat, sat: CGFloat, br: CGFloat, a: CGFloat) {
+  public init(hue: CGFloat, sat: CGFloat, br: CGFloat, a: CGFloat = 1) {
     self.hue = hue
     self.sat = sat
     self.br = br
     self.a = a
   }
 
-  // 
+  // MARK: - Utilities
 
   public var hex: String {
     var r: CGFloat = 0.0
@@ -87,3 +92,10 @@ public struct PDColor {
   
 }
 
+// MARK: - CustomStringConveritble
+
+extension PDColor: CustomStringConvertible {
+  public var description: String {
+    return "\(hue)-\(sat)-\(br)-\(a)"
+  }
+}
