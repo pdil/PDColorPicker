@@ -24,20 +24,30 @@ class PDColorSpec: QuickSpec {
       }
 
       context("when initialized with a 3 component string") {
-        let stringColor3 = PDColor(fromString: "0.5-0.5-0.5")  // default alpha = 1.0
-
         it("correctly assigns values") {
+          let stringColor3 = PDColor(fromString: "0.5,0.5,0.5")  // default alpha = 1.0
+
           expect(stringColor3).toNot(beNil())
           expect(stringColor3!.uiColor).to(equal(original))
+        }
+
+        it("fails for invalid values") {
+          let invalidStringColor3 = PDColor(fromString: "car,0.5,0.5")
+          expect(invalidStringColor3).to(beNil())
         }
       }
 
       context("when initialized with a 4 component string") {
-        let stringColor4 = PDColor(fromString: "0.5-0.5-0.5-1.0")
-
         it("correctly assigns values") {
+          let stringColor4 = PDColor(fromString: "0.5,0.5,0.5,1.0")
+
           expect(stringColor4).toNot(beNil())
           expect(stringColor4!.uiColor).to(equal(original))
+        }
+
+        it("fails for invalid values") {
+          let invalidStringColor4 = PDColor(fromString: "car,0.5,0.5,1.0")
+          expect(invalidStringColor4).to(beNil())
         }
       }
 
@@ -50,7 +60,7 @@ class PDColorSpec: QuickSpec {
       }
 
       context("when initialized with HSB") {
-        let hsbColor = PDColor(hue: 0.5, sat: 0.5, br: 0.5, a: 1)
+        let hsbColor = PDColor(h: 0.5, s: 0.5, b: 0.5, a: 1)
 
         it("correctly assigns values") {
           expect(hsbColor.uiColor).to(equal(original))
@@ -58,11 +68,20 @@ class PDColorSpec: QuickSpec {
       }
 
       it("produces correct description string") {
-        expect(color.description).to(equal("0.5-0.5-0.5-1.0"))
+        expect(color.description).to(equal("0.5,0.5,0.5,1.0"))
       }
 
       it("produces correct hexadecimal string") {
         expect(color.hex).to(equal("#3f7f7f"))
+      }
+
+      it("produces correct RGBA values") {
+        let rgba = color.rgba
+
+        expect(rgba.r).to(equal(CGFloat(0.25)))
+        expect(rgba.g).to(equal(CGFloat(0.50)))
+        expect(rgba.b).to(equal(CGFloat(0.50)))
+        expect(rgba.a).to(equal(CGFloat(1.00)))
       }
 
       describe("the foreground color") {

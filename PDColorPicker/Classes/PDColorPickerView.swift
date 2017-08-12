@@ -150,8 +150,8 @@ class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
   func setSliderCircle() {
     guard let currentColor = currentColor else { return }
 
-    sliderCircleX.constant = (1 - currentColor.sat) * bounds.width
-    sliderCircleY.constant = (1 - currentColor.br) * bounds.height
+    sliderCircleX.constant = (1 - currentColor.s) * bounds.width
+    sliderCircleY.constant = (1 - currentColor.b) * bounds.height
 
     sliderCircle.setNeedsLayout()
   }
@@ -186,7 +186,7 @@ class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
     let sat = min(max(bounds.width - point.x, 0) / bounds.width, 1)
     let br = min(max(bounds.height - point.y, 0) / bounds.height, 1)
 
-    return PDColor(hue: dataSource?.selectedHueForColorPicker() ?? 1, sat: sat, br: br, a: 1)
+    return PDColor(h: dataSource?.selectedHueForColorPicker() ?? 1, s: sat, b: br, a: 1)
   }
 
 }

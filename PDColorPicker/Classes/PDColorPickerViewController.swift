@@ -154,7 +154,7 @@ open class PDColorPickerViewController: UIViewController {
       selectedColorLabel.layer.cornerRadius = selectedColorLabel.frame.height / 2
 
       colorPickerView.currentColor = currentColor
-      colorSliderView.currentHue = currentColor.hue
+      colorSliderView.currentHue = currentColor.h
       colorChanged(to: currentColor)
 
       constraintsHaveBeenSet = true
@@ -179,7 +179,7 @@ open class PDColorPickerViewController: UIViewController {
 @available(iOS 9.0, *)
 extension PDColorPickerViewController: PDColorPickerDataSource {
   func selectedHueForColorPicker() -> CGFloat? {
-    return currentColor.hue
+    return currentColor.h
   }
 }
 
@@ -198,7 +198,7 @@ extension PDColorPickerViewController: PDColorPickerDelegate {
 @available(iOS 9.0, *)
 extension PDColorPickerViewController: PDColorSliderDelegate {
   func hueSelected(_ hue: CGFloat) {
-    currentColor.hue = hue
+    currentColor.h = hue
     colorPickerView.selectedHue = hue
 
     colorChanged(to: currentColor)

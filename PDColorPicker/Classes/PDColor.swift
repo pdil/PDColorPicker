@@ -9,41 +9,60 @@
 import UIKit
 
 public struct PDColor {
-  public var hue: CGFloat
-  public var sat: CGFloat
-  public var br: CGFloat
+  /// hue
+  public var h: CGFloat
+  /// saturation
+  public var s: CGFloat
+  /// brightness
+  public var b: CGFloat
+  /// alpha
   public var a: CGFloat
 
-  public static let red = PDColor(hue: 1, sat: 1, br: 1, a: 1)
+  public static let red = PDColor(h: 1, s: 1, b: 1, a: 1)
 
   public var uiColor: UIColor {
-    return UIColor(hue: hue, saturation: sat, brightness: br, alpha: a)
+    return UIColor(hue: h, saturation: s, brightness: b, alpha: a)
+  }
+
+  public var rgba: (r: CGFloat, b: CGFloat, g: CGFloat, a: CGFloat) {
+    var r: CGFloat = 0.0
+    var g: CGFloat = 0.0
+    var b: CGFloat = 0.0
+    var a: CGFloat = 0.0
+
+    uiColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+
+    return (r: r, b: b, g: g, a: a)
   }
 
   public init(fromColor: UIColor) {
     var h: CGFloat = 0
     var s: CGFloat = 0
     var b: CGFloat = 0
-    var alpha: CGFloat = 0
+    var a: CGFloat = 0
 
-    fromColor.getHue(&h, saturation: &s, brightness: &b, alpha: &alpha)
+    fromColor.getHue(&h, saturation: &s, brightness: &b, alpha: &a)
 
-    self.hue = h
-    self.sat = s
-    self.br = b
-    self.a = alpha
+    self.h = h
+    self.s = s
+    self.b = b
+    self.a = a
   }
 
   public init?(fromString string: String) {
-    let components = string.components(separatedBy: "-")
+    let components = string.components(separatedBy: ",")
 
     if components.count >= 3 {
-      hue = CGFloat(Double(components[0]) ?? 0)
-      sat = CGFloat(Double(components[1]) ?? 0)
-      br = CGFloat(Double(components[2]) ?? 0)
+      if let h = Double(components[0]), let s = Double(components[1]), let b = Double(components[2]) {
+        self.h = CGFloat(h)
+        self.s = CGFloat(s)
+        self.b = CGFloat(b)
+      } else {
+        return nil
+      }
 
-      if components.count == 4 {
-        a = CGFloat(Double(components[3]) ?? 1)
+      if components.count == 4, let a = Double(components[3]) {
+        self.a = CGFloat(a)
       } else {
         a = 1
       }
@@ -52,25 +71,21 @@ public struct PDColor {
     }
   }
 
-  public init(hue: CGFloat, sat: CGFloat, br: CGFloat, a: CGFloat = 1) {
-    self.hue = hue
-    self.sat = sat
-    self.br = br
+  public init(h: CGFloat, s: CGFloat, b: CGFloat, a: CGFloat = 1) {
+    self.h = h
+    self.s = s
+    self.b = b
     self.a = a
   }
 
   // MARK: - Utilities
 
   public var hex: String {
-    var r: CGFloat = 0.0
-    var g: CGFloat = 0.0
-    var b: CGFloat = 0.0
+    let rgba = self.rgba
 
-    uiColor.getRed(&r, green: &g, blue: &b, alpha: nil)
-
-    let rr = (Int)(r * 255) << 16
-    let gg = (Int)(g * 255) << 8
-    let bb = (Int)(b * 255) << 0
+    let rr = (Int)(rgba.r * 255) << 16
+    let gg = (Int)(rgba.g * 255) << 8
+    let bb = (Int)(rgba.b * 255) << 0
 
     let rgb = rr | gg | bb
 
@@ -78,13 +93,9 @@ public struct PDColor {
   }
 
   public var appropriateForegroundColor: UIColor {
-    var r: CGFloat = 0.0
-    var g: CGFloat = 0.0
-    var b: CGFloat = 0.0
+    let rgba = self.rgba
 
-    uiColor.getRed(&r, green: &g, blue: &b, alpha: nil)
-
-    let level = 1 - (0.299 * r + 0.587 * g + 0.114 * b)
+    let level = 1 - (0.299 * rgba.r + 0.587 * rgba.g + 0.114 * rgba.b)
     let d: CGFloat = level < 0.5 ? 0.0 : 1.0
 
     return UIColor(red: d, green: d, blue: d, alpha: 1.0)
@@ -96,6 +107,6 @@ public struct PDColor {
 
 extension PDColor: CustomStringConvertible {
   public var description: String {
-    return "\(hue)-\(sat)-\(br)-\(a)"
+    return "\(h),\(s),\(b),\(a)"
   }
 }
