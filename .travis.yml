@@ -3,15 +3,14 @@ osx_image: xcode9
 
 script:
 - xcodebuild -version
-- xcodebuild \
+- xcodebuild test \
   -workspace Example/PDColorPicker.xcworkspace  \
   -scheme PDColorPicker-Example \
   -sdk iphonesimulator11.0 \
   -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0' \
   -enableCodeCoverage YES \
   ONLY_ACTIVE_ARCH=YES \
-  VALID_ARCHS=x86_64 \
-  test
+  VALID_ARCHS=x86_64
   
 - pod lib lint
 
