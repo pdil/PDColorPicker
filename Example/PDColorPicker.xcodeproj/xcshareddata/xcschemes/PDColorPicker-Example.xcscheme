@@ -53,16 +53,6 @@
                ReferencedContainer = "container:PDColorPicker.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "525ACFA11F3EB5D40027FAA9"
-               BuildableName = "PDColorPicker_Tests.xctest"
-               BlueprintName = "PDColorPicker_Tests"
-               ReferencedContainer = "container:PDColorPicker.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

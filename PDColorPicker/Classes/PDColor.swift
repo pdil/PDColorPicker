@@ -42,7 +42,7 @@ public struct PDColor {
       sat = CGFloat(Double(components[1]) ?? 0)
       br = CGFloat(Double(components[2]) ?? 0)
 
-      if components.count >= 4 {
+      if components.count == 4 {
         a = CGFloat(Double(components[3]) ?? 1)
       } else {
         a = 1
