@@ -90,8 +90,7 @@ class PDColorSpec: QuickSpec {
           let darkColor = PDColor(fromColor: dark)
 
           it("is white") {
-            let white = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-            expect(darkColor.appropriateForegroundColor).to(equal(white))
+            expect(darkColor.appropriateForegroundColor).to(equal(UIColor.white))
           }
         }
 
@@ -100,8 +99,7 @@ class PDColorSpec: QuickSpec {
           let lightColor = PDColor(fromColor: light)
 
           it("is black") {
-            let black = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-            expect(lightColor.appropriateForegroundColor).to(equal(black))
+            expect(lightColor.appropriateForegroundColor).to(equal(UIColor.black))
           }
         }
       }
