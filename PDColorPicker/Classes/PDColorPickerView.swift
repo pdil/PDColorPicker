@@ -18,6 +18,12 @@ protocol PDColorPickerDataSource: class {
 
 class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
 
+  // MARK: - Gesture Recognizer
+
+  var panRecognizer: PDPanGestureRecognizer?
+
+  // MARK: - Properties
+
   weak var delegate: PDColorPickerDelegate?
   weak var dataSource: PDColorPickerDataSource?
 
@@ -62,9 +68,12 @@ class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
   init() {
     super.init(frame: .zero)
 
-    let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(colorDragged(_:)))
-    panRecognizer.delegate = self
-    addGestureRecognizer(panRecognizer)
+    panRecognizer = PDPanGestureRecognizer(target: self, action: #selector(colorDragged(_:)))
+    panRecognizer?.delegate = self
+
+    if let recognizer = panRecognizer {
+      addGestureRecognizer(recognizer)
+    }
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -192,10 +201,10 @@ class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
   }
 
   func colorComponenentsAtPosition(_ point: CGPoint) -> PDColor {
-    let sat = min(max(bounds.width - point.x, 0) / bounds.width, 1)
-    let br = min(max(bounds.height - point.y, 0) / bounds.height, 1)
+    let s = min(max(bounds.width - point.x, 0) / bounds.width, 1)
+    let b = min(max(bounds.height - point.y, 0) / bounds.height, 1)
 
-    return PDColor(h: dataSource?.selectedHueForColorPicker() ?? 1, s: sat, b: br, a: 1)
+    return PDColor(h: dataSource?.selectedHueForColorPicker() ?? 1, s: s, b: b, a: 1)
   }
 
 }

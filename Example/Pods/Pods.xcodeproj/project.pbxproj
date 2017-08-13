@@ -48,6 +48,7 @@
 		4FB185DDE3E141CA6F5956AC3C4E9EDD /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CD1E4C2D488994A37CB1F682CC2477 /* Closures.swift */; };
 		50698F14E7847E18B907E9373FBF4C21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE147446A1225BA68EA82615B1436CC1 /* Foundation.framework */; };
 		51527CFCFE1ED299157DDA74E9123E85 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56D6337BDA2ED02F4249F4CF99FE290 /* SuiteHooks.swift */; };
+		529F4ADA1F40AA16001F986C /* PDPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F4AD91F40AA16001F986C /* PDPanGestureRecognizer.swift */; };
 		531C54B1C10BA0F17A2B7D81D02BD390 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 34846C455011015A12443767FE9C8900 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53C40080BBFDE24CA76D1C51CB2159DE /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AD7E5C38062FB4829B3964A8A8E03 /* Example.swift */; };
 		54BF22CC5B8EE1556B1910114B0A344B /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E706E52B11F6391EF382C5176D8E6A /* AssertionDispatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -201,6 +202,7 @@
 		50B191F5B7327A78C73D4BCA4EC19D44 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/QuickObjectiveC/World.h; sourceTree = "<group>"; };
 		515C13F015332298AFF412E6A291A0E7 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/Nimble/Utils/Async.swift; sourceTree = "<group>"; };
 		523B4574012380AE54088BE3511D6210 /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
+		529F4AD91F40AA16001F986C /* PDPanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		5494CBC0E913BC11A74908ABAD1D837F /* CwlCatchException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchException.swift; path = Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException.swift; sourceTree = "<group>"; };
 		55C7215DF8B0AF02FFB0BE042DE71271 /* PDColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PDColorPicker.xcconfig; sourceTree = "<group>"; };
 		566DF6A41A23211ABF3E7175FBB706E9 /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Sources/Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 				3F11BF104AC33DE6766A94F44272A1A0 /* PDColorPickerSliderView.swift */,
 				1C10302B5DB4F971514EE845A05B774A /* PDColorPickerView.swift */,
 				238DD14891C1A8E85B5B3C6E3340D4EA /* PDColorPickerViewController.swift */,
+				529F4AD91F40AA16001F986C /* PDPanGestureRecognizer.swift */,
 				9D916E9C07B26A0D3B0EA98A97C5D976 /* PDRoundedRectButton.swift */,
 				944919F83DD35F91D4EFF5E431984591 /* UIView+Layout.swift */,
 				6EBF9F4649EF6B2B7537244F83FD527B /* Support Files */,
@@ -952,6 +955,7 @@
 				5CBED5D6FA949E464C52BB76336E2A22 /* PDColorPickerViewController.swift in Sources */,
 				98E8F9E04A73DBCB6A024D7586556DE0 /* PDRoundedRectButton.swift in Sources */,
 				ECA18EF17ABC76A053E76CF32386E9D9 /* UIView+Layout.swift in Sources */,
+				529F4ADA1F40AA16001F986C /* PDPanGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
