@@ -11,6 +11,7 @@ import UIKit
 public protocol Dimmable { }
 
 public extension Dimmable where Self: UIViewController {
+
   private func createDimView(_ rect: CGRect?, color: UIColor, alpha: CGFloat) -> UIView? {
     guard let rect = rect else { return nil }
 

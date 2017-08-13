@@ -18,15 +18,19 @@ open class PDColorPickerViewController: UIViewController {
   // MARK: - Buttons
 
   lazy var saveButton: PDRoundedRectButton = {
-    let button = PDRoundedRectButton(title: "Save", backColor: .white, foreColor: .blue)
+    let button = PDRoundedRectButton(title: "Save", backColor: .white, foreColor: self.tintColor)
+
     button.addTarget(self, action: #selector(savePressed(_:)), for: .touchUpInside)
+    button.titleLabel?.font = self.boldFont
 
     return button
   }()
 
   lazy var cancelButton: PDRoundedRectButton = {
     let button = PDRoundedRectButton(title: "Cancel", backColor: .white, foreColor: .red)
+
     button.addTarget(self, action: #selector(cancelPressed(_:)), for: .touchUpInside)
+    button.titleLabel?.font = self.font
 
     return button
   }()
@@ -88,12 +92,14 @@ open class PDColorPickerViewController: UIViewController {
 
   // MARK: - Initializer
 
-  init(current: UIColor, tintColor: UIColor, completion: @escaping (PDColor?) -> ()) {
+  public init(current: UIColor = .red, tintColor: UIColor = .blue, completion: @escaping (PDColor?) -> ()) {
     self.currentColor = PDColor(fromColor: current)
     self.tintColor = tintColor
     self.completion = completion
 
     super.init(nibName: nil, bundle: nil)
+
+    modalPresentationStyle = .overCurrentContext
   }
   
   required public init?(coder aDecoder: NSCoder) {
@@ -155,8 +161,9 @@ open class PDColorPickerViewController: UIViewController {
 
       colorPickerView.currentColor = currentColor
       colorSliderView.currentHue = currentColor.h
-      colorChanged(to: currentColor)
+      colorPickerView.fadeSlider(.in)
 
+      colorChanged(to: currentColor)
       constraintsHaveBeenSet = true
     }
   }
@@ -164,11 +171,15 @@ open class PDColorPickerViewController: UIViewController {
   // MARK: - Button Targets
 
   @objc func savePressed(_ sender: UIButton) {
+    colorPickerView.fadeSlider(.out)
+
     completion(currentColor)
     dismiss(animated: true, completion: nil)
   }
 
   @objc func cancelPressed(_ sender: UIButton) {
+    colorPickerView.fadeSlider(.out)
+
     completion(nil)
     dismiss(animated: true, completion: nil)
   }

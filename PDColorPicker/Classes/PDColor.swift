@@ -94,11 +94,9 @@ public struct PDColor {
 
   public var appropriateForegroundColor: UIColor {
     let rgba = self.rgba
-
     let level = 1 - (0.299 * rgba.r + 0.587 * rgba.g + 0.114 * rgba.b)
-    let d: CGFloat = level < 0.5 ? 0.0 : 1.0
-
-    return UIColor(red: d, green: d, blue: d, alpha: 1.0)
+    
+    return (level < 0.5) ? .black : .white
   }
   
 }

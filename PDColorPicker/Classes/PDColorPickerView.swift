@@ -39,6 +39,7 @@ class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
     circle.layer.borderColor = UIColor.black.cgColor
     circle.layer.borderWidth = 2.0
     circle.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+    circle.alpha = 0
     return circle
   }()
 
@@ -146,6 +147,14 @@ class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
   }
 
   // MARK: - Slider Management
+
+  enum FadeMode { case `in`, out }
+
+  func fadeSlider(_ mode: FadeMode) {
+    UIView.animate(withDuration: 0.25) {
+      self.sliderCircle.alpha = (mode == .in) ? 1 : 0
+    }
+  }
 
   func setSliderCircle() {
     guard let currentColor = currentColor else { return }

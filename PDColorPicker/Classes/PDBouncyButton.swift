@@ -33,7 +33,7 @@ class PDBouncyButton: UIButton, Bounceable {
 
 protocol Bounceable {}
 
-extension Bounceable where Self: UIButton {
+extension Bounceable where Self: UIView {
   func bounceIn(at scale: CGFloat, with duration: TimeInterval) {
     UIView.animate(withDuration: duration) {
       self.transform = CGAffineTransform(scaleX: scale, y: scale)
@@ -46,3 +46,4 @@ extension Bounceable where Self: UIButton {
     }
   }
 }
+
