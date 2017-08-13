@@ -11,6 +11,7 @@
 		525ACFAC1F3EB5FB0027FAA9 /* Pods_PDColorPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296BA111F3E9E8B00302C4B /* Pods_PDColorPicker_Tests.framework */; };
 		525ACFAD1F3EB6140027FAA9 /* PDColorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BA091F3E91B200302C4B /* PDColorSpec.swift */; };
 		527582F21F3EB3A900B170A1 /* Pods_PDColorPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296BA0D1F3E9E4600302C4B /* Pods_PDColorPicker_Example.framework */; };
+		529F4AD51F401545001F986C /* PDColorPickerViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F4AD31F40152A001F986C /* PDColorPickerViewControllerSpec.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -38,6 +39,7 @@
 		5296BA0D1F3E9E4600302C4B /* Pods_PDColorPicker_Example.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_PDColorPicker_Example.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PDColorPicker-fpfjdneecqtzppflxrgflszvkapw/Build/Products/Debug-iphonesimulator/Pods_PDColorPicker_Example.framework"; sourceTree = "<group>"; };
 		5296BA0F1F3E9E6500302C4B /* Pods-PDColorPicker_Tests-frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "Pods-PDColorPicker_Tests-frameworks.sh"; path = "Pods/Target Support Files/Pods-PDColorPicker_Tests/Pods-PDColorPicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		5296BA111F3E9E8B00302C4B /* Pods_PDColorPicker_Tests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_PDColorPicker_Tests.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PDColorPicker-fpfjdneecqtzppflxrgflszvkapw/Build/Products/Debug-iphonesimulator/Pods_PDColorPicker_Tests.framework"; sourceTree = "<group>"; };
+		529F4AD31F40152A001F986C /* PDColorPickerViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDColorPickerViewControllerSpec.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PDColorPicker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDColorPicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				5296BA091F3E91B200302C4B /* PDColorSpec.swift */,
+				529F4AD31F40152A001F986C /* PDColorPickerViewControllerSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -380,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				525ACFAD1F3EB6140027FAA9 /* PDColorSpec.swift in Sources */,
+				529F4AD51F401545001F986C /* PDColorPickerViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
