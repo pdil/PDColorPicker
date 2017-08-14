@@ -14,9 +14,26 @@ protocol PDColorSliderDelegate: class {
 
 class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
 
+  // MARK: - Gesture Recognizer
+
+  var panRecognizer: PDPanGestureRecognizer?
+
+  // MARK - Properties
+
+  weak var delegate: PDColorSliderDelegate?
+
+  var currentHue: CGFloat? {
+    didSet {
+      if let currentHue = currentHue { delegate?.hueSelected(currentHue) }
+      setHueSlider()
+    }
+  }
+
   var borderWidth: CGFloat = 4 {
     didSet { setNeedsDisplay() }
   }
+
+  // MARK: - Slider Properties
 
   var elementSize: CGFloat = 1 {
     didSet { setNeedsDisplay() }
@@ -37,15 +54,6 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
     return constraint
   }()
 
-  weak var delegate: PDColorSliderDelegate?
-
-  var currentHue: CGFloat? {
-    didSet {
-      if let currentHue = currentHue { delegate?.hueSelected(currentHue) }
-      setHueSlider()
-    }
-  }
-
   var sliderHalfWidth: CGFloat {
     return hueSlider.bounds.width / 2
   }
@@ -56,9 +64,12 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
     super.init(frame: .zero)
     backgroundColor = .clear
 
-    let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(colorDragged(_:)))
-    panRecognizer.delegate = self
-    addGestureRecognizer(panRecognizer)
+    panRecognizer = PDPanGestureRecognizer(target: self, action: #selector(colorDragged(_:)))
+    panRecognizer?.delegate = self
+
+    if let recognizer = panRecognizer {
+      addGestureRecognizer(recognizer)
+    }
 
     layer.shadowColor = UIColor.black.cgColor
     layer.shadowOpacity = 0.4

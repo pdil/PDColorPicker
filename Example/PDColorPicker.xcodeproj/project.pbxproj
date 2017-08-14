@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06658D2570A1541F7FBCF8F7 /* Pods_PDColorPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E41640B954B58AEECAD9BD /* Pods_PDColorPicker_Tests.framework */; };
+		524213051F41269B00E3F961 /* PDColorPickerGesturesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524213031F41269B00E3F961 /* PDColorPickerGesturesSpec.swift */; };
 		525ACFAC1F3EB5FB0027FAA9 /* Pods_PDColorPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296BA111F3E9E8B00302C4B /* Pods_PDColorPicker_Tests.framework */; };
 		525ACFAD1F3EB6140027FAA9 /* PDColorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296BA091F3E91B200302C4B /* PDColorSpec.swift */; };
 		527582F21F3EB3A900B170A1 /* Pods_PDColorPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296BA0D1F3E9E4600302C4B /* Pods_PDColorPicker_Example.framework */; };
@@ -33,6 +34,7 @@
 		3430C7971B610DDC374B2E63 /* Pods-PDColorPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDColorPicker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PDColorPicker_Example/Pods-PDColorPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		367F08CB0AB055783ED8BC6D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		40109194995B216C6675B342 /* PDColorPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PDColorPicker.podspec; path = ../PDColorPicker.podspec; sourceTree = "<group>"; };
+		524213031F41269B00E3F961 /* PDColorPickerGesturesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDColorPickerGesturesSpec.swift; sourceTree = "<group>"; };
 		525ACFA21F3EB5D40027FAA9 /* PDColorPicker_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDColorPicker_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		527582F01F3EB08600B170A1 /* PDColorPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDColorPicker.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PDColorPicker-fpfjdneecqtzppflxrgflszvkapw/Build/Products/Debug-iphonesimulator/PDColorPicker/PDColorPicker.framework"; sourceTree = "<group>"; };
 		5296BA091F3E91B200302C4B /* PDColorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDColorSpec.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				5296BA091F3E91B200302C4B /* PDColorSpec.swift */,
+				524213031F41269B00E3F961 /* PDColorPickerGesturesSpec.swift */,
 				529F4AD31F40152A001F986C /* PDColorPickerViewControllerSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -384,6 +387,7 @@
 			files = (
 				525ACFAD1F3EB6140027FAA9 /* PDColorSpec.swift in Sources */,
 				529F4AD51F401545001F986C /* PDColorPickerViewControllerSpec.swift in Sources */,
+				524213051F41269B00E3F961 /* PDColorPickerGesturesSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
