@@ -8,6 +8,21 @@
 
 import UIKit
 
+/// Creates a modal color picker view that allows the user
+/// to select hue, saturation, and brightness values in an
+/// easy to use, fast interface.
+///
+/// To present the view controller, execute the following
+///   from the presenting view controller:
+///
+///     let colorPickerVC = PDColorPickerViewController { _ in
+///       // handle completion
+///     }
+///     present(colorPickerVC, animated: true)
+///
+/// **Note** Dimming the presenting view controller is recommended
+///   for a better appearance.
+///   See the `Dimmable` protocol.
 @available(iOS 9.0, *)
 open class PDColorPickerViewController: UIViewController {
 
@@ -64,17 +79,26 @@ open class PDColorPickerViewController: UIViewController {
 
   // MARK: - Properties
 
+  /// The tint color of the **Save** button.
   open var tintColor: UIColor {
     didSet {
       saveButton.foreColor = tintColor
     }
   }
 
+  /// The currently selected color of the color picker.
   open var currentColor: PDColor
+
+  /// The completion handler that is called when the color picker is dismissed.
   open var completion: (PDColor?) -> ()
 
+  /// Whether or not to display the hexadecimal code in the selected color preview.
+  /// The default value is `true`.
   open var showHexString = true
 
+  /// The font to be used on the **Cancel** button and color preview.
+  ///
+  /// The default value is the system font at size 18.
   open var font: UIFont = UIFont.systemFont(ofSize: 18) {
     didSet {
       cancelButton.titleLabel?.font = font
@@ -82,6 +106,9 @@ open class PDColorPickerViewController: UIViewController {
     }
   }
 
+  /// The font to be used on the **Save** button.
+  ///
+  /// The default value is the bold system font at size 18.
   open var boldFont: UIFont = UIFont.boldSystemFont(ofSize: 18) {
     didSet {
       saveButton.titleLabel?.font = boldFont
