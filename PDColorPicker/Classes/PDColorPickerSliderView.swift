@@ -140,7 +140,7 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
   }
 
   func hueAtPosition(_ x: CGFloat, containingRect: CGRect) -> CGFloat {
-    return x / (containingRect.width - 2 * borderWidth)
+    return min(max(x / (containingRect.width - 2 * borderWidth), 0), 1)
   }
 
 }

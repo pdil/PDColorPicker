@@ -28,7 +28,7 @@ class PDRoundedRectButton: PDBouncyButton {
   override var intrinsicContentSize: CGSize {
     guard let labelSize = titleLabel?.intrinsicContentSize else { return .zero }
 
-    return CGSize(width: labelSize.width + contentEdgeInsets.left + contentEdgeInsets.right, height: labelSize.height + contentEdgeInsets.top + contentEdgeInsets.bottom)
+    return CGSize(width: labelSize.width + contentEdgeInsets.left + contentEdgeInsets.right, height: super.intrinsicContentSize.height + contentEdgeInsets.top + contentEdgeInsets.bottom)
   }
 
   // MARK: - Initializer
