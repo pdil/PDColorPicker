@@ -6,6 +6,7 @@
 [![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
+[![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
 <a href="https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen" target="_blank"><img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/example.gif" width=300></a>
 
@@ -38,7 +39,7 @@ target 'MyAppTarget' do
 end
 ```
 
-#### Manually (not recommended)
+#### Manual (not recommended)
 
 * Download the `.swift` files inside [PDColorPicker/Classes](https://github.com/pdil/PDColorPicker/tree/master/PDColorPicker/Classes) and add them to your project.
 * Add the files to the appropriate target(s) within the project.
@@ -121,4 +122,4 @@ Paolo Di Lorenzo [[Email](mailto:paolo@dilorenzo.pl?subject=PDColorPicker)] [[We
 
 ## ⚖️ License
 
-PDColorPicker is available under the GPL-3.0 license. See the LICENSE file for more info.
+PDColorPicker is available under the MIT license. See the [LICENSE](https://github.com/pdil/PDColorPicker/blob/master/LICENSE) file for more info.
