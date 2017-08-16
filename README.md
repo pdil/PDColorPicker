@@ -55,10 +55,13 @@ class MyViewController: UIViewController, Dimmable {
   
     func presentColorPicker() {
         // 2.
-        let colorPickerVC = PDColorPickerViewController(initialColor: .blue, tintColor: .black) {
+        let colorPickerVC = PDColorPickerViewController(initialColor: .blue, tintColor: .black)
+
+        // 3.
+        colorPickerVC.completion = {
             [weak self] newColor in
 
-            // 6.
+            // 7.
             self?.undim()
 
             guard let color = newColor else {
@@ -70,11 +73,10 @@ class MyViewController: UIViewController, Dimmable {
             print("A new color was selected! RGB: \(rgb.r), \(rgb.g), \(rgb.b)")
          }
   
-         // 3.
+         // 4.
          dim() // see Dimmable documentation for extra options
     
-         // 4.
-         colorPickerVC.modalPresentationStyle = .overCurrentContext
+         // 5.
          present(colorPickerVC, animated: true)
     }
   
@@ -85,10 +87,11 @@ class MyViewController: UIViewController, Dimmable {
 
 1. Import the  `PDColorPicker` framework.
 2. Instantiate a new `PDColorPickerViewController`.
-3. Implement the `Dimmable` protocol and dim the presenting view controller (optional but highly recommended).
-4. Present the color picker as a modal view controller.
-5. Use the color picker to select a color. When **Save** or **Cancel** is tapped, the completion handler specified in the initializer will automatically provide the new color. If the user taps cancel, `nil` is returned.
-6. Be sure to undim the view once the completion handler is called.
+3. Set the completion handler of the color picker, indicating what the presenting view controller should do with the color result. **Note**: this can also be set in the `PDColorPickerViewController` initializer.
+4. Implement the `Dimmable` protocol and dim the presenting view controller (optional but highly recommended).
+5. Present the color picker as a modal view controller.
+6. Use the color picker to select a color. When **Save** or **Cancel** is tapped, the completion handler specified in the initializer will automatically provide the new color. If the user taps cancel, `nil` is returned.
+7. Be sure to undim the view once the completion handler is called.
 
 #### Bonus
 
