@@ -12,7 +12,7 @@
 		03803CFC82ACD7FE01A1901C7134F342 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF48518D420CCA6390090ADC1EFBD08 /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0A2CA8B0DD7E300ABFCF1956E6B58248 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 37916DDEA494128B5421FCF624ECA3D2 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0ABBB672C09A81AB3CD54D54D03B092C /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799A67761759A57CC01FC43FBCCCF3AB /* BeNil.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0B9EA64D396396E3A80370F55C794513 /* PDColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10302B5DB4F971514EE845A05B774A /* PDColorPickerView.swift */; };
+		0B9EA64D396396E3A80370F55C794513 /* PDColorPickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10302B5DB4F971514EE845A05B774A /* PDColorPickerGridView.swift */; };
 		0CC67CC132E9F9DC98F6D0CC50082DBD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D9897D646E2BB9FBF73704C04440B2 /* XCTest.framework */; };
 		0D426C4802A4E547E48C3FD2F80B0F01 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA87A21755F8FBD1AF7D1724A2E060 /* DSL.swift */; };
 		0E5E651C03635CE8E0F0A8BBA87951A3 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE191F1452F652E6E6F46A35B35234 /* BeVoid.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -172,7 +172,7 @@
 		13AFE9B9B4E2FFE8B4F5A80B7C6EFBA1 /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Sources/QuickObjectiveC/DSL/World+DSL.h"; sourceTree = "<group>"; };
 		1619357D2803739ECED642E77B686B5C /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Sources/Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
 		1980288EB0B8DF169C569027BEEEBB56 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Sources/Lib/CwlPreconditionTesting/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
-		1C10302B5DB4F971514EE845A05B774A /* PDColorPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PDColorPickerView.swift; path = PDColorPicker/Classes/PDColorPickerView.swift; sourceTree = "<group>"; };
+		1C10302B5DB4F971514EE845A05B774A /* PDColorPickerGridView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PDColorPickerGridView.swift; path = PDColorPicker/Classes/PDColorPickerGridView.swift; sourceTree = "<group>"; };
 		1C4A819A81860C2606E6ED40D807C50C /* Pods-PDColorPicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PDColorPicker_Tests-umbrella.h"; sourceTree = "<group>"; };
 		2037CF9AABCA4824F5653883642CE80F /* NMBExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBExpectation.swift; path = Sources/Nimble/Adapters/NMBExpectation.swift; sourceTree = "<group>"; };
 		209CA122CC6A795B2460218DAC3FDECA /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Nimble/DSL.swift; sourceTree = "<group>"; };
@@ -536,7 +536,7 @@
 				AC2E91F28E32C14E5B6D1888FBF098C1 /* PDBouncyButton.swift */,
 				2FD5D55F5AA2AD94CB989360DE66D2C6 /* PDColor.swift */,
 				3F11BF104AC33DE6766A94F44272A1A0 /* PDColorPickerSliderView.swift */,
-				1C10302B5DB4F971514EE845A05B774A /* PDColorPickerView.swift */,
+				1C10302B5DB4F971514EE845A05B774A /* PDColorPickerGridView.swift */,
 				238DD14891C1A8E85B5B3C6E3340D4EA /* PDColorPickerViewController.swift */,
 				529F4AD91F40AA16001F986C /* PDPanGestureRecognizer.swift */,
 				9D916E9C07B26A0D3B0EA98A97C5D976 /* PDRoundedRectButton.swift */,
@@ -951,7 +951,7 @@
 				DAA257B9101ABB09E9526D9681A78842 /* PDColor.swift in Sources */,
 				A952704A9CB0CDDC6F85FC6354640A65 /* PDColorPicker-dummy.m in Sources */,
 				D13DD75FD792759740F1FB094A7A3D57 /* PDColorPickerSliderView.swift in Sources */,
-				0B9EA64D396396E3A80370F55C794513 /* PDColorPickerView.swift in Sources */,
+				0B9EA64D396396E3A80370F55C794513 /* PDColorPickerGridView.swift in Sources */,
 				5CBED5D6FA949E464C52BB76336E2A22 /* PDColorPickerViewController.swift in Sources */,
 				98E8F9E04A73DBCB6A024D7586556DE0 /* PDRoundedRectButton.swift in Sources */,
 				ECA18EF17ABC76A053E76CF32386E9D9 /* UIView+Layout.swift in Sources */,

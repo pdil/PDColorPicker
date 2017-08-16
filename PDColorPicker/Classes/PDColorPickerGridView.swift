@@ -1,5 +1,5 @@
 //
-//  PDColorPickerView.swift
+//  PDColorPickerGridView.swift
 //  PDColorPicker
 //
 //  Created by Paolo Di Lorenzo on 8/8/17.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-protocol PDColorPickerDelegate: class {
+protocol PDColorPickerGridDelegate: class {
   func colorChanged(to newColor: PDColor)
 }
 
-protocol PDColorPickerDataSource: class {
+protocol PDColorPickerGridDataSource: class {
   func selectedHueForColorPicker() -> CGFloat?
 }
 
-class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
+class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
 
   // MARK: - Gesture Recognizer
 
@@ -24,8 +24,8 @@ class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
 
   // MARK: - Properties
 
-  weak var delegate: PDColorPickerDelegate?
-  weak var dataSource: PDColorPickerDataSource?
+  weak var delegate: PDColorPickerGridDelegate?
+  weak var dataSource: PDColorPickerGridDataSource?
 
   var currentColor: PDColor? {
     didSet { setSliderCircle() }

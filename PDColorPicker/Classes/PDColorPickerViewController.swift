@@ -52,8 +52,8 @@ open class PDColorPickerViewController: UIViewController {
 
   // MARK: - Color Picking Views
 
-  lazy var colorPickerView: PDColorPickerView = {
-    let pickerView = PDColorPickerView()
+  lazy var colorPickerView: PDColorPickerGridView = {
+    let pickerView = PDColorPickerGridView()
     pickerView.delegate = self
     pickerView.dataSource = self
     return pickerView
@@ -215,7 +215,7 @@ open class PDColorPickerViewController: UIViewController {
 
 // MARK: - PDColorPickerDataSource
 @available(iOS 9.0, *)
-extension PDColorPickerViewController: PDColorPickerDataSource {
+extension PDColorPickerViewController: PDColorPickerGridDataSource {
   func selectedHueForColorPicker() -> CGFloat? {
     return currentColor.h
   }
@@ -223,7 +223,7 @@ extension PDColorPickerViewController: PDColorPickerDataSource {
 
 // MARK: - PDColorPickerDelegate
 @available(iOS 9.0, *)
-extension PDColorPickerViewController: PDColorPickerDelegate {
+extension PDColorPickerViewController: PDColorPickerGridDelegate {
   func colorChanged(to newColor: PDColor) {
     currentColor = newColor
     selectedColorLabel.backgroundColor = currentColor.uiColor
@@ -234,10 +234,10 @@ extension PDColorPickerViewController: PDColorPickerDelegate {
 
 // MARK: - ColorSliderDelegate
 @available(iOS 9.0, *)
-extension PDColorPickerViewController: PDColorSliderDelegate {
-  func hueSelected(_ hue: CGFloat) {
-    currentColor.h = hue
-    colorPickerView.selectedHue = hue
+extension PDColorPickerViewController: PDColorPickerSliderDelegate {
+  func hueChanged(to newHue: CGFloat) {
+    currentColor.h = newHue
+    colorPickerView.selectedHue = newHue
 
     colorChanged(to: currentColor)
   }

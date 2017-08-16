@@ -27,7 +27,7 @@ class PDColorPickerGesturesSpec: QuickSpec {
     describe("PDColorPickerView gestures") {
       var recognizer: PDPanGestureRecognizer!
       var colorPickerVC: PDColorPickerViewController!
-      var colorPickerView: PDColorPickerView!
+      var colorPickerView: PDColorPickerGridView!
 
       beforeEach {
         colorPickerVC = PDColorPickerViewController(initialColor: .red) { _ in }

@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol PDColorSliderDelegate: class {
-  func hueSelected(_ hue: CGFloat)
+protocol PDColorPickerSliderDelegate: class {
+  func hueChanged(to newHue: CGFloat)
 }
 
 class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
@@ -20,11 +20,11 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
 
   // MARK - Properties
 
-  weak var delegate: PDColorSliderDelegate?
+  weak var delegate: PDColorPickerSliderDelegate?
 
   var currentHue: CGFloat? {
     didSet {
-      if let currentHue = currentHue { delegate?.hueSelected(currentHue) }
+      if let currentHue = currentHue { delegate?.hueChanged(to: currentHue) }
       setHueSlider()
     }
   }
