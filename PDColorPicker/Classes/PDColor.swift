@@ -148,7 +148,11 @@ public struct PDColor {
      returns a color that is visible when superimposed on the current value of the
      `PDColor`.
 
-      The returned value is white if `PDColor` is dark, and black if `PDColor` is light.
+     The returned value is white if `PDColor` is dark, and black if `PDColor` is light.
+     This property is computed based on the "luma" of the associated red, green, and blue values.
+
+     See [https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness)
+     for more information.
    */
   public var appropriateForegroundColor: UIColor {
     let rgba = self.rgba

@@ -3,7 +3,7 @@
 //  PDColorPicker
 //
 //  Created by Paolo Di Lorenzo on 8/13/17.
-//  Copyright © 2017 CocoaPods. All rights reserved.
+//  Copyright © 2017 Paolo Di Lorenzo. All rights reserved.
 //
 
 import Quick
@@ -30,7 +30,7 @@ class PDColorPickerGesturesSpec: QuickSpec {
       var colorPickerView: PDColorPickerView!
 
       beforeEach {
-        colorPickerVC = PDColorPickerViewController(current: .red) { _ in }
+        colorPickerVC = PDColorPickerViewController(initialColor: .red) { _ in }
         colorPickerView = colorPickerVC.colorPickerView
         recognizer = colorPickerView.panRecognizer
 
@@ -101,7 +101,7 @@ class PDColorPickerGesturesSpec: QuickSpec {
       var colorSliderView: PDColorPickerSliderView!
 
       beforeEach {
-        colorPickerVC = PDColorPickerViewController(current: .red) { _ in }
+        colorPickerVC = PDColorPickerViewController(initialColor: .red) { _ in }
         colorSliderView = colorPickerVC.colorSliderView
         recognizer = colorSliderView.panRecognizer
 

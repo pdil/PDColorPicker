@@ -8,10 +8,21 @@
 
 import UIKit
 
-public protocol Dimmable { }
+/// Provides a simple mechanism for dimming a view controller.
+///
+/// The intended usage of this protocol is to allow dimming of a view controller
+/// so that another view controller (e.g. an alert) may be presented on top of it.
+///
+/// - note:
+/// Be sure to carefully read the documentation for proper use of the `dim()` and
+/// `undim()` methods that are implemented by this protocol. Misuse may cause issues
+/// with the view hierarchy of the view controller.
+public protocol Dimmable {  }
 
 public extension Dimmable where Self: UIViewController {
 
+  /// Convenience method that creates a view in frame `rect`,
+  /// with color `color` and transparency `alpha`.
   private func createDimView(_ rect: CGRect?, color: UIColor, alpha: CGFloat) -> UIView? {
     guard let rect = rect else { return nil }
 
@@ -22,7 +33,21 @@ public extension Dimmable where Self: UIViewController {
     return dimView
   }
 
-  public func dim(_ color: UIColor = .black, alpha: CGFloat = 0.5, speed: Double = 0.5) {
+  /**
+   Dims the view controller that it is called on. If the view controller is inside a `UINavigationController`,
+   `UITabBarController`, or both, the entire view will be dimmed including the navigation bar and tab bar.
+
+   - warning:
+     Do not add any subviews to the view controller while it is dimmed. Instead, call `undim()` on the
+     view controller before adding any subviews.
+
+   - parameters:
+     - color: The tint color to be used in dimming. The default is `UIColor.black`.
+     - alpha: The transparency level of the dim. A value of 0.0 means a completely transparent dim (no effect)
+       whereas 1.0 is a completely opaque dim. The default value is 0.5.
+     - speed: The animation speed of the dimming (in seconds). The default value is 0.5.
+  */
+  public func dim(_ color: UIColor = .black, alpha: CGFloat = 0.5, speed: TimeInterval = 0.5) {
     guard let mainDimView = createDimView(UIScreen.main.bounds, color: color, alpha: alpha) else { return }
 
     if let navigationController =  navigationController {
@@ -37,13 +62,28 @@ public extension Dimmable where Self: UIViewController {
       tabBarController?.tabBar.addSubview(tabBarDimView)
     }
 
-    UIView.animate(withDuration: speed, animations: {
+    UIView.animate(withDuration: speed) {
       mainDimView.alpha = alpha
       tabBarDimView?.alpha = alpha
-    })
+    }
   }
 
-  public func undim(_ alpha: CGFloat = 0, speed: Double = 0.5, completion: @escaping () -> Void = {}) {
+  /**
+   Undims the view controller that it is called on. This method has no effect if the view controller
+   has not been dimmed with `dim()` yet.
+
+   - warning:
+     Do not call this method unless `dim()` has been called first and the view controller has not
+     been undimmed already. Calling this method when the view controller is not dimmed may cause
+     issues with the view hierarchy.
+
+   - parameters:
+     - speed: The animation speed of the undimming (in seconds). The default value is 0.5.
+     - completion: The completion handler that is called after the undimming is complete. Use this
+       parameter to execute any cleanup or setup code that should be executed immediately after the
+       view controller becomes visible again.
+   */
+  public func undim(speed: TimeInterval = 0.5, completion: @escaping () -> () = {}) {
     UIView.animate(withDuration: speed, animations: {
       self.tabBarController?.tabBar.subviews.last?.alpha = 0
 
@@ -67,4 +107,5 @@ public extension Dimmable where Self: UIViewController {
       completion()
     })
   }
+
 }

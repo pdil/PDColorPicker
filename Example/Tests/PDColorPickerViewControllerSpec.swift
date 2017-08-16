@@ -3,7 +3,7 @@
 //  PDColorPicker_Example
 //
 //  Created by Paolo Di Lorenzo on 8/13/17.
-//  Copyright © 2017 CocoaPods. All rights reserved.
+//  Copyright © 2017 Paolo Di Lorenzo. All rights reserved.
 //
 
 import Quick
@@ -46,7 +46,7 @@ class PDColorPickerViewControllerSpec: QuickSpec {
           var selectedColor: PDColor?
 
           let startColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
-          let colorPickerVC = PDColorPickerViewController(current: startColor) {
+          let colorPickerVC = PDColorPickerViewController(initialColor: startColor) {
             selectedColor = $0
           }
 

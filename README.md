@@ -16,12 +16,32 @@
 
 ## 💻 Installation
 
+#### Cocoapods
+
 PDColorPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "PDColorPicker"
+pod 'PDColorPicker'
 ```
+
+It should be added to the app's target so that it looks something like this:
+
+```ruby
+use_frameworks!
+
+target 'MyAppTarget' do
+  pod 'PDColorPicker'
+
+  # other pods...
+end
+```
+
+#### Manually (not recommended)
+
+* Download the `.swift` files inside [PDColorPicker/Classes](https://github.com/pdil/PDColorPicker/tree/master/PDColorPicker/Classes) and add them to your project.
+* Add the files to the appropriate target(s) within the project.
+* Use the `PDColorPicker` classes as you normally would.
 
 ## 📝 Usage
 
@@ -35,14 +55,19 @@ class MyViewController: UIViewController, Dimmable {
   
     func presentColorPicker() {
         // 2.
-        let colorPickerVC = PDColorPickerViewController(current: .blue, tintColor: .black) {
+        let colorPickerVC = PDColorPickerViewController(initialColor: .blue, tintColor: .black) {
             [weak self] newColor in
 
+            // 6.
+            self?.undim()
+
             guard let color = newColor else {
-                print("User tapped cancel")
+                print("The user tapped cancel, no color was selected.")
             }
 
-            print("A new color was selected! RGB: \(color.red), \(color.green), \(color.blue)")
+            let rgb = color.rgba
+
+            print("A new color was selected! RGB: \(rgb.r), \(rgb.g), \(rgb.b)")
          }
   
          // 3.
@@ -63,6 +88,7 @@ class MyViewController: UIViewController, Dimmable {
 3. Implement the `Dimmable` protocol and dim the presenting view controller (optional but highly recommended).
 4. Present the color picker as a modal view controller.
 5. Use the color picker to select a color. When **Save** or **Cancel** is tapped, the completion handler specified in the initializer will automatically provide the new color. If the user taps cancel, `nil` is returned.
+6. Be sure to undim the view once the completion handler is called.
 
 #### Bonus
 

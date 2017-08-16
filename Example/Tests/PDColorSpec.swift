@@ -3,7 +3,7 @@
 //  PDColorPicker
 //
 //  Created by Paolo Di Lorenzo on 8/11/17.
-//  Copyright © 2017 CocoaPods. All rights reserved.
+//  Copyright © 2017 Paolo Di Lorenzo. All rights reserved.
 //
 
 import Quick

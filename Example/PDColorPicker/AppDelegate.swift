@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  PDColorPicker
 //
-//  Created by dilorenzopl@gmail.com on 08/08/2017.
-//  Copyright (c) 2017 dilorenzopl@gmail.com. All rights reserved.
+//  Created by Paolo Di Lorenzo on 8/8/2017.
+//  Copyright © 2017 Paolo Di Lorenzo. All rights reserved.
 //
 
 import UIKit

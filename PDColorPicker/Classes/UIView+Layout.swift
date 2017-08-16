@@ -84,14 +84,14 @@ extension UIView {
   }
 
   func anchorCenterHorizontally(in view: UIView? = nil) {
-    guard let view = view ?? superview else { return }
+    guard let view = view ?? superview else { superviewError() }
 
     translatesAutoresizingMaskIntoConstraints = false
     centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
   }
 
   func anchorCenterVertically(in view: UIView? = nil) {
-    guard let view = view ?? superview else { return }
+    guard let view = view ?? superview else { superviewError() }
 
     translatesAutoresizingMaskIntoConstraints = false
     centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true

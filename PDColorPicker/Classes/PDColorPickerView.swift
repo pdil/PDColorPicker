@@ -135,7 +135,7 @@ class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
 
   @objc func colorDragged(_ recognizer: UIPanGestureRecognizer) {
     let pos = recognizer.location(in: self)
-    let comps = colorComponenentsAtPosition(pos)
+    let comps = colorComponents(at: pos)
     let sliderCenter = constrainPosition(pos, toBounds: bounds)
 
     delegate?.colorChanged(to: comps)
@@ -200,7 +200,7 @@ class PDColorPickerView: UIView, UIGestureRecognizerDelegate {
     })
   }
 
-  func colorComponenentsAtPosition(_ point: CGPoint) -> PDColor {
+  func colorComponents(at point: CGPoint) -> PDColor {
     let s = min(max(bounds.width - point.x, 0) / bounds.width, 1)
     let b = min(max(bounds.height - point.y, 0) / bounds.height, 1)
 
