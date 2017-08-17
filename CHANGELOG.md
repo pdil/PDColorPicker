@@ -1,7 +1,17 @@
 
 # 0.1.0.9000
 
+### New Features
+* Implement drag-and-drop support for iOS 11
+* Create drag-and-drop example
 *
+
+### Bug Fixes
+*
+
+### Other Improvements
+* Switch to MIT license
+* 
 
 # 0.1.0
 
