@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:PDColorReceiverExample/PDColorReceiverExample.xcodeproj">
+      location = "group:PDColorReceiverExample.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:PDColorPicker.xcodeproj">
+      location = "group:PDColorPickerExample.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
