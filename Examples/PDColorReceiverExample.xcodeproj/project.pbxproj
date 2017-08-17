@@ -11,15 +11,19 @@
 		5231B1511F452B7200A5E3B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231B1501F452B7200A5E3B1 /* ViewController.swift */; };
 		5231B1561F452B7200A5E3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5231B1551F452B7200A5E3B1 /* Assets.xcassets */; };
 		52468F4A1F45456A0056ED5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52468F481F45456A0056ED5D /* LaunchScreen.storyboard */; };
+		935B146BC8241B78498814C7 /* Pods_PDColorReceiverExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9160414BB1A1284A21AC7696 /* Pods_PDColorReceiverExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49B248CCCA8884F3AA8D830D /* Pods-PDColorReceiverExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDColorReceiverExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PDColorReceiverExample/Pods-PDColorReceiverExample.debug.xcconfig"; sourceTree = "<group>"; };
 		5231B14B1F452B7200A5E3B1 /* PDColorReceiverExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDColorReceiverExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5231B14E1F452B7200A5E3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5231B1501F452B7200A5E3B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5231B1551F452B7200A5E3B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5231B15A1F452B7300A5E3B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52468F491F45456A0056ED5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PDColorReceiverExample/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		9160414BB1A1284A21AC7696 /* Pods_PDColorReceiverExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDColorReceiverExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A36293F547877D2F71B12D0F /* Pods-PDColorReceiverExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDColorReceiverExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-PDColorReceiverExample/Pods-PDColorReceiverExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935B146BC8241B78498814C7 /* Pods_PDColorReceiverExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CC7BBAD57E7F21D88559129 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49B248CCCA8884F3AA8D830D /* Pods-PDColorReceiverExample.debug.xcconfig */,
+				A36293F547877D2F71B12D0F /* Pods-PDColorReceiverExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5231B1421F452B7200A5E3B1 = {
 			isa = PBXGroup;
 			children = (
 				5231B14D1F452B7200A5E3B1 /* PDColorReceiverExample */,
 				5231B14C1F452B7200A5E3B1 /* Products */,
+				0CC7BBAD57E7F21D88559129 /* Pods */,
+				F672F320188CB0C09C1D813D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +85,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F672F320188CB0C09C1D813D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9160414BB1A1284A21AC7696 /* Pods_PDColorReceiverExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5231B15D1F452B7300A5E3B1 /* Build configuration list for PBXNativeTarget "PDColorReceiverExample" */;
 			buildPhases = (
+				DC694C4B3E89C82B67309C36 /* [CP] Check Pods Manifest.lock */,
 				5231B1471F452B7200A5E3B1 /* Sources */,
 				5231B1481F452B7200A5E3B1 /* Frameworks */,
 				5231B1491F452B7200A5E3B1 /* Resources */,
+				FC87C049B47BE8C63928682E /* [CP] Embed Pods Frameworks */,
+				B0103776DA7F2CD35E76E32B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0103776DA7F2CD35E76E32B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PDColorReceiverExample/Pods-PDColorReceiverExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC694C4B3E89C82B67309C36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PDColorReceiverExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC87C049B47BE8C63928682E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PDColorReceiverExample/Pods-PDColorReceiverExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PDColorPicker/PDColorPicker.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PDColorPicker.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PDColorReceiverExample/Pods-PDColorReceiverExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5231B1471F452B7200A5E3B1 /* Sources */ = {
@@ -268,6 +349,7 @@
 		};
 		5231B15E1F452B7300A5E3B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49B248CCCA8884F3AA8D830D /* Pods-PDColorReceiverExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UNCTHE43HQ;
@@ -276,12 +358,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.paolo.PDColorReceiverExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		5231B15F1F452B7300A5E3B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A36293F547877D2F71B12D0F /* Pods-PDColorReceiverExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UNCTHE43HQ;
@@ -290,7 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.paolo.PDColorReceiverExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
