@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_PDColorPicker_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_PDColorPicker_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_PDColorReceiverExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_PDColorReceiverExampleVersionString[];
 

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_PDColorPicker_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_PDColorPicker_TestsVersionString[];
+FOUNDATION_EXPORT double Pods_PDColorPickerExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_PDColorPickerExampleVersionString[];
 

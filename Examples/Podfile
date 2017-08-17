@@ -1,16 +1,28 @@
-use_frameworks!
-
-project 'PDColorPickerExample.xcodeproj'
-
+workspace 'PDColorPicker.xcworkspace'
 platform :ios, '9.0'
 
-target 'PDColorPicker_Example' do
-  pod 'PDColorPicker', :path => '../'
+use_frameworks!
 
-  target 'PDColorPicker_Tests' do
+def shared_pods
+  pod 'PDColorPicker', :path => '../'
+end
+
+project 'PDColorPickerExample.xcodeproj'
+project 'PDColorReceiverExample.xcodeproj'
+
+target 'PDColorPickerExample' do
+  project 'PDColorPickerExample.xcodeproj'
+  shared_pods
+
+  target 'PDColorPickerTests' do
     inherit! :search_paths
 
     pod 'Quick'
     pod 'Nimble', :inhibit_warnings => true
   end
+end
+
+target 'PDColorReceiverExample' do
+  project 'PDColorReceiverExample.xcodeproj'
+  shared_pods
 end
