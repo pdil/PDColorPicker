@@ -52,9 +52,9 @@
 		5231B14D1F452B7200A5E3B1 /* PDColorReceiverExample */ = {
 			isa = PBXGroup;
 			children = (
+				5231B1551F452B7200A5E3B1 /* Assets.xcassets */,
 				5231B14E1F452B7200A5E3B1 /* AppDelegate.swift */,
 				5231B1501F452B7200A5E3B1 /* ViewController.swift */,
-				5231B1551F452B7200A5E3B1 /* Assets.xcassets */,
 				5231B1571F452B7200A5E3B1 /* LaunchScreen.storyboard */,
 				5231B15A1F452B7300A5E3B1 /* Info.plist */,
 			);
