@@ -122,7 +122,7 @@ open class PDColorPickerViewController: UIViewController {
   // MARK: - Initializer
 
   public init(initialColor: UIColor = .red, tintColor: UIColor = .blue, completion: @escaping (PDColor?) -> () = { _ in }) {
-    self.currentColor = PDColor(fromColor: initialColor)
+    self.currentColor = PDColor(color: initialColor)
     self.tintColor = tintColor
     self.completion = completion
 

@@ -50,7 +50,7 @@ public struct PDColor {
 
    - parameter color: The `UIColor` to be used to initialize the `PDColor`.
   */
-  public init(fromColor color: UIColor) {
+  public init(color: UIColor) {
     var h: CGFloat = 0
     var s: CGFloat = 0
     var b: CGFloat = 0
@@ -81,7 +81,7 @@ public struct PDColor {
        let color = PDColor(fromString: "0.5,0.75,0.33")
        ```
    */
-  public init?(fromString string: String) {
+  public init?(string: String) {
     let components = string.components(separatedBy: ",")
 
     if components.count >= 3 {
