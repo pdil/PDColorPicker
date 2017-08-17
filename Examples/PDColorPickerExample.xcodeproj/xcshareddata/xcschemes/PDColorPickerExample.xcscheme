@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "PDColorPicker_Example.app"
-               BlueprintName = "PDColorPicker_Example"
+               BuildableName = "PDColorPickerExample.app"
+               BlueprintName = "PDColorPickerExample"
                ReferencedContainer = "container:PDColorPickerExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "525ACFA11F3EB5D40027FAA9"
-               BuildableName = "PDColorPicker_Tests.xctest"
-               BlueprintName = "PDColorPicker_Tests"
+               BuildableName = "PDColorPickerTests.xctest"
+               BlueprintName = "PDColorPickerTests"
                ReferencedContainer = "container:PDColorPickerExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "525ACFA11F3EB5D40027FAA9"
-               BuildableName = "PDColorPicker_Tests.xctest"
-               BlueprintName = "PDColorPicker_Tests"
+               BuildableName = "PDColorPickerTests.xctest"
+               BlueprintName = "PDColorPickerTests"
                ReferencedContainer = "container:PDColorPickerExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -58,8 +58,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "PDColorPicker_Example.app"
-            BlueprintName = "PDColorPicker_Example"
+            BuildableName = "PDColorPickerExample.app"
+            BlueprintName = "PDColorPickerExample"
             ReferencedContainer = "container:PDColorPickerExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -81,8 +81,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "PDColorPicker_Example.app"
-            BlueprintName = "PDColorPicker_Example"
+            BuildableName = "PDColorPickerExample.app"
+            BlueprintName = "PDColorPickerExample"
             ReferencedContainer = "container:PDColorPickerExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -100,8 +100,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "PDColorPicker_Example.app"
-            BlueprintName = "PDColorPicker_Example"
+            BuildableName = "PDColorPickerExample.app"
+            BlueprintName = "PDColorPickerExample"
             ReferencedContainer = "container:PDColorPickerExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
