@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PDColorReceiverExample/PDColorReceiverExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PDColorPicker.xcodeproj">
    </FileRef>
    <FileRef

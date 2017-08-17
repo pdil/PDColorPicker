@@ -35,6 +35,7 @@
 		3430C7971B610DDC374B2E63 /* Pods-PDColorPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDColorPicker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PDColorPicker_Example/Pods-PDColorPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		367F08CB0AB055783ED8BC6D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		40109194995B216C6675B342 /* PDColorPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PDColorPicker.podspec; path = ../PDColorPicker.podspec; sourceTree = "<group>"; };
+		5231B1401F4507B900A5E3B1 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		524213031F41269B00E3F961 /* PDColorPickerGesturesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDColorPickerGesturesSpec.swift; sourceTree = "<group>"; };
 		525ACFA21F3EB5D40027FAA9 /* PDColorPicker_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDColorPicker_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		527582F01F3EB08600B170A1 /* PDColorPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDColorPicker.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PDColorPicker-fpfjdneecqtzppflxrgflszvkapw/Build/Products/Debug-iphonesimulator/PDColorPicker/PDColorPicker.framework"; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 			children = (
 				40109194995B216C6675B342 /* PDColorPicker.podspec */,
 				F111FEE45CB0A2BC07676769 /* README.md */,
+				5231B1401F4507B900A5E3B1 /* CHANGELOG.md */,
 				367F08CB0AB055783ED8BC6D /* LICENSE */,
 			);
 			name = "Podspec Metadata";
@@ -239,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "PDColorPicker" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "PDColorPickerExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -527,7 +529,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -575,7 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -599,6 +601,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -616,6 +619,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -631,7 +635,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "PDColorPicker" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "PDColorPickerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,

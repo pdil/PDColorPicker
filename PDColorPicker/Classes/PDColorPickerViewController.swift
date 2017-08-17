@@ -74,6 +74,8 @@ open class PDColorPickerViewController: UIViewController {
     label.layer.borderWidth = 1.0
     label.layer.borderColor = UIColor.black.cgColor
 
+    label.isUserInteractionEnabled = true
+
     return label
   }()
 
@@ -167,6 +169,11 @@ open class PDColorPickerViewController: UIViewController {
     view.addConstraint(
       NSLayoutConstraint(item: selectedColorLabel, attribute: .height, relatedBy: .equal, toItem: saveButton, attribute: .height, multiplier: 1, constant: 0)
     )
+
+    if #available(iOS 11.0, *) {
+      let colorDragInteraction = UIDragInteraction(delegate: self)
+      selectedColorLabel.addInteraction(colorDragInteraction)
+    }
   }
 
   var constraintsHaveBeenSet = false
@@ -241,5 +248,13 @@ extension PDColorPickerViewController: PDColorPickerSliderDelegate {
 
     colorChanged(to: currentColor)
   }
-  
+}
+
+// MARK: - UIDragInteractionDelegate
+@available(iOS 11.0, *)
+extension PDColorPickerViewController: UIDragInteractionDelegate {
+  public func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
+    let colorItemProvider = NSItemProvider(object: currentColor.uiColor)
+    return [UIDragItem(itemProvider: colorItemProvider)]
+  }
 }
