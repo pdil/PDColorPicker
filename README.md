@@ -1,18 +1,24 @@
-<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/logo.png" width="100%">
+![Logo](https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/logo.png)
+
+----
 
 [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker)
 [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker)
 
-[![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
 [![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
-🎨 **PDColorPicker** is an open source iOS library that lets developers include a color picker in their apps, allowing users to easily select colors in a variety of formats. The interface fonts and display colors are also customizable. Drag and drop is also supported for apps targeting iPads on iOS 11 or later. This library is open for collaboration with the community so anyone is invited to submit issues or pull requests.
 
-<a href="https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen" target="_blank"><img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/example.gif" width=300></a>
+
+🎨 **PDColorPicker** is an open source iOS library that lets developers include a color picker in their apps, allowing users to easily select colors in a variety of formats. This library is open for collaboration with the community so anyone is invited to submit issues or pull requests.
+
+[<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/example.gif" width=300>](https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen)
+
+----
 
 ## 📄 Requirements
 
@@ -40,7 +46,7 @@ This line should be added to the app's target so that it looks something like th
 use_frameworks!
 
 target 'TARGET_NAME' do
-  pod 'PDColorPicker', ~> 0.1.0
+  pod 'PDColorPicker', '~> 0.1.0'
 
   # other pods...
 end
@@ -149,7 +155,7 @@ override var preferredStatusBarStyle: UIStatusBarStyle {
 
 ## 📲 Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory.
+To run the example project, clone the repo, and run `pod install` from the Examples directory.
 
 ## 🙋‍♂️ Author
 
