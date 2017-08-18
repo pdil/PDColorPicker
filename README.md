@@ -16,7 +16,7 @@
 
 🎨 **PDColorPicker** is an open source iOS library that lets developers include a color picker in their apps, allowing users to easily select colors in a variety of formats. This library is open for collaboration with the community so anyone is invited to submit issues or pull requests.
 
-<video width="240" src="example.mov" autoplay loop></video>
+<video width="240" src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/example.mov" autoplay loop></video>
 
 ----
 
