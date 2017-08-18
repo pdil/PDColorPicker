@@ -171,10 +171,6 @@ let receivedColor = PDColor(color: droppedColor)
 print(receivedColor.hex)
 ```
 
-## 📲 Example
-
-To run the example project, clone the repo, and run `pod install` from the Examples directory.
-
 ## 🙋‍♂️ Author
 
 Paolo Di Lorenzo [[Email](mailto:paolo@dilorenzo.pl?subject=PDColorPicker)] [[Website](https://dilorenzo.pl)] [[Twitter](https://twitter.com/dilorenzopl)] [[StackOverflow](https://stackoverflow.com/users/7264964/paolo)]
