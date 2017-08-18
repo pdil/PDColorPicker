@@ -46,7 +46,7 @@ This line should be added to the app's target so that it looks something like th
 use_frameworks!
 
 target 'TARGET_NAME' do
-  pod 'PDColorPicker', '~> 0.1.0'
+  pod 'PDColorPicker', '~> 0.2.0'
 
   # other pods...
 end
@@ -72,7 +72,7 @@ $ brew install carthage
 Create a Cartfile inside the root project directory with the following line (or add this line if you already have a Cartfile):
 
 ```
-github "pdil/PDColorPicker" ~> 0.1.0
+github "pdil/PDColorPicker" ~> 0.2.0
 ```
 
 * From the root project directory, run `carthage update` from the Terminal to build the framework.
