@@ -1,4 +1,4 @@
-# 🎨 PDColorPicker
+<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/logo.png" width="100%">
 
 [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker)
 [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker)
@@ -8,11 +8,13 @@
 [![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
+🎨 **PDColorPicker** is an open source iOS library that allows developers to include a color picker in their apps, allowing users to easily select colors in a variety of formats.
+
 <a href="https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen" target="_blank"><img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/example.gif" width=300></a>
 
 ## 📄 Requirements
 
-* iOS 9.0 or later
+* iOS 9.0 or later (iOS 11.0+ for drag and drop)
 * Xcode 9.0 or later
 * Swift 3.2 or later
 

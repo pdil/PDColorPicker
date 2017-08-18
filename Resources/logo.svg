@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="468"
+   height="90"
+   viewBox="0 0 468 90"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/Users/paolo/Desktop/iOS/PDColorPicker/Resources/logo.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5522">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5524" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop5526" />
+    </linearGradient>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask4298">
+      <rect
+         style="fill:#00ffff;fill-opacity:1"
+         id="rect4300"
+         width="11.428572"
+         height="90.35714"
+         x="65"
+         y="962.36218" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask4320">
+      <rect
+         style="fill:#00ffff;fill-opacity:1"
+         id="rect4322"
+         width="8.9285717"
+         height="81.428574"
+         x="65"
+         y="965.57648" />
+    </mask>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5508">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5510"
+         y="1032.0311"
+         x="-16.667545"
+         style="font-style:normal;font-weight:normal;font-size:39.59698105px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:69.29471588px;font-family:Nunito;-inkscape-font-specification:'Nunito Bold'"
+           y="1032.0311"
+           x="-16.667545"
+           id="tspan5512"
+           sodipodi:role="line"><tspan
+   id="tspan5514"
+   style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Nunito;-inkscape-font-specification:'Nunito Ultra-Bold'">PD</tspan>ColorPicker</tspan></text>
+    </clipPath>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5522"
+       id="radialGradient5528"
+       cx="234"
+       cy="1007.3622"
+       fx="234"
+       fy="1007.3622"
+       r="230.81692"
+       gradientTransform="matrix(1,0,0,0.1095785,0,896.97697)"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5558"
+       x="-0.033287355"
+       width="1.0665747"
+       y="-0.30377633"
+       height="1.6075527">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="6.4027372"
+         id="feGaussianBlur5560" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="207.08488"
+     inkscape:cy="38.243275"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     height="90px"
+     inkscape:window-width="1276"
+     inkscape:window-height="755"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-962.3622)">
+    <text
+       sodipodi:linespacing="125%"
+       id="text5516"
+       y="1032.0311"
+       x="-1.6675453"
+       style="font-style:normal;font-weight:normal;font-size:39.59698105px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:url(#radialGradient5528);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5558);"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:69.29471588px;font-family:Nunito;-inkscape-font-specification:'Nunito Bold';stroke:url(#radialGradient5528);fill:#666666;"
+         y="1032.0311"
+         x="-1.6675453"
+         id="tspan5518"
+         sodipodi:role="line"><tspan
+   id="tspan5520"
+   style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Nunito;-inkscape-font-specification:'Nunito Ultra-Bold';stroke:url(#radialGradient5528);fill:#666666;">PD</tspan>ColorPicker</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:39.59698105px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-1.6675453"
+       y="1032.0311"
+       id="text4136"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4138"
+         x="-1.6675453"
+         y="1032.0311"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:69.29471588px;font-family:Nunito;-inkscape-font-specification:'Nunito Bold'"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Nunito;-inkscape-font-specification:'Nunito Ultra-Bold'"
+   id="tspan4340">PD</tspan>ColorPicker</tspan></text>
+    <g
+       id="g5490"
+       transform="translate(15,0)"
+       clip-path="url(#clipPath5508)">
+      <g
+         id="g4344">
+        <rect
+           style="fill:#ff0000;fill-opacity:1"
+           id="rect4326"
+           width="7.7952762"
+           height="119.69941"
+           x="931.17688"
+           y="1285.4897"
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)" />
+        <rect
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)"
+           y="1285.4916"
+           x="938.6781"
+           height="119.69941"
+           width="7.7952762"
+           id="rect4328"
+           style="fill:#ff7f00;fill-opacity:1" />
+        <rect
+           style="fill:#ffff00;fill-opacity:1"
+           id="rect4330"
+           width="7.7952762"
+           height="119.69941"
+           x="946.17688"
+           y="1285.4897"
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)" />
+        <rect
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)"
+           y="1285.4897"
+           x="953.67682"
+           height="119.69941"
+           width="7.7952762"
+           id="rect4332"
+           style="fill:#00ff00;fill-opacity:1" />
+        <rect
+           style="fill:#0000ff;fill-opacity:1"
+           id="rect4334"
+           width="7.7952762"
+           height="119.69941"
+           x="961.17688"
+           y="1285.4897"
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)" />
+        <rect
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)"
+           y="1285.4897"
+           x="968.67682"
+           height="119.69941"
+           width="7.7952762"
+           id="rect4336"
+           style="fill:#4b0082;fill-opacity:1" />
+        <rect
+           style="fill:#9400d3;fill-opacity:1"
+           id="rect4338"
+           width="7.7952762"
+           height="119.69941"
+           x="976.17688"
+           y="1285.4897"
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)" />
+      </g>
+      <g
+         transform="matrix(-0.99999624,0,0,-1,79.616028,2015.0815)"
+         id="g5178">
+        <rect
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)"
+           y="1285.4897"
+           x="931.17688"
+           height="119.69941"
+           width="7.7952762"
+           id="rect5180"
+           style="fill:#ff0000;fill-opacity:1" />
+        <rect
+           style="fill:#ff7f00;fill-opacity:1"
+           id="rect5182"
+           width="7.7952762"
+           height="119.69941"
+           x="938.6781"
+           y="1285.4916"
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)" />
+        <rect
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)"
+           y="1285.4897"
+           x="946.17688"
+           height="119.69941"
+           width="7.7952762"
+           id="rect5184"
+           style="fill:#ffff00;fill-opacity:1" />
+        <rect
+           style="fill:#00ff00;fill-opacity:1"
+           id="rect5186"
+           width="7.7952762"
+           height="119.69941"
+           x="953.67682"
+           y="1285.4897"
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)" />
+        <rect
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)"
+           y="1285.4897"
+           x="961.17688"
+           height="119.69941"
+           width="7.7952762"
+           id="rect5188"
+           style="fill:#0000ff;fill-opacity:1" />
+        <rect
+           style="fill:#4b0082;fill-opacity:1"
+           id="rect5190"
+           width="7.7952762"
+           height="119.69941"
+           x="968.67682"
+           y="1285.4897"
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)" />
+        <rect
+           transform="matrix(1,0,-0.66267011,0.74891143,0,0)"
+           y="1285.4897"
+           x="976.17688"
+           height="119.69941"
+           width="7.7952762"
+           id="rect5192"
+           style="fill:#9400d3;fill-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>
