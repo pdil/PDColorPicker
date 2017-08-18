@@ -4,11 +4,13 @@
 [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker)
 
 [![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 [![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 [![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
-🎨 **PDColorPicker** is an open source iOS library that allows developers to include a color picker in their apps, allowing users to easily select colors in a variety of formats.
+🎨 **PDColorPicker** is an open source iOS library that lets developers include a color picker in their apps, allowing users to easily select colors in a variety of formats. The interface fonts and display colors are also customizable. Drag and drop is also supported for apps targeting iPads on iOS 11 or later. This library is open for collaboration with the community so anyone is invited to submit issues or pull requests.
 
 <a href="https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen" target="_blank"><img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/example.gif" width=300></a>
 
@@ -22,24 +24,55 @@
 
 #### Cocoapods
 
-PDColorPicker is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+PDColorPicker is available through [CocoaPods](http://cocoapods.org).
+
+If you have not done so already, run `pod setup` from the root directory of your application.
+
+To install `PDColorPicker`, simply add the following line to the Podfile:
 
 ```ruby
 pod 'PDColorPicker'
 ```
 
-It should be added to the app's target so that it looks something like this:
+This line should be added to the app's target so that it looks something like this:
 
 ```ruby
 use_frameworks!
 
-target 'MyAppTarget' do
-  pod 'PDColorPicker'
+target 'TARGET_NAME' do
+  pod 'PDColorPicker', ~> 0.1.0
 
   # other pods...
 end
 ```
+
+Next run `pod install` from the Terminal while inside the directory that contains the Podfile.
+
+Open the newly created `.xcworkspace` file and build the project to make `PDColorPicker` available.
+
+**Note**: Be sure to always work inside the `.xcworkspace` file and **not** the `.xcodeproj` file, otherwise Xcode will not be able to locate the dependencies and `PDColorPicker` will not be accessible.
+
+#### Carthage
+
+PDColorPicker is available through [Carthage](https://github.com/carthage/carthage).
+
+If you haven't installed Carthage yet, use Homebrew to install it:
+
+```
+$ brew update
+$ brew install carthage
+```
+
+Create a Cartfile inside the root project directory with the following line (or add this line if you already have a Cartfile):
+
+```
+github "pdil/PDColorPicker" ~> 0.1.0
+```
+
+* From the root project directory, run `carthage update` from the Terminal to build the framework.
+* Select the project in the Project Navigator in Xcode (blue icon).
+* Open the "General" tab on the top bar.
+* Drag `PDColorPicker.framework` from the `Carthage/build` folder into the "Embedded Binaries" section.
 
 #### Manual (not recommended)
 
