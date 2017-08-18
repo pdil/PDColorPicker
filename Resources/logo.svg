@@ -10,16 +10,16 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="468"
-   height="90"
-   viewBox="0 0 468 90"
+   width="492.36697"
+   height="81.318283"
+   viewBox="0 0 492.36697 81.318283"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="logo.svg"
    inkscape:export-filename="/Users/paolo/Desktop/iOS/PDColorPicker/Resources/logo.png"
-   inkscape:export-xdpi="180"
-   inkscape:export-ydpi="180">
+   inkscape:export-xdpi="400"
+   inkscape:export-ydpi="400">
   <defs
      id="defs4">
     <linearGradient
@@ -82,17 +82,17 @@
        cy="1007.3622"
        fx="234"
        fy="1007.3622"
-       r="230.81692"
-       gradientTransform="matrix(1,0,0,0.1095785,0,896.97697)"
+       r="230.81693"
+       gradientTransform="matrix(1,0,0,0.1095785,26.00001,896.97702)"
        gradientUnits="userSpaceOnUse" />
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter5558"
-       x="-0.033287355"
+       x="-0.033287354"
        width="1.0665747"
-       y="-0.30377633"
-       height="1.6075527">
+       y="-0.30377632"
+       height="1.6075526">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="6.4027372"
@@ -106,9 +106,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="207.08488"
-     inkscape:cy="38.243275"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="118.45795"
+     inkscape:cy="-41.07555"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -118,7 +118,11 @@
      inkscape:window-height="755"
      inkscape:window-x="0"
      inkscape:window-y="1"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -135,38 +139,38 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-962.3622)">
+     transform="translate(-13.81652,-966.70307)">
     <text
        sodipodi:linespacing="125%"
        id="text5516"
        y="1032.0311"
-       x="-1.6675453"
-       style="font-style:normal;font-weight:normal;font-size:39.59698105px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:url(#radialGradient5528);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5558);"
+       x="24.332464"
+       style="font-style:normal;font-weight:normal;font-size:39.59698105px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:url(#radialGradient5528);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5558)"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:69.29471588px;font-family:Nunito;-inkscape-font-specification:'Nunito Bold';stroke:url(#radialGradient5528);fill:#666666;"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:69.29471588px;font-family:Nunito;-inkscape-font-specification:'Nunito Bold';fill:#666666;stroke:url(#radialGradient5528)"
          y="1032.0311"
-         x="-1.6675453"
+         x="24.332464"
          id="tspan5518"
          sodipodi:role="line"><tspan
    id="tspan5520"
-   style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Nunito;-inkscape-font-specification:'Nunito Ultra-Bold';stroke:url(#radialGradient5528);fill:#666666;">PD</tspan>ColorPicker</tspan></text>
+   style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Nunito;-inkscape-font-specification:'Nunito Ultra-Bold';fill:#666666;stroke:url(#radialGradient5528)">PD</tspan>ColorPicker</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:39.59698105px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-1.6675453"
+       x="24.332462"
        y="1032.0311"
        id="text4136"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4138"
-         x="-1.6675453"
+         x="24.332462"
          y="1032.0311"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:69.29471588px;font-family:Nunito;-inkscape-font-specification:'Nunito Bold'"><tspan
    style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Nunito;-inkscape-font-specification:'Nunito Ultra-Bold'"
    id="tspan4340">PD</tspan>ColorPicker</tspan></text>
     <g
        id="g5490"
-       transform="translate(15,0)"
+       transform="translate(41.000008,2.4645997e-6)"
        clip-path="url(#clipPath5508)">
       <g
          id="g4344">
