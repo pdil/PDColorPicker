@@ -31,10 +31,12 @@ class ViewController: UIViewController {
 
     view.backgroundColor = .white
 
-    let dropInteraction = UIDropInteraction(delegate: self)
-    view.addInteraction(dropInteraction)
-
     setupViews()
+
+    if #available(iOS 11.0, *) {
+      let dropInteraction = UIDropInteraction(delegate: self)
+      view.addInteraction(dropInteraction)
+    }
   }
 
   private func setupViews() {
@@ -48,6 +50,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - UIDropInteraction
+@available(iOS 11.0, *)
 extension ViewController: UIDropInteractionDelegate {
   func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
     return session.canLoadObjects(ofClass: UIColor.self)
