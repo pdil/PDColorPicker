@@ -1,17 +1,17 @@
 
-# 0.1.0.9000
+# 0.2.0
 
 ### New Features
-* Implement drag-and-drop support for iOS 11
-* Create drag-and-drop example
-*
-
-### Bug Fixes
-*
+* Implemented drag-and-drop support for iOS 11
+* Created drag-and-drop example
 
 ### Other Improvements
-* Switch to MIT license
-* 
+* Renamed `PDColor` initializer parameters
+  - `PDColor(fromString:)` becomes `PDColor(string:)`
+  - `PDColor(fromColor:)` becomes `PDColor(color:)`
+* Switched to MIT license
+* Added code of conduct
+* Improved documentation
 
 # 0.1.0
 
