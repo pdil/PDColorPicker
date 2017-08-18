@@ -16,7 +16,7 @@
 
 🎨 **PDColorPicker** is an open source iOS library that lets developers include a color picker in their apps, allowing users to easily select colors in a variety of formats. This library is open for collaboration with the community so anyone is invited to submit issues or pull requests.
 
-[<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/example.gif" width=300>](https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen) [<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/drag-drop-demo-trimmed.gif" width=600>](https://giphy.com/gifs/6TNPgdZ3W4qMo/fullscreen)
+[<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/example.gif" width=300>](https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen)
 
 ----
 
@@ -151,6 +151,24 @@ Next, in the _presenting_ view controller, include the following code:
 override var preferredStatusBarStyle: UIStatusBarStyle {
   return .lightContent
 }
+```
+
+## Drag and Drop (requires iOS 11.0+)
+
+Drag and drop is also supported in projects that target iOS 11.0 or later.
+
+[<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/drag-drop-demo-trimmed.gif" width=600>](https://giphy.com/gifs/6TNPgdZ3W4qMo/fullscreen)
+
+See `PDColorReceiverExample` for an example on how to consume a color that is dragged into your app. The drag and drop implementation of `PDColorPicker` exposes a basic `UIColor` so that it can be read by apps that don't necessarily import `PDColorPicker`. 
+
+Of course, if the destination app imports `PDColorPicker`, it will have access to the convenient `PDColor` class which it could instantiate with the received `UIColor`:
+
+```swift
+// droppedColor is a UIColor that arrived via a drag and drop interaction
+let receivedColor = PDColor(color: droppedColor)
+
+// make use of PDColor features
+print(receivedColor.hex)
 ```
 
 ## 📲 Example
