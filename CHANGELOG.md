@@ -1,5 +1,9 @@
+# PDColorPicker v0.2.0.9000
 
-# 0.2.0
+* 
+
+# [PDColorPicker v0.2.0](https://github.com/pdil/PDColorPicker/releases/tag/0.2.0)
+Released on Friday, August 18, 2017.
 
 ### New Features
 * Implemented drag-and-drop support for iOS 11
@@ -13,7 +17,8 @@
 * Added code of conduct
 * Improved documentation
 
-# 0.1.0
+# [PDColorPicker v0.1.0](https://github.com/pdil/PDColorPicker/releases/tag/0.1.0)
+Released on Wednesday, August 16, 2017.
 
 First release.
 
