@@ -153,7 +153,7 @@ override var preferredStatusBarStyle: UIStatusBarStyle {
 }
 ```
 
-## Drag and Drop (requires iOS 11.0+)
+## 📲 Drag and Drop
 
 Drag and drop is also supported in projects that target iOS 11.0 or later.
 
