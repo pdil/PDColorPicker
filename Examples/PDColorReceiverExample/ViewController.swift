@@ -45,6 +45,7 @@ class ViewController: UIViewController {
 
     colorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     colorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    colorLabel.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, multiplier: 0.9, constant: 0).isActive = true
   }
 
 }
