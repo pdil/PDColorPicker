@@ -22,7 +22,7 @@
 
 ## 💻 Installation
 
-#### Cocoapods
+### Cocoapods
 
 PDColorPicker is available through [CocoaPods](http://cocoapods.org).
 
@@ -52,7 +52,7 @@ Open the newly created `.xcworkspace` file and build the project to make `PDColo
 
 **Note**: Be sure to always work inside the `.xcworkspace` file and **not** the `.xcodeproj` file, otherwise Xcode will not be able to locate the dependencies and `PDColorPicker` will not be accessible.
 
-#### Carthage
+### Carthage
 
 PDColorPicker is available through [Carthage](https://github.com/carthage/carthage).
 
@@ -74,7 +74,7 @@ github "pdil/PDColorPicker" ~> 0.1.0
 * Open the "General" tab on the top bar.
 * Drag `PDColorPicker.framework` from the `Carthage/build` folder into the "Embedded Binaries" section.
 
-#### Manual (not recommended)
+### Manual (not recommended)
 
 * Download the `.swift` files inside [PDColorPicker/Classes](https://github.com/pdil/PDColorPicker/tree/master/PDColorPicker/Classes) and add them to your project.
 * Add the files to the appropriate target(s) within the project.
@@ -130,7 +130,7 @@ class MyViewController: UIViewController, Dimmable {
 6. Use the color picker to select a color. When **Save** or **Cancel** is tapped, the completion handler specified in the initializer will automatically provide the new color. If the user taps cancel, `nil` is returned.
 7. Be sure to undim the view once the completion handler is called.
 
-#### Bonus
+### Bonus
 
 To achieve the white status bar while the presenting view controller is dimmed, set `UIViewControllerBasedStatusBarAppearance` to `YES` in your `Info.plist`.
 
