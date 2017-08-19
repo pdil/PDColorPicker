@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.screenshots      = 'https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/colorpicker.jpg', 'https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/demo.gif', https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/drag-drop-demo.gif'
 
   s.homepage         = 'https://dilorenzo.pl/PDColorPicker'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Paolo Di Lorenzo' => 'paolo@dilorenzo.pl' }
   s.source           = { :git => 'https://github.com/pdil/PDColorPicker.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/dilorenzopl'

@@ -101,7 +101,6 @@ import UIKit
 import PDColorPicker  // 1.
 
 class MyViewController: UIViewController, Dimmable {
-  
     // ...
   
     func presentColorPicker() {
@@ -112,16 +111,13 @@ class MyViewController: UIViewController, Dimmable {
         colorPickerVC.completion = {
             [weak self] newColor in
 
-            // 7.
-            self?.undim()
+            self?.undim() // 7.
 
             guard let color = newColor else {
                 print("The user tapped cancel, no color was selected.")
             }
 
-            let rgb = color.rgba
-
-            print("A new color was selected! RGB: \(rgb.r), \(rgb.g), \(rgb.b)")
+            print("A new color was selected! HSBA: \(String(describing: color))")
          }
   
          // 4.
@@ -132,7 +128,7 @@ class MyViewController: UIViewController, Dimmable {
     }
   
     // ...
-  
+
 }
 ```
 
