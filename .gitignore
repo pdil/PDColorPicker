@@ -1,5 +1,6 @@
-# Ignore .mov video files - commit .gif instead
+# Ignore media source video files
 *.mov
+*.svg
 
 # ===========
 
