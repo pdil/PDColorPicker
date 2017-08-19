@@ -13,13 +13,11 @@
 [![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
 
-
 🎨 **PDColorPicker** is an open source iOS library that lets developers include a color picker in their apps, allowing users to easily select colors in a variety of formats. This library is open for collaboration with the community so anyone is invited to submit issues or pull requests.
 
 | Demo              | Table of Contents |
 | ----------------- | ----------------- |
-| [<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/example.gif" width=300>](https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen) | <ol><li>[Requirements](README.md#-requirements)</li><li>[Installation](README.md#-installation)<ol><li>[CocoaPods](README.md#cocoapods)</li><li>[Carthage](README.md#carthage)</li><li>[Manual](README.md#manual-not-recommended)</li></ol></li><li>[Usage](README.md#-usage)</li><li>[Drag and Drop](README.md#-drag-and-drop)</li><li>[Author](README.md#%EF%B8%8F-author)</li><li>[License](README.md#%EF%B8%8F-license)</li></ol> |
-
+| [<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/demo.gif" width=300>](https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen) | <ol><li>[Requirements](README.md#-requirements)</li><li>[Installation](README.md#-installation)<ol><li>[CocoaPods](README.md#cocoapods)</li><li>[Carthage](README.md#carthage)</li><li>[Manual](README.md#manual-not-recommended)</li></ol></li><li>[Usage](README.md#-usage)</li><li>[Drag and Drop](README.md#-drag-and-drop)</li><li>[Author](README.md#%EF%B8%8F-author)</li><li>[License](README.md#%EF%B8%8F-license)</li></ol> |
 
 ----
 
@@ -33,14 +31,14 @@
 
 ### Cocoapods
 
-PDColorPicker is available through [CocoaPods](http://cocoapods.org).
+**PDColorPicker** is available through [CocoaPods](http://cocoapods.org).
 
 If you have not done so already, run `pod setup` from the root directory of your application.
 
 To install `PDColorPicker`, simply add the following line to the Podfile:
 
 ```ruby
-pod 'PDColorPicker'
+pod 'PDColorPicker', '~> 0.2.0'
 ```
 
 This line should be added to the app's target so that it looks something like this:
@@ -63,7 +61,7 @@ Open the newly created `.xcworkspace` file and build the project to make `PDColo
 
 ### Carthage
 
-PDColorPicker is available through [Carthage](https://github.com/carthage/carthage).
+**PDColorPicker** is available through [Carthage](https://github.com/carthage/carthage).
 
 If you haven't installed Carthage yet, use Homebrew to install it:
 
@@ -78,8 +76,15 @@ Create a Cartfile inside the root project directory with the following line (or 
 github "pdil/PDColorPicker" ~> 0.2.0
 ```
 
-* From the root project directory, run `carthage update` from the Terminal to build the framework.
-* Select the project in the Project Navigator in Xcode (blue icon).
+Build the Carthage frameworks by running the following command in the Terminal from the root project directory:
+
+```
+$ carthage update
+```
+
+This will build the framework inside the `Carthage/build` folder.
+
+* In Xcode, select your project in the Project Navigator in Xcode (blue icon).
 * Open the "General" tab on the top bar.
 * Drag `PDColorPicker.framework` from the `Carthage/build` folder into the "Embedded Binaries" section.
 
@@ -87,7 +92,7 @@ github "pdil/PDColorPicker" ~> 0.2.0
 
 * Download the `.swift` files inside [PDColorPicker/Classes](https://github.com/pdil/PDColorPicker/tree/master/PDColorPicker/Classes) and add them to your project.
 * Add the files to the appropriate target(s) within the project.
-* Use the `PDColorPicker` classes as you normally would.
+* Import `PDColorPicker` as you normally would.
 
 ## 📝 Usage
 
@@ -167,11 +172,14 @@ See `PDColorReceiverExample` for an example on how to consume a color that is dr
 Of course, if the destination app imports `PDColorPicker`, it will have access to the convenient `PDColor` class which it could instantiate with the received `UIColor`:
 
 ```swift
-// droppedColor is a UIColor that arrived via a drag and drop interaction
-let receivedColor = PDColor(color: droppedColor)
+func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
+  session.loadObjects(ofClass: UIColor.self) {
+    guard let color = $0.first as? UIColor else { return }
 
-// make use of PDColor features
-print(receivedColor.hex)
+    let pdColor = PDColor(color: color)
+    print(pdColor.hex)
+  }
+}
 ```
 
 ## 🙋‍♂️ Author
