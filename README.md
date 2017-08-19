@@ -31,7 +31,7 @@
 
 ### Cocoapods
 
-**PDColorPicker** is available through [CocoaPods](http://cocoapods.org).
+`PDColorPicker` is available through [CocoaPods](http://cocoapods.org).
 
 If you have not done so already, run `pod setup` from the root directory of your application.
 
@@ -53,7 +53,11 @@ target 'TARGET_NAME' do
 end
 ```
 
-Next run `pod install` from the Terminal while inside the directory that contains the Podfile.
+Build the CocoaPods frameworks by running the following command in the Terminal from the root project directory:
+
+```
+$ pod install
+```
 
 Open the newly created `.xcworkspace` file and build the project to make `PDColorPicker` available.
 
@@ -61,7 +65,7 @@ Open the newly created `.xcworkspace` file and build the project to make `PDColo
 
 ### Carthage
 
-**PDColorPicker** is available through [Carthage](https://github.com/carthage/carthage).
+`PDColorPicker` is available through [Carthage](https://github.com/carthage/carthage).
 
 If you haven't installed Carthage yet, use Homebrew to install it:
 
@@ -84,7 +88,9 @@ $ carthage update
 
 This will build the framework inside the `Carthage/build` folder.
 
-* In Xcode, select your project in the Project Navigator in Xcode (blue icon).
+Lastly, add the framework to your project:
+
+* In Xcode, select the project in the Project Navigator in Xcode (blue icon).
 * Open the "General" tab on the top bar.
 * Drag `PDColorPicker.framework` from the `Carthage/build` folder into the "Embedded Binaries" section.
 
