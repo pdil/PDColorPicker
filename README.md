@@ -165,7 +165,7 @@ override var preferredStatusBarStyle: UIStatusBarStyle {
 
 Drag and drop is also supported in projects that target iOS 11.0 or later.
 
-[<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/drag-drop-demo-trimmed.gif" width=600>](https://giphy.com/gifs/6TNPgdZ3W4qMo/fullscreen)
+[<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/drag-drop-demo.gif" width=600>](https://giphy.com/gifs/6TNPgdZ3W4qMo/fullscreen)
 
 See `PDColorReceiverExample` for an example on how to consume a color that is dragged into your app. The drag and drop implementation of `PDColorPicker` exposes a basic `UIColor` so that it can be read by apps that don't necessarily import `PDColorPicker`. 
 
