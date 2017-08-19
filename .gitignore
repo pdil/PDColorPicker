@@ -1,4 +1,7 @@
-Resources/*.mov
+# Ignore .mov video files - commit .gif instead
+*.mov
+
+# ===========
 
 # OS X
 .DS_Store
