@@ -66,7 +66,7 @@ public extension PDColor {
   /// Convenient representation of the white `PDColor`.
   ///
   /// Its values are `(0.0, 0.0, 1.0, 1.0)` in the HSBA representation.
-  public static let white = PDColor(h: 0, s: 1, b: 1, a: 1)
+  public static let white = PDColor(h: 0, s: 0, b: 1, a: 1)
   
   /// Convenient representation of the black `PDColor`.
   ///
