@@ -1,6 +1,19 @@
 # PDColorPicker v0.2.0.9000
 
-* 
+* Add the following named colors to `PDColor` for convenience:
+  * `PDColor.red`
+  * `PDColor.orange`
+  * `PDColor.yellow`
+  * `PDColor.yellowGreen`
+  * `PDColor.green`
+  * `PDColor.cyan`
+  * `PDColor.azure`
+  * `PDColor.blue`
+  * `PDColor.purple`
+  * `PDColor.magenta`
+  * `PDColor.pink`
+  * `PDColor.white`
+  * `PDColor.black`
 
 # [PDColorPicker v0.2.0](https://github.com/pdil/PDColorPicker/releases/tag/0.2.0)
 Released on Friday, August 18, 2017.
