@@ -7,7 +7,7 @@
 //
 
 
-extension PDColor {
+public extension PDColor {
   /// Convenient representation of the red `PDColor`.
   ///
   /// Its values are `(1.0, 1.0, 1.0, 1.0)` in the HSBA representation.

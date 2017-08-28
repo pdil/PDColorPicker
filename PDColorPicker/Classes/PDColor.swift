@@ -160,7 +160,7 @@ public struct PDColor {
 }
 
 // MARK: - CustomStringConveritble
-extension PDColor: CustomStringConvertible {
+public extension PDColor: CustomStringConvertible {
   public var description: String {
     return "\(h),\(s),\(b),\(a)"
   }
