@@ -2,10 +2,11 @@
 
 ----
 
-[![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
-[![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
+[![Version](https://img.shields.io/github/release/pdil/PDColorPicker/all.svg)](https://github.com/pdil/PDColorPicker/releases)
+[![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg)](http://cocoapods.org/pods/PDColorPicker)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)](https://cocoapods.org/pods/PDColorPicker)
+[![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg)](http://cocoapods.org/pods/PDColorPicker)
 
 
 | Branch | CI | Coverage |
