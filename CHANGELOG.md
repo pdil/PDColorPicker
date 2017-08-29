@@ -1,3 +1,7 @@
+# PDColorPicker v0.3.0.9000
+
+*
+
 # [PDColorPicker v0.3.0](https://github.com/pdil/PDColorPicker/releases/tag/0.3.0)
 Released Monday, August 28, 2017.
 
