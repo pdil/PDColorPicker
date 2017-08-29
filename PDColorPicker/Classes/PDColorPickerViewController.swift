@@ -176,30 +176,28 @@ open class PDColorPickerViewController: UIViewController {
     }
   }
 
-  var constraintsHaveBeenSet = false
   override open func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
-    if !constraintsHaveBeenSet {
-      guard let pvc = presentingViewController else { return }
+    guard let pvc = presentingViewController else { return }
 
-      view.frame.size.width = pvc.view.frame.width * 0.9
-      view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
+    let aspectRatio: CGFloat = 0.7
 
-      view.frame.origin.y = pvc.view.frame.height * 0.2
-      view.frame.size.height = pvc.view.frame.height * 0.9 - view.frame.origin.y
+    view.frame.size.height = pvc.view.frame.height * 0.7
+    view.frame.size.width = min(view.frame.height * aspectRatio, pvc.view.frame.width * 0.9)
 
-      view.layoutIfNeeded()
+    view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
+    view.frame.origin.y = pvc.view.frame.height / 2 - view.frame.height / 2
 
-      selectedColorLabel.layer.cornerRadius = selectedColorLabel.frame.height / 2
+    view.layoutIfNeeded()
 
-      colorPickerView.currentColor = currentColor
-      colorSliderView.currentHue = currentColor.h
-      colorPickerView.fadeSlider(.in)
+    selectedColorLabel.layer.cornerRadius = selectedColorLabel.frame.height / 2
 
-      colorChanged(to: currentColor)
-      constraintsHaveBeenSet = true
-    }
+    colorPickerView.currentColor = currentColor
+    colorSliderView.currentHue = currentColor.h
+    colorPickerView.fadeSlider(.in)
+
+    colorChanged(to: currentColor)
   }
 
   // MARK: - Button Targets

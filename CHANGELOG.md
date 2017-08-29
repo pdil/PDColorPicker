@@ -1,5 +1,8 @@
 # PDColorPicker v0.2.0.9000
 
+### Improvements
+* Fixed sizing of `PDColorPickerViewController` for different screen sizes (e.g. iPad in multiple split-view sizes).
+* Improve framework documentation
 * 
 
 # [PDColorPicker v0.2.0](https://github.com/pdil/PDColorPicker/releases/tag/0.2.0)

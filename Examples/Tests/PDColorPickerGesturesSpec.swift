@@ -24,7 +24,7 @@ class PDColorPickerGesturesSpec: QuickSpec {
       window.makeKeyAndVisible()
     }
 
-    describe("PDColorPickerView gestures") {
+    describe("PDColorPickerGridView gestures") {
       var recognizer: PDPanGestureRecognizer!
       var colorPickerVC: PDColorPickerViewController!
       var colorPickerView: PDColorPickerGridView!
@@ -51,7 +51,7 @@ class PDColorPickerGesturesSpec: QuickSpec {
 
       context("when the gesture begins") {
         it("sets the correct saturation and brightness values") {
-          recognizer.performTouch(location: colorPickerView.center, translation: nil, state: .began)
+          recognizer.performTouch(location: colorPickerView.center, translation: nil, state: .changed)
 
           expect(colorPickerVC.currentColor.s).to(equal(0.5))
           expect(colorPickerVC.currentColor.b).to(equal(0.5))
@@ -130,7 +130,7 @@ class PDColorPickerGesturesSpec: QuickSpec {
           let expectedHue = x / (colorSliderView.bounds.width - 2 * colorSliderView.borderWidth)
 
           expect(colorPickerVC.currentColor.h).toEventually(equal(expectedHue))
-          expect(colorSliderView.sliderX.constant).toEventually(equal(x))
+          expect(colorSliderView.sliderX.constant).toEventually(equal(x - colorSliderView.borderWidth))
         }
       }
     }
