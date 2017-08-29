@@ -2,10 +2,16 @@
 
 ----
 
-[![CI Status](http://img.shields.io/travis/pdil/PDColorPicker.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker)
-[![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker)
+[![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
+[![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
-[![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker) [![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
+
+| Branch | CI | Coverage |
+| ------ | -- | -------- |
+| `master` (v0.3.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker) |
+| `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker) |
 
 
 🎨 **PDColorPicker** is an open source iOS library that lets developers include a color picker in their apps, allowing users to easily select colors in a variety of formats. This library is open for collaboration with the community so anyone is invited to submit issues or pull requests.
