@@ -51,6 +51,7 @@ class PDColorPickerGesturesSpec: QuickSpec {
 
       context("when the gesture begins") {
         it("sets the correct saturation and brightness values") {
+          recognizer.performTouch(location: .zero, translation: nil, state: .began)
           recognizer.performTouch(location: colorPickerView.center, translation: nil, state: .changed)
 
           expect(colorPickerVC.currentColor.s).to(equal(0.5))
@@ -63,6 +64,8 @@ class PDColorPickerGesturesSpec: QuickSpec {
           // move 1/4 of the view width to the right
           let x = colorPickerView.bounds.width / 4
           let location = CGPoint(x: x, y: 0)
+
+          recognizer.performTouch(location: .zero, translation: nil, state: .began)
           recognizer.performTouch(location: location, translation: nil, state: .changed)
 
           expect(colorPickerVC.currentColor.s).toEventually(equal(0.75))
@@ -75,12 +78,13 @@ class PDColorPickerGesturesSpec: QuickSpec {
           // move 1/4 of the view height downward
           let y = colorPickerView.bounds.height / 4
           let offset = colorPickerView.visibilityOffset
-
           let location = CGPoint(x: 0, y: y)
+
+          recognizer.performTouch(location: .zero, translation: nil, state: .began)
           recognizer.performTouch(location: location, translation: nil, state: .changed)
 
-          expect(colorPickerVC.currentColor.b).toEventually(equal(0.75))
-          expect(colorPickerView.sliderCircleY.constant).toEventually(equal(y - offset))
+          expect(colorPickerVC.currentColor.b).to(equal(0.75))
+          expect(colorPickerView.sliderCircleY.constant).to(equal(y - offset))
         }
       }
 
@@ -89,8 +93,8 @@ class PDColorPickerGesturesSpec: QuickSpec {
           recognizer.performTouch(location: colorPickerView.center, translation: nil, state: .began)
           recognizer.performTouch(location: nil, translation: nil, state: .ended)
 
-          expect(colorPickerView.sliderCircle.transform).toEventually(equal(CGAffineTransform.identity))
-          expect(colorPickerView.sliderCircle.backgroundColor).toEventually(equal(UIColor.white.withAlphaComponent(0.6)))
+          expect(colorPickerView.sliderCircle.transform).to(equal(CGAffineTransform.identity))
+          expect(colorPickerView.sliderCircle.backgroundColor).to(equal(UIColor.white.withAlphaComponent(0.6)))
         }
       }
     }
@@ -125,12 +129,14 @@ class PDColorPickerGesturesSpec: QuickSpec {
           // move 1/4 of the view width to the right
           let x = colorSliderView.bounds.width / 4
           let location = CGPoint(x: x, y: 0)
+
+          recognizer.performTouch(location: .zero, translation: nil, state: .began)
           recognizer.performTouch(location: location, translation: nil, state: .changed)
 
           let expectedHue = x / (colorSliderView.bounds.width - 2 * colorSliderView.borderWidth)
 
-          expect(colorPickerVC.currentColor.h).toEventually(equal(expectedHue))
-          expect(colorSliderView.sliderX.constant).toEventually(equal(x - colorSliderView.borderWidth))
+          expect(colorPickerVC.currentColor.h).to(equal(expectedHue))
+          expect(colorSliderView.sliderX.constant).to(equal(x))
         }
       }
     }
