@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PDColorPicker'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'A simple, fast color picker for iOS apps.'
 
   s.description      = <<-DESC
@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
                         to suit the appearance of any app in which PDColorPicker is used.'
                        DESC
 
-  s.screenshots      = 'https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/colorpicker.jpg', 'https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/demo.gif', https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/drag-drop-demo.gif'
+  s.screenshots      = 'https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/demo.gif', 'https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/drag-drop-demo.gif'
 
-  s.homepage         = 'https://dilorenzo.pl/PDColorPicker'
+  s.homepage         = 'https://dilorenzo.pl/pkgs/PDColorPicker'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author           = { 'Paolo Di Lorenzo' => 'paolo@dilorenzo.pl' }
   s.source           = { :git => 'https://github.com/pdil/PDColorPicker.git', :tag => s.version.to_s }

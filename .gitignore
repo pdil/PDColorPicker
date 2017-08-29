@@ -1,4 +1,4 @@
-# Ignore media source video files
+# Ignore media source files
 *.mov
 *.svg
 

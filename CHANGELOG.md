@@ -1,7 +1,7 @@
-# PDColorPicker v0.2.0.9000
+# [PDColorPicker v0.3.0](https://github.com/pdil/PDColorPicker/releases/tag/0.3.0)
 
 ### Improvements
-* Fixed sizing of `PDColorPickerViewController` for different screen sizes (e.g. iPad in multiple split-view sizes).
+* Fixed sizing of `PDColorPickerViewController` for different screen sizes (e.g. iPad in multiple split-view sizes)
 * Add the following named colors to `PDColor` for convenience:
   * `PDColor.red`
   * `PDColor.orange`

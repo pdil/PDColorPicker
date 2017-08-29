@@ -38,7 +38,7 @@ If you have not done so already, run `pod setup` from the root directory of your
 To install `PDColorPicker`, simply add the following line to the Podfile:
 
 ```ruby
-pod 'PDColorPicker', '~> 0.2.0'
+pod 'PDColorPicker', '~> 0.3.0'
 ```
 
 This line should be added to the app's target so that it looks something like this:
@@ -47,7 +47,7 @@ This line should be added to the app's target so that it looks something like th
 use_frameworks!
 
 target 'TARGET_NAME' do
-  pod 'PDColorPicker', '~> 0.2.0'
+  pod 'PDColorPicker', '~> 0.3.0'
 
   # other pods...
 end
@@ -77,7 +77,7 @@ $ brew install carthage
 Create a Cartfile inside the root project directory with the following line (or add this line if you already have a Cartfile):
 
 ```
-github "pdil/PDColorPicker" ~> 0.2.0
+github "pdil/PDColorPicker" ~> 0.3.0
 ```
 
 Build the Carthage frameworks by running the following command in the Terminal from the root project directory:
