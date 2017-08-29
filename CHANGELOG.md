@@ -16,7 +16,7 @@
   * `PDColor.pink`
   * `PDColor.white`
   * `PDColor.black`
-* Improve framework documentation
+* Improved framework documentation
 
 # [PDColorPicker v0.2.0](https://github.com/pdil/PDColorPicker/releases/tag/0.2.0)
 Released on Friday, August 18, 2017.
