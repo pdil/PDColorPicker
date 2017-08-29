@@ -3,7 +3,7 @@ Released Monday, August 28, 2017.
 
 ### Improvements
 * Fixed sizing of `PDColorPickerViewController` for different screen sizes (e.g. iPad in multiple split-view sizes)
-* Add the following named colors to `PDColor` for convenience:
+* Added the following named colors to `PDColor` for convenience:
   * `PDColor.red`
   * `PDColor.orange`
   * `PDColor.yellow`
