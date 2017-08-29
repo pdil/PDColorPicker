@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'PDColorPicker'
   s.version          = '0.2.0'
-  s.summary          = 'A clean, fast color picker for iOS apps.'
+  s.summary          = 'A simple, fast color picker for iOS apps.'
 
   s.description      = <<-DESC
                         PDColorPicker provides the ability to easily add a color selection interface to an iOS app.

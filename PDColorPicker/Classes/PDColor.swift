@@ -14,6 +14,7 @@ import UIKit
 /// Convenience methods for accessing the `UIColor`, RGB, and hexadecimal
 ///   representations are also provided.
 public struct PDColor {
+  
   /// Hue -- values are constrained to be between 0.0 and 1.0.
   public var h: CGFloat
   /// Saturation -- values are constrained to be between 0.0 and 1.0.
@@ -22,11 +23,6 @@ public struct PDColor {
   public var b: CGFloat
   /// Alpha -- values are constrained to be between 0.0 and 1.0.
   public var a: CGFloat
-
-  /// Convenient representation of the default red `PDColor`.
-  ///
-  /// It's values are `(1.0, 1.0, 1.0, 1.0)` in the HSBA representation.
-  public static let red = PDColor(h: 1, s: 1, b: 1, a: 1)
 
   /// The `UIColor` representation of the `PDColor`.
   public var uiColor: UIColor {
@@ -164,7 +160,6 @@ public struct PDColor {
 }
 
 // MARK: - CustomStringConveritble
-
 extension PDColor: CustomStringConvertible {
   public var description: String {
     return "\(h),\(s),\(b),\(a)"
