@@ -6,7 +6,6 @@
 //  Copyright © 2017 Paolo Di Lorenzo. All rights reserved.
 //
 
-
 public extension PDColor {
   /// Convenient representation of the red `PDColor`.
   ///

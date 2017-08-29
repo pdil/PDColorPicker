@@ -52,6 +52,7 @@
 		499EF2F53452B6D2A5B7AA77EE20E826 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAB9B5CEB03F1CE85FCE7B33364D29B /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4CDACD8A5A6CFB688838AA988E7D1E43 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F956D6F10DD5ACB44DA7326DF223994E /* Nimble-dummy.m */; };
 		50698F14E7847E18B907E9373FBF4C21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE147446A1225BA68EA82615B1436CC1 /* Foundation.framework */; };
+		523467441F5503A7007E67AF /* PDColor+NamedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523467421F550357007E67AF /* PDColor+NamedColors.swift */; };
 		531C54B1C10BA0F17A2B7D81D02BD390 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 34846C455011015A12443767FE9C8900 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54BF22CC5B8EE1556B1910114B0A344B /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E706E52B11F6391EF382C5176D8E6A /* AssertionDispatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		56F1AA62A4A63EA055876472F53C543C /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE54CE0BC26AA3AA0FF6D0AC91964E4 /* DSL+Wait.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -218,6 +219,7 @@
 		50B191F5B7327A78C73D4BCA4EC19D44 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/QuickObjectiveC/World.h; sourceTree = "<group>"; };
 		5103A17457C918C63BBDBE81282814D1 /* Pods-PDColorReceiverExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PDColorReceiverExample-frameworks.sh"; sourceTree = "<group>"; };
 		515C13F015332298AFF412E6A291A0E7 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/Nimble/Utils/Async.swift; sourceTree = "<group>"; };
+		523467421F550357007E67AF /* PDColor+NamedColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PDColor+NamedColors.swift"; path = "PDColorPicker/Classes/PDColor+NamedColors.swift"; sourceTree = "<group>"; };
 		523B4574012380AE54088BE3511D6210 /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
 		5494CBC0E913BC11A74908ABAD1D837F /* CwlCatchException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchException.swift; path = Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException.swift; sourceTree = "<group>"; };
 		55D5FDD1E8E8DB36F159D3876CE74136 /* Pods-PDColorPickerExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PDColorPickerExample-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 				7E8C488D1534A478565C2740398327A1 /* Dimmable.swift */,
 				6801EAB49C384CF907C8D28A9B3816CD /* PDBouncyButton.swift */,
 				F679CD68FEB30192F75BE239ABA37F64 /* PDColor.swift */,
+				523467421F550357007E67AF /* PDColor+NamedColors.swift */,
 				0217206807B95A4D0A5882CD973293D3 /* PDColorPickerGridView.swift */,
 				3900AE3A98F1F9E873C7E122D1BFC9FD /* PDColorPickerSliderView.swift */,
 				9F16FDF88F7C19D2A468781EB78EA7E2 /* PDColorPickerViewController.swift */,
@@ -1001,6 +1004,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523467441F5503A7007E67AF /* PDColor+NamedColors.swift in Sources */,
 				3CC1C62B9C0DB91EBFEC420CBB3B4876 /* Dimmable.swift in Sources */,
 				7053B4ED4D87AE892E215ADC29248528 /* PDBouncyButton.swift in Sources */,
 				82E28B9F3D3211CB7319AA5634AA1ADB /* PDColor.swift in Sources */,
