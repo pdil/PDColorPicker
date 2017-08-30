@@ -57,26 +57,6 @@ extension UIView {
     if height > 0 {
       heightAnchor.constraint(equalToConstant: height).isActive = true
     }
-
-    if let heightMult = heightMult, let superview = superview {
-      anchorHeightProportionally(to: superview.heightAnchor, multiplier: heightMult)
-    }
-
-    if let widthMult = widthMult, let superview = superview {
-      anchorWidthProportionally(to: superview.widthAnchor, multiplier: widthMult)
-    }
-  }
-  
-  // MARK: - Proportional Sizing
-  
-  func anchorHeightProportionally(to dimension: NSLayoutDimension, multiplier: CGFloat) {
-    translatesAutoresizingMaskIntoConstraints = false
-    heightAnchor.constraint(equalTo: dimension, multiplier: multiplier).isActive = true
-  }
-
-  func anchorWidthProportionally(to dimension: NSLayoutDimension, multiplier: CGFloat) {
-    translatesAutoresizingMaskIntoConstraints = false
-    widthAnchor.constraint(equalTo: dimension, multiplier: multiplier).isActive = true
   }
 
 }
