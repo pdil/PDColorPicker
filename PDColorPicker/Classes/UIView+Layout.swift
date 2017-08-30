@@ -11,8 +11,14 @@ import UIKit
 @available(iOS 9.0, *)
 extension UIView {
 
-  // MARK: - Main Anchoring
-
+  /// Provides a convenient method for anchoring the view to other
+  /// anchors within its view hierarchy. All parameters have default values of
+  /// `nil` or `0` so only the desired constraints need be provided.
+  ///
+  /// This method should only be called *after* the view has been added to its superview.
+  ///
+  /// This method sets `translatesAutoresizingMaskIntoConstraints` to `false` on
+  /// the view.
   func anchor(left: NSLayoutXAxisAnchor? = nil,
               right: NSLayoutXAxisAnchor? = nil,
               top: NSLayoutYAxisAnchor? = nil,
@@ -59,82 +65,6 @@ extension UIView {
     if let widthMult = widthMult, let superview = superview {
       anchorWidthProportionally(to: superview.widthAnchor, multiplier: widthMult)
     }
-  }
-
-  // MARK: - Centering
-
-  func anchorCenter(in view: UIView? = nil, padding: CGFloat? = nil) {
-    guard let centerView = view ?? superview else { superviewError() }
-    
-    if let padding = padding {
-      anchor(
-        left: centerView.leftAnchor,
-        right: centerView.rightAnchor,
-        top: centerView.topAnchor,
-        bottom: centerView.bottomAnchor,
-        leftConstant: padding,
-        rightConstant: padding,
-        topConstant: padding,
-        bottomConstant: padding
-      )
-    }
-
-    anchorCenterHorizontally(in: view)
-    anchorCenterVertically(in: view)
-  }
-
-  func anchorCenterHorizontally(in view: UIView? = nil) {
-    guard let view = view ?? superview else { superviewError() }
-
-    translatesAutoresizingMaskIntoConstraints = false
-    centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-  }
-
-  func anchorCenterVertically(in view: UIView? = nil) {
-    guard let view = view ?? superview else { superviewError() }
-
-    translatesAutoresizingMaskIntoConstraints = false
-    centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-  }
-
-  // MARK: - Proportional Sizing
-
-  func anchorHeightProportionally(to dimension: NSLayoutDimension, multiplier: CGFloat) {
-    translatesAutoresizingMaskIntoConstraints = false
-    heightAnchor.constraint(equalTo: dimension, multiplier: multiplier).isActive = true
-  }
-
-  func anchorWidthProportionally(to dimension: NSLayoutDimension, multiplier: CGFloat) {
-    translatesAutoresizingMaskIntoConstraints = false
-    widthAnchor.constraint(equalTo: dimension, multiplier: multiplier).isActive = true
-  }
-
-  // MARK: - Fill
-
-  func anchorFill(in view: UIView? = nil, padding: CGFloat = 0) {
-    guard let fillView = view ?? superview else { superviewError() }
-
-    let paddingInsets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-    anchorFill(in: fillView, paddingInsets: paddingInsets)
-  }
-
-  func anchorFill(in view: UIView, paddingInsets: UIEdgeInsets) {
-    anchor(
-      left: view.leftAnchor,
-      right: view.rightAnchor,
-      top: view.topAnchor,
-      bottom: view.bottomAnchor,
-      leftConstant: paddingInsets.left,
-      rightConstant: paddingInsets.right,
-      topConstant: paddingInsets.top,
-      bottomConstant: paddingInsets.bottom
-    )
-  }
-
-  // MARK: - Error Handling
-
-  private func superviewError() -> Never {
-    fatalError("Could not find a superview for view:\n\n\(self.debugDescription)\n\nThe view may not have been added to a superview")
   }
 
 }
