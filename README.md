@@ -19,7 +19,7 @@
 
 | Demo              | Table of Contents |
 | ----------------- | ----------------- |
-| [<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/demo.gif" width=300>](https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen) | [📄 Requirements](README.md#-requirements)<br>[💻 Installation](README.md#-installation)<ul><li>[CocoaPods](README.md#cocoapods)</li><li>[Carthage](README.md#carthage)</li><li>[Manual](README.md#manual-not-recommended)</li></ul>[📝 Usage](README.md#-usage)<br>[📲 Drag and Drop](README.md#-drag-and-drop)<br>[🎨 **PDColorPicker** in other apps](README.md#-pdcolorpicker-in-other-apps)<br>[🙋‍♂️ Author](README.md#%EF%B8%8F-author)<br>[⚖️ License](README.md#%EF%B8%8F-license) |
+| [<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/demo.gif" width=300>](https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen) | [📄 Requirements](README.md#-requirements)<br><br>[💻 Installation](README.md#-installation)<br><ul><li>[CocoaPods](README.md#cocoapods)</li><li>[Carthage](README.md#carthage)</li><li>[Manual](README.md#manual-not-recommended)</li></ul>[📝 Usage](README.md#-usage)<br><br>[📲 Drag and Drop](README.md#-drag-and-drop)<br><br>[🎨 **PDColorPicker** in other apps](README.md#-pdcolorpicker-in-other-apps)<br><br>[🙋‍♂️ Author](README.md#%EF%B8%8F-author)<br><br>[⚖️ License](README.md#%EF%B8%8F-license) |
 
 ----
 
