@@ -11,7 +11,7 @@
 
 | Branch | CI | Coverage |
 | ------ | -- | -------- |
-| `master` (v0.3.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
+| `master` (v0.4.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
 | `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker/branches) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/develop) |
 
 
@@ -40,7 +40,7 @@ If you have not done so already, run `pod setup` from the root directory of your
 To install `PDColorPicker`, simply add the following line to the Podfile:
 
 ```ruby
-pod 'PDColorPicker', '~> 0.3.0'
+pod 'PDColorPicker', '~> 0.4.0'
 ```
 
 This line should be added to the app's target so that it looks something like this:
@@ -49,7 +49,7 @@ This line should be added to the app's target so that it looks something like th
 use_frameworks!
 
 target 'TARGET_NAME' do
-  pod 'PDColorPicker', '~> 0.3.0'
+  pod 'PDColorPicker', '~> 0.4.0'
 
   # other pods...
 end
@@ -79,7 +79,7 @@ $ brew install carthage
 Create a Cartfile inside the root project directory with the following line (or add this line if you already have a Cartfile):
 
 ```
-github "pdil/PDColorPicker" ~> 0.3.0
+github "pdil/PDColorPicker" ~> 0.4.0
 ```
 
 Build the Carthage frameworks by running the following command in the Terminal from the root project directory:

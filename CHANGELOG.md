@@ -1,5 +1,7 @@
-# PDColorPicker v0.3.0.9000
+# [PDColorPicker v0.4.0](https://github.com/pdil/PDColorPicker/releases/tag/0.4.0)
+Released on Thursday, August 31, 2017.
 
+### Improvements
 * Removed unnecessary layout anchor functions.
 * Improved framework documentation.
 
