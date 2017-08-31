@@ -197,7 +197,7 @@ If your app is using **PDColorPicker**, [let me know](mailto:paolo@dilorenzo.pl?
 
 Paolo Di Lorenzo
 
-[![Email](https://img.shields.io/badge/email-paolo%40dilorenzo.pl-red.svg)](paolo@dilorenzo.pl)
+[![Email](https://img.shields.io/badge/email-paolo@dilorenzo.pl-red.svg)](mailto:paolo@dilorenzo.pl?subject=PDColorPicker)
 [![Website](https://img.shields.io/badge/web-dilorenzo.pl-red.svg)](https://dilorenzo.pl)
 [![Twitter](https://img.shields.io/badge/twitter-%40dilorenzopl-4099FF.svg)](https://twitter.com/dilorenzopl)
 [![Stackoverflow](https://img.shields.io/badge/stackoverflow-%40Paolo-FF9900.svg)](https://stackoverflow.com/users/7264964/paolo)
