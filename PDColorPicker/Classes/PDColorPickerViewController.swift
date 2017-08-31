@@ -117,8 +117,6 @@ open class PDColorPickerViewController: UIViewController {
     }
   }
 
-  override open var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
-
   // MARK: - Initializer
 
   public init(initialColor: UIColor = .red, tintColor: UIColor = .blue, completion: @escaping (PDColor?) -> () = { _ in }) {

@@ -2,15 +2,17 @@
 
 ----
 
-[![CI Status](http://img.shields.io/travis/pdil/PDColorPicker.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker)
-[![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker)
+[![Version](https://img.shields.io/github/release/pdil/PDColorPicker/all.svg)](https://github.com/pdil/PDColorPicker/releases)
+[![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg)](http://cocoapods.org/pods/PDColorPicker)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-4BC51D.svg)](https://cocoapods.org/pods/PDColorPicker)
+[![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg)](http://cocoapods.org/pods/PDColorPicker)
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Version](https://img.shields.io/cocoapods/v/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
 
-[![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
-[![Platform](https://img.shields.io/cocoapods/p/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
-[![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg?style=flat)](http://cocoapods.org/pods/PDColorPicker)
+| Branch | CI | Coverage |
+| ------ | -- | -------- |
+| `master` (v0.4.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
+| `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker/branches) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/develop) |
 
 
 🎨 **PDColorPicker** is an open source iOS library that lets developers include a color picker in their apps, allowing users to easily select colors in a variety of formats. This library is open for collaboration with the community so anyone is invited to submit issues or pull requests.
@@ -38,7 +40,7 @@ If you have not done so already, run `pod setup` from the root directory of your
 To install `PDColorPicker`, simply add the following line to the Podfile:
 
 ```ruby
-pod 'PDColorPicker', '~> 0.3.0'
+pod 'PDColorPicker', '~> 0.4.0'
 ```
 
 This line should be added to the app's target so that it looks something like this:
@@ -47,7 +49,7 @@ This line should be added to the app's target so that it looks something like th
 use_frameworks!
 
 target 'TARGET_NAME' do
-  pod 'PDColorPicker', '~> 0.3.0'
+  pod 'PDColorPicker', '~> 0.4.0'
 
   # other pods...
 end
@@ -77,7 +79,7 @@ $ brew install carthage
 Create a Cartfile inside the root project directory with the following line (or add this line if you already have a Cartfile):
 
 ```
-github "pdil/PDColorPicker" ~> 0.3.0
+github "pdil/PDColorPicker" ~> 0.4.0
 ```
 
 Build the Carthage frameworks by running the following command in the Terminal from the root project directory:
@@ -189,5 +191,6 @@ func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDr
 Paolo Di Lorenzo [[Email](mailto:paolo@dilorenzo.pl?subject=PDColorPicker)] [[Website](https://dilorenzo.pl)] [[Twitter](https://twitter.com/dilorenzopl)] [[StackOverflow](https://stackoverflow.com/users/7264964/paolo)]
 
 ## ⚖️ License
+[![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](https://github.com/pdil/PDColorPicker/blob/master/LICENSE)
 
 PDColorPicker is available under the MIT license. See the [LICENSE](https://github.com/pdil/PDColorPicker/blob/master/LICENSE) file for more info.
