@@ -9,8 +9,8 @@
 [![Downloads](https://img.shields.io/cocoapods/dt/PDColorPicker.svg)](http://cocoapods.org/pods/PDColorPicker)
 
 
-| Branch | CI | Coverage |
-| ------ | -- | -------- |
+| Branch | Status | Coverage |
+| ------ | ------ | -------- |
 | `master` (v0.4.1) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
 | `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker/branches) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/develop) |
 
