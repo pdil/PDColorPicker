@@ -1,4 +1,4 @@
-# PDColorPicker v0.4.0.9999
+# [PDColorPicker v0.4.1](https://github.com/pdil/PDColorPicker/releases/tag/0.4.1)
 
 ### Improvements
 * Improved framework documentation.
