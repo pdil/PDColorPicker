@@ -23,10 +23,12 @@ public extension Dimmable where Self: UIViewController {
 
   /// Convenience method that creates a view in frame `rect`,
   /// with color `color` and transparency `alpha`.
-  private func createDimView(_ rect: CGRect?, color: UIColor, alpha: CGFloat) -> UIView? {
-    guard let rect = rect else { return nil }
+  private func createDimView(in superview: UIView, color: UIColor, alpha: CGFloat) -> UIView? {
+    let dimView = UIView()
 
-    let dimView = UIView(frame: rect)
+    superview.addSubview(dimView)
+    dimView.anchorFill(view: superview)
+
     dimView.backgroundColor = color
     dimView.alpha = 0
 
@@ -48,23 +50,22 @@ public extension Dimmable where Self: UIViewController {
      - speed: The animation speed of the dimming (in seconds). The default value is 0.5.
   */
   public func dim(_ color: UIColor = .black, alpha: CGFloat = 0.5, speed: TimeInterval = 0.5) {
-    guard let mainDimView = createDimView(UIScreen.main.bounds, color: color, alpha: alpha) else { return }
+    let viewToDim: UIView
 
     if let navigationController =  navigationController {
-      navigationController.view.addSubview(mainDimView)
+      viewToDim = navigationController.view
     } else {
-      view.addSubview(mainDimView)
+      viewToDim = self.view
     }
 
-    let tabBarDimView = createDimView(tabBarController?.tabBar.bounds, color: color, alpha: alpha)
-
-    if let tabBarDimView = tabBarDimView {
-      tabBarController?.tabBar.addSubview(tabBarDimView)
+    if let dimmingView = createDimView(in: viewToDim, color: color, alpha: alpha) {
+      UIView.animate(withDuration: 0.25) { dimmingView.alpha = alpha }
     }
 
-    UIView.animate(withDuration: speed) {
-      mainDimView.alpha = alpha
-      tabBarDimView?.alpha = alpha
+    if let tabBar = tabBarController?.tabBar {
+      if let tabBarDimView = createDimView(in: tabBar, color: color, alpha: alpha) {
+        UIView.animate(withDuration: 0.25) { tabBarDimView.alpha = alpha }
+      }
     }
   }
 
