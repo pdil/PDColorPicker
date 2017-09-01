@@ -11,7 +11,7 @@
 
 | Branch | CI | Coverage |
 | ------ | -- | -------- |
-| `master` (v0.4.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
+| `master` (v0.4.1) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
 | `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker/branches) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/develop) |
 
 
@@ -19,7 +19,7 @@
 
 | Demo              | Table of Contents |
 | ----------------- | ----------------- |
-| [<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/demo.gif" width=300>](https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen) | <ol><li>[Requirements](README.md#-requirements)</li><li>[Installation](README.md#-installation)<ol><li>[CocoaPods](README.md#cocoapods)</li><li>[Carthage](README.md#carthage)</li><li>[Manual](README.md#manual-not-recommended)</li></ol></li><li>[Usage](README.md#-usage)</li><li>[Drag and Drop](README.md#-drag-and-drop)</li><li>[Author](README.md#%EF%B8%8F-author)</li><li>[License](README.md#%EF%B8%8F-license)</li></ol> |
+| [<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/demo.gif" width=300>](https://giphy.com/gifs/10ofmG3LCZMImI/fullscreen) | [📄 Requirements](README.md#-requirements)<br><br>[💻 Installation](README.md#-installation)<br><ul><li>[CocoaPods](README.md#cocoapods)</li><li>[Carthage](README.md#carthage)</li><li>[Manual](README.md#manual-not-recommended)</li></ul>[📝 Usage](README.md#-usage)<br><br>[📲 Drag and Drop](README.md#-drag-and-drop)<br><br>[🎨 **PDColorPicker** in other apps](README.md#-pdcolorpicker-in-other-apps)<br><br>[🙋‍♂️ Author](README.md#%EF%B8%8F-author)<br><br>[⚖️ License](README.md#%EF%B8%8F-license) |
 
 ----
 
@@ -40,7 +40,7 @@ If you have not done so already, run `pod setup` from the root directory of your
 To install `PDColorPicker`, simply add the following line to the Podfile:
 
 ```ruby
-pod 'PDColorPicker', '~> 0.4.0'
+pod 'PDColorPicker', '~> 0.4.1'
 ```
 
 This line should be added to the app's target so that it looks something like this:
@@ -49,7 +49,7 @@ This line should be added to the app's target so that it looks something like th
 use_frameworks!
 
 target 'TARGET_NAME' do
-  pod 'PDColorPicker', '~> 0.4.0'
+  pod 'PDColorPicker', '~> 0.4.1'
 
   # other pods...
 end
@@ -79,7 +79,7 @@ $ brew install carthage
 Create a Cartfile inside the root project directory with the following line (or add this line if you already have a Cartfile):
 
 ```
-github "pdil/PDColorPicker" ~> 0.4.0
+github "pdil/PDColorPicker" ~> 0.4.1
 ```
 
 Build the Carthage frameworks by running the following command in the Terminal from the root project directory:
@@ -186,9 +186,21 @@ func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDr
 }
 ```
 
+## 🎨 `PDColorPicker` in other apps
+Here is a list of apps that use **PDColorPicker** to let their users select colors:
+
+* None that I know of (yet) 😥
+
+If your app is using **PDColorPicker**, [let me know](mailto:paolo@dilorenzo.pl?subject=PDColorPicker) and I'll add it to this list!
+
 ## 🙋‍♂️ Author
 
-Paolo Di Lorenzo [[Email](mailto:paolo@dilorenzo.pl?subject=PDColorPicker)] [[Website](https://dilorenzo.pl)] [[Twitter](https://twitter.com/dilorenzopl)] [[StackOverflow](https://stackoverflow.com/users/7264964/paolo)]
+Paolo Di Lorenzo
+
+[![Email](https://img.shields.io/badge/email-paolo@dilorenzo.pl-red.svg)](mailto:paolo@dilorenzo.pl?subject=PDColorPicker)
+[![Website](https://img.shields.io/badge/web-dilorenzo.pl-red.svg)](https://dilorenzo.pl)
+[![Twitter](https://img.shields.io/badge/twitter-%40dilorenzopl-4099FF.svg)](https://twitter.com/dilorenzopl)
+[![Stackoverflow](https://img.shields.io/badge/stackoverflow-%40Paolo-FF9900.svg)](https://stackoverflow.com/users/7264964/paolo)
 
 ## ⚖️ License
 [![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](https://github.com/pdil/PDColorPicker/blob/master/LICENSE)

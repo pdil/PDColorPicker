@@ -82,4 +82,12 @@ extension UIView {
     }
   }
 
+  func anchorFill(view: UIView? = nil) {
+    guard let view = view ?? superview else {
+      fatalError("No view provided, and a superview didn't exist. Be sure to add the view as a subview before calling anchorFill().\n\n")
+    }
+
+    anchor(left: view.leftAnchor, right: view.rightAnchor, top: view.topAnchor, bottom: view.bottomAnchor)
+  }
+
 }
