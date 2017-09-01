@@ -71,7 +71,7 @@ class PDColorPickerViewControllerSpec: QuickSpec {
           let font = UIFont.systemFont(ofSize: 5)
           let boldFont = UIFont.boldSystemFont(ofSize: 5)
 
-          let colorPickerVC = PDColorPickerViewController() { _ in }
+          let colorPickerVC = PDColorPickerViewController()
           colorPickerVC.font = font
           colorPickerVC.boldFont = boldFont
 
@@ -85,7 +85,7 @@ class PDColorPickerViewControllerSpec: QuickSpec {
         it("appears on views correctly") {
           let tintColor = UIColor.yellow
 
-          let colorPickerVC = PDColorPickerViewController() { _ in }
+          let colorPickerVC = PDColorPickerViewController()
           colorPickerVC.tintColor = tintColor
 
           expect(colorPickerVC.saveButton.titleLabel?.textColor).to(equal(tintColor))

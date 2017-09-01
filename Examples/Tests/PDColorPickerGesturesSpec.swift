@@ -30,7 +30,7 @@ class PDColorPickerGesturesSpec: QuickSpec {
       var colorPickerView: PDColorPickerGridView!
 
       beforeEach {
-        colorPickerVC = PDColorPickerViewController(initialColor: .red) { _ in }
+        colorPickerVC = PDColorPickerViewController(initialColor: .red)
         colorPickerView = colorPickerVC.colorPickerView
         recognizer = colorPickerView.panRecognizer
 
@@ -105,7 +105,7 @@ class PDColorPickerGesturesSpec: QuickSpec {
       var colorSliderView: PDColorPickerSliderView!
 
       beforeEach {
-        colorPickerVC = PDColorPickerViewController(initialColor: .red) { _ in }
+        colorPickerVC = PDColorPickerViewController(initialColor: .red)
         colorSliderView = colorPickerVC.colorSliderView
         recognizer = colorSliderView.panRecognizer
 
