@@ -1,3 +1,11 @@
+# PDColorPicker v0.4.0.9999
+
+### Improvements
+* Improved framework documentation.
+
+### Bug Fixes
+* Fixed rotation issue with dimming view ([issue #8](https://github.com/pdil/PDColorPicker/issues/8))
+
 # [PDColorPicker v0.4.0](https://github.com/pdil/PDColorPicker/releases/tag/0.4.0)
 Released on Thursday, August 31, 2017.
 
