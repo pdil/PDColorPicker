@@ -119,7 +119,14 @@ open class PDColorPickerViewController: UIViewController {
 
   // MARK: - Initializer
 
-  public init(initialColor: UIColor = .red, tintColor: UIColor = .blue, completion: @escaping (PDColor?) -> () = { _ in }) {
+  /**
+   Creates a `PDColorPickerViewController` with an initial color, a tint color for the *Save* button, and a completion callback to handle the user response.
+
+   - parameter initialColor: The starting color that the color picker should be set to. This parameter can be any `UIColor`. The hue, saturation, and brightness values will be parsed from the given color and used to provide the starting positions of the sliders. The default value is `UIColor.red` which places the hue slider to the left and the saturation/brightness slider in the top left.
+   - parameter tintColor: Currently this property only affects the text color of the *Save* button. The default value is `UIColor.blue`.
+   - parameter completion: The completion callback that is called when the user taps *Save* or *Cancel*. The callback returns a single `PDColor?` parameter that contains the selected color as a `PDColor` if the user taps *Save*, or `nil` if the user taps *Cancel*.
+  */
+  public init(initialColor: UIColor = .red, tintColor: UIColor = .blue, completion: @escaping (PDColor?) -> ()) {
     self.currentColor = PDColor(color: initialColor)
     self.tintColor = tintColor
     self.completion = completion
@@ -128,7 +135,7 @@ open class PDColorPickerViewController: UIViewController {
 
     modalPresentationStyle = .overCurrentContext
   }
-  
+
   required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
