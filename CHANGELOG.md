@@ -1,7 +1,7 @@
 # PDColorPicker v0.4.1.9999
 
 ### Improvements
-* The status bar no longer needs to be set by the presenting view controller (managed by `PDColorPickerViewController`)
+* The status bar style no longer needs to be set by the presenting view controller (managed by `PDColorPickerViewController`)
 
 ### Bug Fixes
 * Fixed issue with slider circle offset not working in `PDColorPickerGridView`
