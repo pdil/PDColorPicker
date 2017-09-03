@@ -1,8 +1,17 @@
+# PDColorPicker v0.4.1.9999
+
+### Improvements
+* The status bar no longer needs to be set by the presenting view controller (managed by `PDColorPickerViewController`)
+
+### Bug Fixes
+* Fixed issue with slider circle offset not working in `PDColorPickerGridView`
+  * This was caused by not checking to see if constraints had already been set in `PDColorPickerViewController`
+
 # [PDColorPicker v0.4.1](https://github.com/pdil/PDColorPicker/releases/tag/0.4.1)
 Released on Thursday, August 31, 2017.
 
 ### Improvements
-* Improved framework documentation.
+* Improved framework documentation
 
 ### Bug Fixes
 * Fixed rotation issue with dimming view ([issue #8](https://github.com/pdil/PDColorPicker/issues/8))
@@ -11,8 +20,8 @@ Released on Thursday, August 31, 2017.
 Released on Thursday, August 31, 2017.
 
 ### Improvements
-* Removed unnecessary layout anchor functions.
-* Improved framework documentation.
+* Removed unnecessary layout anchor functions
+* Improved framework documentation
 
 # [PDColorPicker v0.3.0](https://github.com/pdil/PDColorPicker/releases/tag/0.3.0)
 Released Monday, August 28, 2017.

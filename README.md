@@ -158,13 +158,6 @@ You can also copy the code here into the plist file:
 <true/>
 ```
 
-Next, in the _presenting_ view controller, include the following code:
-```swift
-override var preferredStatusBarStyle: UIStatusBarStyle {
-  return .lightContent
-}
-```
-
 ## 📲 Drag and Drop
 
 Drag and drop is also supported in projects that target iOS 11.0 or later.

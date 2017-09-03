@@ -30,6 +30,10 @@ open class PDColorPickerViewController: UIViewController {
     static let padding: CGFloat = 8
   }
 
+  open override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+
   // MARK: - Buttons
 
   lazy var saveButton: PDRoundedRectButton = {
@@ -134,6 +138,7 @@ open class PDColorPickerViewController: UIViewController {
     super.init(nibName: nil, bundle: nil)
 
     modalPresentationStyle = .overCurrentContext
+    modalPresentationCapturesStatusBarAppearance = true
   }
 
   required public init?(coder aDecoder: NSCoder) {
