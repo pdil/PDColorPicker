@@ -203,6 +203,6 @@ Paolo Di Lorenzo
 [![Stackoverflow](https://img.shields.io/badge/stackoverflow-%40Paolo-FF9900.svg)](https://stackoverflow.com/users/7264964/paolo)
 
 ## ⚖️ License
-[![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](https://github.com/pdil/PDColorPicker/blob/master/LICENSE)
+[![License](https://img.shields.io/cocoapods/l/PDColorPicker.svg?style=flat)](https://github.com/pdil/PDColorPicker/blob/master/LICENSE.md)
 
-PDColorPicker is available under the MIT license. See the [LICENSE](https://github.com/pdil/PDColorPicker/blob/master/LICENSE) file for more info.
+PDColorPicker is available under the MIT license. See the [LICENSE](https://github.com/pdil/PDColorPicker/blob/master/LICENSE.md) file for more info.
