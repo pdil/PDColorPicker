@@ -30,6 +30,10 @@ open class PDColorPickerViewController: UIViewController {
     static let padding: CGFloat = 8
   }
 
+  open override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+
   // MARK: - Buttons
 
   lazy var saveButton: PDRoundedRectButton = {
@@ -134,6 +138,7 @@ open class PDColorPickerViewController: UIViewController {
     super.init(nibName: nil, bundle: nil)
 
     modalPresentationStyle = .overCurrentContext
+    modalPresentationCapturesStatusBarAppearance = true
   }
 
   required public init?(coder aDecoder: NSCoder) {
@@ -181,28 +186,32 @@ open class PDColorPickerViewController: UIViewController {
     }
   }
 
+  var constraintsHaveBeenSet = false
   override open func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
-    guard let pvc = presentingViewController else { return }
+    if !constraintsHaveBeenSet {
+      guard let pvc = presentingViewController else { return }
 
-    let aspectRatio: CGFloat = 0.7
+      let aspectRatio: CGFloat = 0.7
 
-    view.frame.size.height = pvc.view.frame.height * 0.7
-    view.frame.size.width = min(view.frame.height * aspectRatio, pvc.view.frame.width * 0.9)
+      view.frame.size.height = pvc.view.frame.height * 0.7
+      view.frame.size.width = min(view.frame.height * aspectRatio, pvc.view.frame.width * 0.9)
 
-    view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
-    view.frame.origin.y = pvc.view.frame.height / 2 - view.frame.height / 2
+      view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
+      view.frame.origin.y = pvc.view.frame.height / 2 - view.frame.height / 2
 
-    view.layoutIfNeeded()
+      view.layoutIfNeeded()
 
-    selectedColorLabel.layer.cornerRadius = selectedColorLabel.frame.height / 2
+      selectedColorLabel.layer.cornerRadius = selectedColorLabel.frame.height / 2
 
-    colorPickerView.currentColor = currentColor
-    colorSliderView.currentHue = currentColor.h
-    colorPickerView.fadeSlider(.in)
+      colorPickerView.currentColor = currentColor
+      colorSliderView.currentHue = currentColor.h
+      colorPickerView.fadeSlider(.in)
 
-    colorChanged(to: currentColor)
+      colorChanged(to: currentColor)
+      constraintsHaveBeenSet = true
+    }
   }
 
   // MARK: - Button Targets
