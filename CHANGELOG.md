@@ -1,4 +1,4 @@
-# PDColorPicker v0.4.1.9999
+# [PDColorPicker v0.5.0](https://github.com/pdil/PDColorPicker/releases/tag/0.5.0)
 
 ### Improvements
 * The status bar style no longer needs to be set by the presenting view controller (managed by `PDColorPickerViewController`)
