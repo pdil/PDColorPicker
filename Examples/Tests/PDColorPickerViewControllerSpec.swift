@@ -37,7 +37,7 @@ class PDColorPickerViewControllerSpec: QuickSpec {
           var selectedColor: PDColor? = .red
 
           let colorPickerVC = PDColorPickerViewController {
-            vc.undim()
+            vc.undim(speed: 0)
             selectedColor = $0
           }
 
@@ -54,7 +54,7 @@ class PDColorPickerViewControllerSpec: QuickSpec {
 
           let startColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
           let colorPickerVC = PDColorPickerViewController(initialColor: startColor) {
-            vc.undim()
+            vc.undim(speed: 0)
             selectedColor = $0
           }
 
