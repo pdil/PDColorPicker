@@ -1,3 +1,13 @@
+# [PDColorPicker v0.6.0](https://github.com/pdil/PDColorPicker/releases/tag/0.6.0)
+Released on Tuesday, September 19, 2017.
+
+* Now supports Swift 4.0
+  * For projects that don't support Swift 4.0, install from the `swift-3.2` branch.
+
+### Minor improvements
+* Added Contributing guidelines to repository (will be updated over time)
+* Improved code coverage for tests
+
 # [PDColorPicker v0.5.0](https://github.com/pdil/PDColorPicker/releases/tag/0.5.0)
 Released on Sunday, September 3, 2017.
 
