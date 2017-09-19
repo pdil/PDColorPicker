@@ -265,6 +265,7 @@ extension PDColorPickerViewController: PDColorPickerSliderDelegate {
 // MARK: - UIDragInteractionDelegate
 @available(iOS 11.0, *)
 extension PDColorPickerViewController: UIDragInteractionDelegate {
+  @available(iOS 11.0, *)
   public func dragInteraction(_ interaction: UIDragInteraction, itemsForBeginning session: UIDragSession) -> [UIDragItem] {
     let colorItemProvider = NSItemProvider(object: currentColor.uiColor)
     return [UIDragItem(itemProvider: colorItemProvider)]

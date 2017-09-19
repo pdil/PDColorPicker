@@ -27,7 +27,7 @@
 
 * iOS 9.0 or later (iOS 11.0+ for drag and drop)
 * Xcode 9.0 or later
-* Swift 3.2 or later
+* Swift 4.0 or later
 
 ## 💻 Installation
 
@@ -40,7 +40,7 @@ If you have not done so already, run `pod setup` from the root directory of your
 To install `PDColorPicker`, simply add the following line to the Podfile:
 
 ```ruby
-pod 'PDColorPicker', '~> 0.5.0'
+pod 'PDColorPicker'
 ```
 
 This line should be added to the app's target so that it looks something like this:
@@ -49,11 +49,19 @@ This line should be added to the app's target so that it looks something like th
 use_frameworks!
 
 target 'TARGET_NAME' do
-  pod 'PDColorPicker', '~> 0.5.0'
+  pod 'PDColorPicker'
 
   # other pods...
 end
 ```
+
+> **Swift 3.2 Version**
+>
+> If the project is not built for Swift 4.0, install from the `swift-3.2` branch:
+> ```ruby
+> pod 'PDColorPicker', :git => 'https://github.com/pdil/PDColorPicker.git', :branch => 'swift-3.2'
+> ```
+> Note that this build will only include features from `PDColorPicker v0.5.0`
 
 Build the CocoaPods frameworks by running the following command in the Terminal from the root project directory:
 
@@ -79,8 +87,16 @@ $ brew install carthage
 Create a Cartfile inside the root project directory with the following line (or add this line if you already have a Cartfile):
 
 ```
-github "pdil/PDColorPicker" ~> 0.5.0
+github "pdil/PDColorPicker"
 ```
+
+> **Swift 3.2 Version**
+>
+> If the project is not built for Swift 4.0, install from the `swift-3.2` branch:
+> ```
+> github "pdil/PDColorPicker" "swift-3.2"
+> ```
+> Note that this build will only include features from `PDColorPicker v0.5.0`
 
 Build the Carthage frameworks by running the following command in the Terminal from the root project directory:
 
