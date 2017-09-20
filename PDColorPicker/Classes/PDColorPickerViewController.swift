@@ -69,7 +69,7 @@ open class PDColorPickerViewController: UIViewController {
     return sliderView
   }()
 
-  let selectedColorLabel: UILabel = {
+  lazy var selectedColorLabel: UILabel = {
     let label = UILabel()
 
     label.clipsToBounds = true
