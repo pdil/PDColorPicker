@@ -39,9 +39,9 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
     didSet { setNeedsDisplay() }
   }
 
-  var sliderOffset: CGFloat = 3
+  let sliderOffset: CGFloat = 3
 
-  var hueSlider: UIView = {
+  lazy var hueSlider: UIView = {
     let slider = UIView()
     slider.layer.borderColor = UIColor.black.cgColor
     slider.layer.borderWidth = 1.0
