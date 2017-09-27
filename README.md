@@ -139,6 +139,7 @@ class MyViewController: UIViewController, Dimmable {
 
             guard let color = newColor else {
                 print("The user tapped cancel, no color was selected.")
+                return
             }
 
             print("A new color was selected! HSBA: \(String(describing: color))")
@@ -152,7 +153,6 @@ class MyViewController: UIViewController, Dimmable {
     }
   
     // ...
-
 }
 ```
 
