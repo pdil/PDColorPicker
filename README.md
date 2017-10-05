@@ -198,9 +198,9 @@ func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDr
 ## 🎨 `PDColorPicker` in other apps
 Here is a list of apps that use **PDColorPicker** to let their users select colors:
 
-* None that I know of (yet) 😥
+* 🌮 [FoodEase](https://foodease.xyz)
 
-If your app is using **PDColorPicker**, [let me know](mailto:paolo@dilorenzo.pl?subject=PDColorPicker) and I'll add it to this list!
+If your app is using **PDColorPicker**, [let me know](mailto:paolo@dilorenzo.pl?subject=PDColorPicker) and I'll add it to this list (include an emoji to represent your app in the list, the app name, and a web or download URL)!
 
 ## 🙋‍♂️ Author
 
