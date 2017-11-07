@@ -1,3 +1,15 @@
+# [PDColorPicker v0.7.0](https://github.com/pdil/PDColorPicker/releases/tag/0.7.0)
+Released on Tuesday, November 6, 2017.
+
+* Added support for Smart Invert Colors.
+  * Set `supportsSmartInverColors` to `true` or `false` in `PDColorPicker`.
+* Added [Pull Request](https://github.com/pdil/PDColorPicker/blob/master/.github/PULL_REQUEST_TEMPLATE.md) and [Issue](https://github.com/pdil/PDColorPicker/blob/master/.github/ISSUE_TEMPLATE.md) templates.
+
+### Bug Fixes
+* Changed some property declarations for consistency.
+* Fixed `codecov.yml` template.
+* Fixed example code in [README](https://github.com/pdil/PDColorPicker/blob/master/README.md)
+
 # [PDColorPicker v0.6.0](https://github.com/pdil/PDColorPicker/releases/tag/0.6.0)
 Released on Tuesday, September 19, 2017.
 

@@ -40,7 +40,7 @@ class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
 
   // MARK: - Slider Properties
 
-  let sliderCircle: UIView = {
+  lazy var sliderCircle: UIView = {
     let circle = UIView()
     circle.layer.borderColor = UIColor.black.cgColor
     circle.layer.borderWidth = 2.0

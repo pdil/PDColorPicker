@@ -60,16 +60,26 @@ open class PDColorPickerViewController: UIViewController {
     let pickerView = PDColorPickerGridView()
     pickerView.delegate = self
     pickerView.dataSource = self
+
+    if #available(iOS 11.0, *) {
+      pickerView.accessibilityIgnoresInvertColors = true
+    }
+
     return pickerView
   }()
 
   lazy var colorSliderView: PDColorPickerSliderView = {
     let sliderView = PDColorPickerSliderView()
     sliderView.delegate = self
+
+    if #available(iOS 11.0, *) {
+      sliderView.accessibilityIgnoresInvertColors = true
+    }
+
     return sliderView
   }()
 
-  let selectedColorLabel: UILabel = {
+  lazy var selectedColorLabel: UILabel = {
     let label = UILabel()
 
     label.clipsToBounds = true
@@ -79,6 +89,10 @@ open class PDColorPickerViewController: UIViewController {
     label.layer.borderColor = UIColor.black.cgColor
 
     label.isUserInteractionEnabled = true
+
+    if #available(iOS 11.0, *) {
+      label.accessibilityIgnoresInvertColors = true
+    }
 
     return label
   }()
@@ -101,6 +115,21 @@ open class PDColorPickerViewController: UIViewController {
   /// Whether or not to display the hexadecimal code in the selected color preview.
   /// The default value is `true`.
   open var showHexString = true
+
+  /// Whether or not to support Smart Invert Colors on iOS 11.0+.
+  /// It is highly recommended to leave this value set to the default of true as
+  ///   inverted colors may cause unexpected behavior.
+  open var supportSmartInvertColors = true {
+    didSet {
+      if #available(iOS 11.0, *) {
+        selectedColorLabel.accessibilityIgnoresInvertColors = supportSmartInvertColors
+        colorSliderView.accessibilityIgnoresInvertColors = supportSmartInvertColors
+        colorPickerView.accessibilityIgnoresInvertColors = supportSmartInvertColors
+      } else {
+        print("\n\n[PDColorPicker] Warning: supportSmartInvertColors is only available on iOS 11.0, be sure to check availability using #available(iOS 11.0, *).\n\n")
+      }
+    }
+  }
 
   /// The font to be used on the **Cancel** button and color preview.
   ///

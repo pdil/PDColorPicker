@@ -11,7 +11,7 @@
 
 | Branch | Status | Coverage |
 | ------ | ------ | -------- |
-| `master` (v0.6.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
+| `master` (v0.7.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
 | `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker/branches) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/develop) |
 
 
@@ -139,6 +139,7 @@ class MyViewController: UIViewController, Dimmable {
 
             guard let color = newColor else {
                 print("The user tapped cancel, no color was selected.")
+                return
             }
 
             print("A new color was selected! HSBA: \(String(describing: color))")
@@ -152,7 +153,6 @@ class MyViewController: UIViewController, Dimmable {
     }
   
     // ...
-
 }
 ```
 
@@ -198,9 +198,9 @@ func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDr
 ## 🎨 `PDColorPicker` in other apps
 Here is a list of apps that use **PDColorPicker** to let their users select colors:
 
-* None that I know of (yet) 😥
+* 🌮 [FoodEase](https://foodease.xyz)
 
-If your app is using **PDColorPicker**, [let me know](mailto:paolo@dilorenzo.pl?subject=PDColorPicker) and I'll add it to this list!
+If your app is using **PDColorPicker**, [let me know](mailto:paolo@dilorenzo.pl?subject=PDColorPicker) and I'll add it to this list (include an emoji to represent your app in the list, the app name, and a web or download URL)!
 
 ## 🙋‍♂️ Author
 
