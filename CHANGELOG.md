@@ -2,7 +2,7 @@
 Released on Tuesday, November 6, 2017.
 
 * Added support for Smart Invert Colors.
-  * Set `supportsSmartInverColors` to `true` or `false` in `PDColorPicker`.
+  * Set `supportsSmartInvertColors` to `true` or `false` in `PDColorPicker`.
 * Added [Pull Request](https://github.com/pdil/PDColorPicker/blob/master/.github/PULL_REQUEST_TEMPLATE.md) and [Issue](https://github.com/pdil/PDColorPicker/blob/master/.github/ISSUE_TEMPLATE.md) templates.
 
 ### Bug Fixes
