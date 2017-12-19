@@ -8,7 +8,7 @@ script:
 # - pod lib lint
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -J '^PDColorPicker$'
+  - bash <(curl -s https://codecov.io/bash) -J '^PDColorPicker$' || echo "Codecov did not collect coverage reports."
 
 notifications:
   pushover:
