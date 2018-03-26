@@ -71,10 +71,10 @@ public struct PDColor {
      Example:
 
        ```
-       let color = PDColor(fromString: "0.5,0.75,0.33,1.0")
+       let color = PDColor(string: "0.5,0.75,0.33,1.0")
 
        // alpha defaults to 1.0
-       let color = PDColor(fromString: "0.5,0.75,0.33")
+       let color = PDColor(string: "0.5,0.75,0.33")
        ```
    */
   public init?(string: String) {
