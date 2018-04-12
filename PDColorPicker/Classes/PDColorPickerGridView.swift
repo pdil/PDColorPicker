@@ -21,6 +21,7 @@ class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
   // MARK: - Gesture Recognizer
 
   var panRecognizer: PDPanGestureRecognizer?
+  var tapRecognizer: UITapGestureRecognizer?
 
   // MARK: - Properties
 
@@ -73,6 +74,13 @@ class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
 
     if let recognizer = panRecognizer {
       addGestureRecognizer(recognizer)
+    }
+    
+    tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(colorTapped(_:)))
+    tapRecognizer?.delegate = self
+    
+    if let recognizer = tapRecognizer {
+        addGestureRecognizer(recognizer)
     }
   }
 
@@ -153,6 +161,23 @@ class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
     default:
       break
     }
+  }
+    
+  @objc func colorTapped(_ recognizer: UITapGestureRecognizer) {
+    let pos = recognizer.location(in: self)
+    let comps = colorComponents(at: pos)
+    let sliderCenter = constrainPosition(pos, toBounds: bounds)
+    
+    delegate?.colorChanged(to: comps)
+    sliderCircle.backgroundColor = comps.uiColor
+    
+    animateCircleSlider(.grow)
+    
+    sliderCircleX.constant = sliderCenter.x
+    sliderCircleY.constant = sliderCenter.y - visibilityOffset
+    
+    sliderCircle.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+    animateCircleSlider(.shrink)
   }
 
   // MARK: - Slider Management
