@@ -1,3 +1,8 @@
+# PDColorPicker v0.7.0.9999
+
+* Added ability to tap grid/slider to change color (without panning)
+
+
 # [PDColorPicker v0.7.0](https://github.com/pdil/PDColorPicker/releases/tag/0.7.0)
 Released on Tuesday, November 6, 2017.
 
