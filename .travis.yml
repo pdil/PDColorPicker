@@ -1,9 +1,13 @@
 language: objective-c
-osx_image: xcode9
+osx_image: xcode9.3
+
+before_install:
+  - npm install ios-sim -g
+  - ios-sim start --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-8, 11.3"
 
 script:
-- xcodebuild clean build build-for-testing -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator11.0 -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64
-- xcodebuild test-without-building -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator11.0 -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.0' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64 
+  - xcodebuild clean build build-for-testing -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator11.3 -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64
+  - xcodebuild test-without-building -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator11.3 -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64 
 # | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
 # - pod lib lint
 
