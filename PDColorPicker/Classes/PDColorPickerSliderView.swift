@@ -17,7 +17,7 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
   // MARK: - Gesture Recognizer
 
   var panRecognizer: PDPanGestureRecognizer?
-  var tapRecognizer: UITapGestureRecognizer?
+  var tapRecognizer: PDTapGestureRecognizer?
 
   // MARK - Properties
 
@@ -72,7 +72,7 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
       addGestureRecognizer(recognizer)
     }
     
-    tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(colorTapped(_:)))
+    tapRecognizer = PDTapGestureRecognizer(target: self, action: #selector(colorTapped(_:)))
     tapRecognizer?.delegate = self
     
     if let recognizer = tapRecognizer {
