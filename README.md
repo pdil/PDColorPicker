@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/logo.png)
+![Logo](https://raw.githubusercontent.com/pdil/PDColorPicker/master/Design/logo.png)
 
 ----
 
