@@ -1,9 +1,9 @@
 //
-//  PDPanGestureRecognizer.swift
+//  PDTapGestureRecognizer.swift
 //  PDColorPicker
 //
-//  Created by Paolo Di Lorenzo on 8/13/17.
-//  Copyright © 2017 Paolo Di Lorenzo. All rights reserved.
+//  Created by Paolo Di Lorenzo on 4/17/18.
+//  Copyright © 2018 Paolo Di Lorenzo. All rights reserved.
 //
 
 import UIKit
