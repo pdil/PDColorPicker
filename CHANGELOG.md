@@ -1,6 +1,8 @@
 # PDColorPicker v0.7.0.9999
 
-* Added ability to tap grid/slider to change color (without panning) (by [@bennyjr33](https://github.com/bennyjr33))
+* Added ability to tap grid/slider to change color (without panning) ([PR #12](https://github.com/pdil/PDColorPicker/pull/12) by [@bennyjr33](https://github.com/bennyjr33))
+* Added ability to toggle drag and drop functionality.
+  * Set `allowsDragAndDrop` to `true` or `false` in `PDColorPicker`.
 
 
 # [PDColorPicker v0.7.0](https://github.com/pdil/PDColorPicker/releases/tag/0.7.0)
