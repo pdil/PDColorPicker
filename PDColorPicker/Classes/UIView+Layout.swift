@@ -19,8 +19,10 @@ extension UIView {
    This method should only be called *after* the receiver has been added to its superview,
    otherwise an exception may be thrown.
 
-   This method sets `translatesAutoresizingMaskIntoConstraints` to `false` on
+   This method automatically sets `translatesAutoresizingMaskIntoConstraints` to `false` on
    the receiver.
+  
+   All parameters are optional and are set to sensible defaults if ignored (e.g. `nil` or `0`).
 
    Example:
 
@@ -29,8 +31,8 @@ extension UIView {
    let aView = UIView()
    addSubview(aView)
    // sets aView to be positioned 10 points from the
-   //   superview's left anchor
-   aView.anchor(left: viewAnchor, leftConstant: 10))
+   //   containing view's left anchor
+   aView.anchor(left: self.leftAnchor, leftConstant: 10)
    ```
 
    - parameter left: The anchor to pin the left side of the receiver to.
@@ -84,7 +86,7 @@ extension UIView {
 
   func anchorFill(view: UIView? = nil) {
     guard let view = view ?? superview else {
-      fatalError("No view provided, and a superview didn't exist. Be sure to add the view as a subview before calling anchorFill().\n\n")
+      fatalError("No view provided, and a superview doesn't exist. Be sure to add the view as a subview before calling anchorFill().\n\n")
     }
 
     anchor(left: view.leftAnchor, right: view.rightAnchor, top: view.topAnchor, bottom: view.bottomAnchor)

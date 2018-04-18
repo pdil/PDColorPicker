@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/logo.png)
+![Logo](https://raw.githubusercontent.com/pdil/PDColorPicker/master/Design/logo.png)
 
 ----
 
@@ -11,7 +11,7 @@
 
 | Branch | Status | Coverage |
 | ------ | ------ | -------- |
-| `master` (v0.7.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
+| `master` (v0.8.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
 | `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker/branches) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/develop) |
 
 
@@ -26,8 +26,8 @@
 ## 📄 Requirements
 
 * iOS 9.0 or later (iOS 11.0+ for drag and drop)
-* Xcode 9.0 or later
-* Swift 4.0 or later
+* Xcode 9.3 or later
+* Swift 4.1 or later
 
 ## 💻 Installation
 
@@ -199,6 +199,7 @@ func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDr
 Here is a list of apps that use **PDColorPicker** to let their users select colors:
 
 * 🌮 [FoodEase](https://foodease.xyz)
+* 🎨 [Paint Shapes](https://itunes.apple.com/us/app/paint-shapes/id1366164052)
 
 If your app is using **PDColorPicker**, [let me know](mailto:paolo@dilorenzo.pl?subject=PDColorPicker) and I'll add it to this list (include an emoji to represent your app in the list, the app name, and a web or download URL)!
 

@@ -126,7 +126,7 @@ open class PDColorPickerViewController: UIViewController {
         colorSliderView.accessibilityIgnoresInvertColors = supportSmartInvertColors
         colorPickerView.accessibilityIgnoresInvertColors = supportSmartInvertColors
       } else {
-        print("\n\n[PDColorPicker] Warning: supportSmartInvertColors is only available on iOS 11.0, be sure to check availability using #available(iOS 11.0, *).\n\n")
+        print("\n\n[PDColorPicker] Warning: supportSmartInvertColors is only available on iOS 11.0 or later, be sure to check availability using #available(iOS 11.0, *).\n\n")
       }
     }
   }
@@ -149,6 +149,29 @@ open class PDColorPickerViewController: UIViewController {
       saveButton.titleLabel?.font = boldFont
     }
   }
+
+  /// Whether or not to allow drag and drop of the color preview.
+  ///
+  /// The default value is `true`.
+  open var allowsDragAndDrop: Bool = true {
+    didSet {
+      guard #available(iOS 11.0, *) else {
+        print("\n\n[PDColorPicker] Warning: allowsDragAndDrop is only available on iOS 11.0 or later, be sure to check availability using #available(iOS 11.0, *).\n\n")
+        return
+      }
+
+      if allowsDragAndDrop {
+        selectedColorLabel.addInteraction(colorDragInteraction)
+      } else {
+        selectedColorLabel.removeInteraction(colorDragInteraction)
+      }
+    }
+  }
+
+  @available(iOS 11.0, *)
+  private lazy var colorDragInteraction: UIDragInteraction = {
+    return UIDragInteraction(delegate: self)
+  }()
 
   // MARK: - Initializer
 
@@ -209,7 +232,7 @@ open class PDColorPickerViewController: UIViewController {
       NSLayoutConstraint(item: selectedColorLabel, attribute: .height, relatedBy: .equal, toItem: saveButton, attribute: .height, multiplier: 1, constant: 0)
     )
 
-    if #available(iOS 11.0, *) {
+    if #available(iOS 11.0, *), allowsDragAndDrop {
       let colorDragInteraction = UIDragInteraction(delegate: self)
       selectedColorLabel.addInteraction(colorDragInteraction)
     }

@@ -1,8 +1,17 @@
+# PDColorPicker v0.8.0
+Released on Tuesday, April 17, 2017.
+
+* Added ability to tap grid/slider to change color (without panning) ([PR #12](https://github.com/pdil/PDColorPicker/pull/12) by [@bennyjr33](https://github.com/bennyjr33))
+* Added ability to toggle drag and drop functionality.
+  * Set `allowsDragAndDrop` to `true` or `false` in `PDColorPicker`.
+* Updated to support Swift 4.1.
+
+
 # [PDColorPicker v0.7.0](https://github.com/pdil/PDColorPicker/releases/tag/0.7.0)
 Released on Tuesday, November 6, 2017.
 
 * Added support for Smart Invert Colors.
-  * Set `supportsSmartInverColors` to `true` or `false` in `PDColorPicker`.
+  * Set `supportsSmartInvertColors` to `true` or `false` in `PDColorPicker`.
 * Added [Pull Request](https://github.com/pdil/PDColorPicker/blob/master/.github/PULL_REQUEST_TEMPLATE.md) and [Issue](https://github.com/pdil/PDColorPicker/blob/master/.github/ISSUE_TEMPLATE.md) templates.
 
 ### Bug Fixes

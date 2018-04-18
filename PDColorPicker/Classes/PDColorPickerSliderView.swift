@@ -17,6 +17,7 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
   // MARK: - Gesture Recognizer
 
   var panRecognizer: PDPanGestureRecognizer?
+  var tapRecognizer: PDTapGestureRecognizer?
 
   // MARK - Properties
 
@@ -69,6 +70,13 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
 
     if let recognizer = panRecognizer {
       addGestureRecognizer(recognizer)
+    }
+    
+    tapRecognizer = PDTapGestureRecognizer(target: self, action: #selector(colorTapped(_:)))
+    tapRecognizer?.delegate = self
+    
+    if let recognizer = tapRecognizer {
+        addGestureRecognizer(recognizer)
     }
 
     layer.shadowColor = UIColor.black.cgColor
@@ -123,6 +131,13 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
     default:
       break
     }
+  }
+    
+  @objc func colorTapped(_ sender: UITapGestureRecognizer) {
+    let pos = sender.location(in: self)
+    
+    currentHue = hueAtPosition(pos.x, containingRect: bounds)
+    sliderX.constant = constrainPosition(pos, toBounds: bounds)
   }
 
   // MARK: - Slider Management
