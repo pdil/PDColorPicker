@@ -11,7 +11,7 @@
 
 | Branch | Status | Coverage |
 | ------ | ------ | -------- |
-| `master` (v0.7.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
+| `master` (v0.8.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
 | `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker/branches) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/develop) |
 
 
@@ -26,8 +26,8 @@
 ## 📄 Requirements
 
 * iOS 9.0 or later (iOS 11.0+ for drag and drop)
-* Xcode 9.0 or later
-* Swift 4.0 or later
+* Xcode 9.3 or later
+* Swift 4.1 or later
 
 ## 💻 Installation
 
