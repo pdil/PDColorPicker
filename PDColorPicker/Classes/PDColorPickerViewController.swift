@@ -78,6 +78,17 @@ open class PDColorPickerViewController: UIViewController {
 
     return sliderView
   }()
+  
+  lazy var alphaSliderView: PDColorPickerAlphaSliderView = {
+    let sliderView = PDColorPickerAlphaSliderView()
+    sliderView.delegate = self
+
+    if #available(iOS 11.0, *) {
+      sliderView.accessibilityIgnoresInvertColors = true
+    }
+
+    return sliderView
+  }()
 
   lazy var selectedColorLabel: UILabel = {
     let label = UILabel()
@@ -212,21 +223,25 @@ open class PDColorPickerViewController: UIViewController {
   }
 
   private func setupViews() {
-    view.addSubview(colorPickerView)
-    colorPickerView.anchor(left: view.leftAnchor, right: view.rightAnchor, top: view.topAnchor)
+  	let sliderStackView = UIStackView(arrangedSubviews: [colorPickerView, colorSliderView, alphaSliderView])
+  	
+  	sliderStackView.alignment = .center
+    sliderStackView.axis = .vertical
+    sliderStackView.distribution = .fillEqually
+    sliderStackView.spacing = LocalConstants.padding
 
-    view.addSubview(colorSliderView)
-    colorSliderView.anchor(left: view.leftAnchor, right: view.rightAnchor, top: colorPickerView.bottomAnchor, leftConstant: LocalConstants.padding, rightConstant: LocalConstants.padding, topConstant: LocalConstants.padding, height: 44)
+    view.addSubview(sliderStackView)
+    sliderStackView.anchor(left: view.leftAnchor, right: view.rightAnchor, top: view.topAnchor, leftConstant: LocalConstants.padding, rightConstant: LocalConstants.padding, topConstant: LocalConstants.padding)
 
-    let stackView = UIStackView(arrangedSubviews: [cancelButton, saveButton, selectedColorLabel])
+    let buttonStackView = UIStackView(arrangedSubviews: [cancelButton, saveButton, selectedColorLabel])
 
-    stackView.alignment = .center
-    stackView.axis = .horizontal
-    stackView.distribution = .fillEqually
-    stackView.spacing = LocalConstants.padding
+    buttonStackView.alignment = .center
+    buttonStackView.axis = .horizontal
+    buttonStackView.distribution = .fillEqually
+    buttonStackView.spacing = LocalConstants.padding
 
-    view.addSubview(stackView)
-    stackView.anchor(left: view.leftAnchor, right: view.rightAnchor, top: colorSliderView.bottomAnchor, bottom: view.bottomAnchor, leftConstant: LocalConstants.padding, rightConstant: LocalConstants.padding, topConstant: LocalConstants.padding, bottomConstant: LocalConstants.padding, height: 44)
+    view.addSubview(buttonStackView)
+    buttonStackView.anchor(left: view.leftAnchor, right: view.rightAnchor, top: colorSliderView.bottomAnchor, bottom: view.bottomAnchor, leftConstant: LocalConstants.padding, rightConstant: LocalConstants.padding, topConstant: LocalConstants.padding, bottomConstant: LocalConstants.padding, height: 44)
 
     view.addConstraint(
       NSLayoutConstraint(item: selectedColorLabel, attribute: .height, relatedBy: .equal, toItem: saveButton, attribute: .height, multiplier: 1, constant: 0)
