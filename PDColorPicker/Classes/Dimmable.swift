@@ -32,6 +32,10 @@ public extension Dimmable where Self: UIViewController {
     dimView.backgroundColor = color
     dimView.alpha = 0
 
+    if #available(iOS 11.0, *) {
+      dimiew.accessibilityIgnoresInvertColors = true
+    }
+
     return dimView
   }
 
