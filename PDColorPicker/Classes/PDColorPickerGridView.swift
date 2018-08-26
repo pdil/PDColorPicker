@@ -124,7 +124,7 @@ class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
     layer.addSublayer(saturationGradient)
     layer.addSublayer(brightnessGradient)
 
-    bringSubview(toFront: sliderCircle)
+    bringSubviewToFront(sliderCircle)
   }
 
   private func gradientLayerWithEndPoints(_ start: CGPoint, _ end: CGPoint, endColor: UIColor) -> CAGradientLayer {
