@@ -170,11 +170,16 @@ open class PDColorPickerViewController: UIViewController {
   /**
    Creates a `PDColorPickerViewController` with an initial color, a tint color for the *Save* button, and a completion callback to handle the user response.
 
-   - parameter initialColor: The starting color that the color picker should be set to. This parameter can be any `UIColor`. The hue, saturation, and brightness values will be parsed from the given color and used to provide the starting positions of the sliders. The default value is `UIColor.red` which places the hue slider to the left and the saturation/brightness slider in the top left.
+   - parameter initialColor: The starting color that the color picker should be set to. This parameter can be any `UIColor`.
+      The hue, saturation, and brightness values will be parsed from the given color and used to provide the starting positions of the sliders.
+      The default value is `UIColor.red` which places the hue slider to the left and the saturation/brightness slider in the top left.
    - parameter tintColor: Currently this property only affects the text color of the *Save* button. The default value is `UIColor.blue`.
-   - parameter completion: The completion callback that is called when the user taps *Save* or *Cancel*. The callback returns a single `PDColor?` parameter that contains the selected color as a `PDColor` if the user taps *Save*, or `nil` if the user taps *Cancel*. The default completion is a blank closure (this allows implementation after initialization if necessary).
-  */
-  public init(initialColor: UIColor = .red, tintColor: UIColor = .blue, completion: @escaping (PDColor?) -> () = { _ in }) {
+   - parameter completion: The completion callback that is called when the user taps *Save* or *Cancel*. The callback returns a single `PDColor?`
+      parameter that contains the selected color as a `PDColor` if the user taps *Save*, or `nil` if the user taps *Cancel*.
+      The default completion is a blank closure (this allows implementation after initialization if necessary).
+   - parameter selectedColor: The color selected by the user when `PDColorPickerViewController` is displayed. If the user cancels, the value is `nil`.
+   */
+  public init(initialColor: UIColor = .red, tintColor: UIColor = .blue, completion: @escaping (_ selectedColor: PDColor?) -> () = { _ in }) {
     self.currentColor = PDColor(color: initialColor)
     self.tintColor = tintColor
     self.completion = completion
