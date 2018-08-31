@@ -25,6 +25,19 @@ import UIKit
 ///   See the `Dimmable` protocol.
 @available(iOS 9.0, *)
 open class PDColorPickerViewController: UIViewController {
+  
+  public enum HexStringCase {
+    case uppercase, lowercase
+    
+    func applied(to string: String) -> String {
+      switch self {
+      case .uppercase:
+        return string.uppercased()
+      case .lowercase:
+        return string.lowercased()
+      }
+    }
+  }
 
   private struct LocalConstants {
     static let padding: CGFloat = 8
@@ -115,6 +128,11 @@ open class PDColorPickerViewController: UIViewController {
   /// Whether or not to display the hexadecimal code in the selected color preview.
   /// The default value is `true`.
   open var showHexString = true
+  
+  /// Whether to display the hexadecimal code in `uppercase` or `lowercase`.
+  /// This property has no effect if `showHexString` is set to `false`.
+  /// The default is `uppercase`.
+  open var hexStringCase = HexStringCase.uppercase
 
   /// Whether or not to support Smart Invert Colors on iOS 11.0+.
   /// It is highly recommended to leave this value set to the default of true as
@@ -299,7 +317,7 @@ extension PDColorPickerViewController: PDColorPickerGridDelegate {
     currentColor = newColor
     selectedColorLabel.backgroundColor = currentColor.uiColor
     selectedColorLabel.textColor = newColor.appropriateForegroundColor
-    selectedColorLabel.text = showHexString ? newColor.hex : ""
+    selectedColorLabel.text = showHexString ? hexStringCase.applied(to: newColor.hex) : ""
   }
 }
 
