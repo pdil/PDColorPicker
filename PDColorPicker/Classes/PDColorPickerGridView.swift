@@ -73,6 +73,10 @@ class PDColorPickerGridView: UIView {
 
   init() {
     super.init(frame: .zero)
+    
+    if #available(iOS 11.0, *) {
+      accessibilityIgnoresInvertColors = true
+    }
 
     addGestureRecognizer(panRecognizer)
     addGestureRecognizer(tapRecognizer)

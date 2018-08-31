@@ -73,42 +73,16 @@ open class PDColorPickerViewController: UIViewController {
     let pickerView = PDColorPickerGridView()
     pickerView.delegate = self
     pickerView.dataSource = self
-
-    if #available(iOS 11.0, *) {
-      pickerView.accessibilityIgnoresInvertColors = true
-    }
-
     return pickerView
   }()
 
   lazy var colorSliderView: PDColorPickerSliderView = {
     let sliderView = PDColorPickerSliderView()
     sliderView.delegate = self
-
-    if #available(iOS 11.0, *) {
-      sliderView.accessibilityIgnoresInvertColors = true
-    }
-
     return sliderView
   }()
 
-  lazy var selectedColorLabel: UILabel = {
-    let label = UILabel()
-
-    label.clipsToBounds = true
-    label.textAlignment = .center
-
-    label.layer.borderWidth = 1.0
-    label.layer.borderColor = UIColor.black.cgColor
-
-    label.isUserInteractionEnabled = true
-
-    if #available(iOS 11.0, *) {
-      label.accessibilityIgnoresInvertColors = true
-    }
-
-    return label
-  }()
+  var selectedColorLabel = PDSelectedColorLabel()
 
   // MARK: - Properties
 
