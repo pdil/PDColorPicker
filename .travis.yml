@@ -7,9 +7,8 @@ before_install:
 
 script:
   - xcodebuild clean build build-for-testing -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator12.0 -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64
-  - xcodebuild test-without-building -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator12.0 -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64 
-# | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
-# - pod lib lint
+  - xcodebuild test-without-building -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator12.0 -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64 | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
+  - pod lib lint
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J '^PDColorPicker$' || echo "Codecov did not collect coverage reports."
