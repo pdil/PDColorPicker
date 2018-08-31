@@ -458,6 +458,7 @@
 			children = (
 				C3653150E7FAA34CD2AE66A425CE7968 /* PDColorPicker */,
 			);
+			indentWidth = 2;
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};

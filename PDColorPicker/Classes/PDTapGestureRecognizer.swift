@@ -34,7 +34,7 @@ class PDTapGestureRecognizer: UITapGestureRecognizer {
       return super.state
     }
     set {
-      self.state = newValue
+      
     }
   }
 

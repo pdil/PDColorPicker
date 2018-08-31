@@ -35,7 +35,7 @@ class PDPanGestureRecognizer: UIPanGestureRecognizer {
       return super.state
     }
     set {
-      self.state = newValue
+
     }
   }
   
