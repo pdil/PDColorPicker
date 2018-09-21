@@ -26,11 +26,16 @@ class PDTapGestureRecognizer: UITapGestureRecognizer {
   }
 
   override var state: UIGestureRecognizerState {
-    if let testState = testState {
-      return testState
+    set {
+        super.state = newValue
     }
+    get {
+        if let testState = testState {
+            return testState
+        }
 
-    return super.state
+        return super.state
+    }
   }
 
   override func location(in view: UIView?) -> CGPoint {
