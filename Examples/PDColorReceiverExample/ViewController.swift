@@ -16,7 +16,7 @@ class ViewController: UIViewController {
   lazy var colorLabel: UILabel = {
     let label = UILabel()
 
-    label.font = UIFont.systemFont(ofSize: 72, weight: UIFontWeightLight)
+    label.font = UIFont.systemFont(ofSize: 72, weight: .light)
     label.adjustsFontSizeToFitWidth = true
     label.minimumScaleFactor = 0.25
     label.text = "Drag a color here!"

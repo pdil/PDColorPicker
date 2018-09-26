@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0280B6498F07A122B1EDA9847368AE47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE147446A1225BA68EA82615B1436CC1 /* Foundation.framework */; };
-		03434E526C3ED68ADAFCCD94DB439D01 /* PDColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 356E15A7B55CE50D5B087A433787448C /* PDColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04A39D55030DA49BFDD0AF925A53B6ED /* PDBouncyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504D9EFAD1BAB7140385D05F510AEA4 /* PDBouncyButton.swift */; };
 		05640A745A4F564023B1F1B19A1F8FC1 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE355D4991740061E1869BD33C0E74 /* Example.swift */; };
 		08800BD9B293AC4934C8E339D57F6EBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE147446A1225BA68EA82615B1436CC1 /* Foundation.framework */; };
@@ -44,6 +43,8 @@
 		4EE9500EE0E820C7A2EFA5D907746DB6 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E33F4AAD7E32EB5CF8E122776D7D2A /* AssertionDispatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		506290DE072DE1A399E944D0284C7784 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B47174F5F20D1542A71C67F29F135F /* Behavior.swift */; };
 		52190CF32086C1E900DC3B1A /* PDTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52190CF22086C1E200DC3B1A /* PDTapGestureRecognizer.swift */; };
+		524A11322139F0CB009F6F86 /* PDSelectedColorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A11302139F070009F6F86 /* PDSelectedColorLabel.swift */; };
+		524BB1AA21324BCF008DBBE0 /* PDColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 356E15A7B55CE50D5B087A433787448C /* PDColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52C8D5AE99851B7CDFDA80F9388F9BDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE147446A1225BA68EA82615B1436CC1 /* Foundation.framework */; };
 		535D07DBF80C3DD263FF9A066F888038 /* World+DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AA245C666739A4EF6B4BB0460D1E588 /* World+DSL.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5561EB6C98DC7785C2FA5CDBD141E0CF /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCD8BFF93EEEC05B736AD25AF4E492E /* RaisesException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -231,7 +232,7 @@
 		44971F9C4C22557F24A6B1B000293F80 /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
 		45B8C88E78B700619FCE186336699512 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
 		469EFF8292B5A288C775450FB27DEB21 /* Pods_PDColorPickerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDColorPickerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48A9E1DAD09ACB7314B7DB3AC5259A08 /* PDPanGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PDPanGestureRecognizer.swift; path = PDColorPicker/Classes/PDPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		48A9E1DAD09ACB7314B7DB3AC5259A08 /* PDPanGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; name = PDPanGestureRecognizer.swift; path = PDColorPicker/Classes/PDPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		4A5BDEE62A0D58443A3FBC969E3F683C /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.h; sourceTree = "<group>"; };
 		4ACA9C9339BCA917903E142110149B35 /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Sources/Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
 		4D57CEB221A15B342D231C55B12C3BDC /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
@@ -239,7 +240,8 @@
 		4F7EDA745C6DB17FB2FB8995A3F2C51E /* PDColorPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PDColorPickerViewController.swift; path = PDColorPicker/Classes/PDColorPickerViewController.swift; sourceTree = "<group>"; };
 		5031EAC9C48CC70F0A495E0C3D142D77 /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Sources/Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
 		5132CB15B91132746844342652270B74 /* CwlMachBadInstructionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlMachBadInstructionHandler.m; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/CwlMachBadInstructionHandler.m; sourceTree = "<group>"; };
-		52190CF22086C1E200DC3B1A /* PDTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PDTapGestureRecognizer.swift; path = PDColorPicker/Classes/PDTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		52190CF22086C1E200DC3B1A /* PDTapGestureRecognizer.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; name = PDTapGestureRecognizer.swift; path = PDColorPicker/Classes/PDTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		524A11302139F070009F6F86 /* PDSelectedColorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PDSelectedColorLabel.swift; path = PDColorPicker/Classes/PDSelectedColorLabel.swift; sourceTree = "<group>"; };
 		54BDF0D1BB230164230D7DFD9F92A0FC /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/NimbleObjectiveC/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		54C2DD3F07BE6CB6A4FA7F45720C0F09 /* CwlCatchException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchException.swift; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchException/CwlCatchException.swift; sourceTree = "<group>"; };
 		56A6318DD5FB9B02ABAA366E6552FB81 /* Pods_PDColorReceiverExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDColorReceiverExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -458,6 +460,7 @@
 			children = (
 				C3653150E7FAA34CD2AE66A425CE7968 /* PDColorPicker */,
 			);
+			indentWidth = 2;
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
@@ -701,6 +704,7 @@
 				DC09895507E410CD650619BC6933EC6A /* PDColorPickerSliderView.swift */,
 				4F7EDA745C6DB17FB2FB8995A3F2C51E /* PDColorPickerViewController.swift */,
 				48A9E1DAD09ACB7314B7DB3AC5259A08 /* PDPanGestureRecognizer.swift */,
+				524A11302139F070009F6F86 /* PDSelectedColorLabel.swift */,
 				52190CF22086C1E200DC3B1A /* PDTapGestureRecognizer.swift */,
 				09BA80B771AF52A0D95A763089018550 /* PDRoundedRectButton.swift */,
 				2C80DBB94F3D124D95A813A1D12063E3 /* UIView+Layout.swift */,
@@ -777,7 +781,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03434E526C3ED68ADAFCCD94DB439D01 /* PDColorPicker-umbrella.h in Headers */,
+				524BB1AA21324BCF008DBBE0 /* PDColorPicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +918,17 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					3F4077E5C716D03E6D98C65FC9990CD4 = {
+						LastSwiftMigration = 1000;
+					};
+					84B900852143C358F09CAEF776B1A86E = {
+						LastSwiftMigration = 1000;
+					};
+					94EBA9AA81D80F89F12FF7C0B32C0F34 = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1064,6 +1079,7 @@
 				CF5317B03656F7AC972D08A40C783279 /* PDColorPickerViewController.swift in Sources */,
 				F6A5FBD5A7B0A98ADB8871C682F1826C /* PDPanGestureRecognizer.swift in Sources */,
 				F8C0B2FB838193670EE57AC45EE87622 /* PDRoundedRectButton.swift in Sources */,
+				524A11322139F0CB009F6F86 /* PDSelectedColorLabel.swift in Sources */,
 				29C12813FF1A0C2C606D7CAC2F93C77F /* UIView+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1278,7 +1294,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1545,7 +1561,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
