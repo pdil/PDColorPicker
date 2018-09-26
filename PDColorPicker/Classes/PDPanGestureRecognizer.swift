@@ -26,7 +26,7 @@ class PDPanGestureRecognizer: UIPanGestureRecognizer {
     super.init(target: target, action: action)
   }
   
-  override var state: UIGestureRecognizerState {
+  override var state: UIGestureRecognizer.State {
     get {
       if let testState = testState {
           return testState
