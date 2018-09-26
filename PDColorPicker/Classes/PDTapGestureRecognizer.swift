@@ -28,13 +28,13 @@ class PDTapGestureRecognizer: UITapGestureRecognizer {
   override var state: UIGestureRecognizer.State {
     get {
       if let testState = testState {
-        return testState
+          return testState
       }
-      
+
       return super.state
     }
     set {
-      
+      super.state = newValue
     }
   }
 
