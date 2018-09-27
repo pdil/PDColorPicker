@@ -92,6 +92,14 @@ open class PDColorPickerViewController: UIViewController {
       saveButton.foreColor = tintColor
     }
   }
+  
+  /// The background color of the view.
+  /// The default value is `UIColor.lightGray`
+  open var backgroundColor: UIColor = .lightGray {
+    didSet {
+      view.backgroundColor = backgroundColor
+    }
+  }
 
   /// The currently selected color of the color picker.
   open var currentColor: PDColor
@@ -106,7 +114,7 @@ open class PDColorPickerViewController: UIViewController {
   /// Whether to display the hexadecimal code in `uppercase` or `lowercase`.
   /// This property has no effect if `showHexString` is set to `false`.
   /// The default is `uppercase`.
-  open var hexStringCase = HexStringCase.uppercase
+  open var hexStringCase: HexStringCase = .uppercase
 
   /// Whether or not to support Smart Invert Colors on iOS 11.0+.
   /// It is highly recommended to leave this value set to the default of true as
@@ -126,7 +134,7 @@ open class PDColorPickerViewController: UIViewController {
   /// The font to be used on the **Cancel** button and color preview.
   ///
   /// The default value is the system font at size 18.
-  open var font: UIFont = UIFont.systemFont(ofSize: 18) {
+  open var font: UIFont = .systemFont(ofSize: 18) {
     didSet {
       cancelButton.titleLabel?.font = font
       selectedColorLabel.font = font
@@ -136,7 +144,7 @@ open class PDColorPickerViewController: UIViewController {
   /// The font to be used on the **Save** button.
   ///
   /// The default value is the bold system font at size 18.
-  open var boldFont: UIFont = UIFont.boldSystemFont(ofSize: 18) {
+  open var boldFont: UIFont = .boldSystemFont(ofSize: 18) {
     didSet {
       saveButton.titleLabel?.font = boldFont
     }
@@ -203,7 +211,7 @@ open class PDColorPickerViewController: UIViewController {
     view.layer.shadowOpacity = 0.6
     view.layer.shadowRadius = 15
     view.layer.shadowOffset = CGSize(width: 0, height: 5)
-    view.backgroundColor = .lightGray
+    view.backgroundColor = backgroundColor
     
     setupViews()
   }
@@ -240,17 +248,7 @@ open class PDColorPickerViewController: UIViewController {
     super.viewDidLayoutSubviews()
 
     if !constraintsHaveBeenSet {
-      guard let pvc = presentingViewController else { return }
-
-      let aspectRatio: CGFloat = 0.7
-
-      view.frame.size.height = pvc.view.frame.height * 0.7
-      view.frame.size.width = min(view.frame.height * aspectRatio, pvc.view.frame.width * 0.9)
-
-      view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
-      view.frame.origin.y = pvc.view.frame.height / 2 - view.frame.height / 2
-
-      view.layoutIfNeeded()
+      updateViewFrame()
 
       selectedColorLabel.layer.cornerRadius = selectedColorLabel.frame.height / 2
 
@@ -261,6 +259,10 @@ open class PDColorPickerViewController: UIViewController {
       colorChanged(to: currentColor)
       constraintsHaveBeenSet = true
     }
+  }
+  
+  override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    updateViewFrame()
   }
 
   // MARK: - Button Targets
@@ -277,6 +279,22 @@ open class PDColorPickerViewController: UIViewController {
 
     completion(nil)
     dismiss(animated: true, completion: nil)
+  }
+  
+  // MARK: - Convenience
+  
+  private func updateViewFrame() {
+    guard let pvc = presentingViewController else { return }
+    
+    let sizeRatio: CGFloat = 0.7
+    
+    view.frame.size.height = pvc.view.frame.height * sizeRatio
+    view.frame.size.width = min(pvc.view.frame.width * sizeRatio, view.frame.height * 0.9)
+    
+    view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
+    view.frame.origin.y = pvc.view.frame.height / 2 - view.frame.height / 2
+    
+    view.layoutIfNeeded()
   }
 
 }

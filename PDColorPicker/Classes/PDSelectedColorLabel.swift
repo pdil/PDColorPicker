@@ -1,6 +1,6 @@
 //
 //  PDSelectedColorLabel.swift
-//  Nimble
+//  PDColorPicker
 //
 //  Created by Paolo Di Lorenzo on 8/31/18.
 //
