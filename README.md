@@ -11,7 +11,7 @@
 
 | Branch | Status | Coverage |
 | ------ | ------ | -------- |
-| `master` (v0.8.0) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
+| `master` (v0.8.1) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
 | `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker/branches) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/develop) |
 
 
@@ -26,8 +26,8 @@
 ## 📄 Requirements
 
 * iOS 9.0 or later (iOS 11.0+ for drag and drop)
-* Xcode 9.3 or later
-* Swift 4.1 or later
+* Xcode 10 or later
+* Swift 4.2 or later
 
 ## 💻 Installation
 
@@ -55,13 +55,13 @@ target 'TARGET_NAME' do
 end
 ```
 
-> **Swift 3.2 Version**
+> **Older Swift Versions**
 >
-> If the project is not built for Swift 4.0, install from the `swift-3.2` branch:
+> If the project is not built for Swift 4.2, install from the `swift-3.2` or the `swift-4.1` branches:
 > ```ruby
-> pod 'PDColorPicker', :git => 'https://github.com/pdil/PDColorPicker.git', :branch => 'swift-3.2'
+> pod 'PDColorPicker', :git => 'https://github.com/pdil/PDColorPicker.git', :branch => 'swift-4.1'
 > ```
-> Note that this build will only include features from `PDColorPicker v0.5.0`
+> Note that this build may not include all of the latest features of `PDColorPicker`.
 
 Build the CocoaPods frameworks by running the following command in the Terminal from the root project directory:
 
@@ -90,13 +90,13 @@ Create a Cartfile inside the root project directory with the following line (or 
 github "pdil/PDColorPicker"
 ```
 
-> **Swift 3.2 Version**
+> **Older Swift Versions**
 >
-> If the project is not built for Swift 4.0, install from the `swift-3.2` branch:
+> If the project is not built for Swift 4.2, install from the `swift-3.2` or `swift-4.1` branches:
 > ```
-> github "pdil/PDColorPicker" "swift-3.2"
+> github "pdil/PDColorPicker" "swift-4.1"
 > ```
-> Note that this build will only include features from `PDColorPicker v0.5.0`
+> Note that this build may not include the latest features of `PDColorPicker`.
 
 Build the Carthage frameworks by running the following command in the Terminal from the root project directory:
 

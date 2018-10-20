@@ -25,6 +25,19 @@ import UIKit
 ///   See the `Dimmable` protocol.
 @available(iOS 9.0, *)
 open class PDColorPickerViewController: UIViewController {
+  
+  public enum HexStringCase {
+    case uppercase, lowercase
+    
+    func applied(to string: String) -> String {
+      switch self {
+      case .uppercase:
+        return string.uppercased()
+      case .lowercase:
+        return string.lowercased()
+      }
+    }
+  }
 
   private struct LocalConstants {
     static let padding: CGFloat = 8
@@ -60,42 +73,16 @@ open class PDColorPickerViewController: UIViewController {
     let pickerView = PDColorPickerGridView()
     pickerView.delegate = self
     pickerView.dataSource = self
-
-    if #available(iOS 11.0, *) {
-      pickerView.accessibilityIgnoresInvertColors = true
-    }
-
     return pickerView
   }()
 
   lazy var colorSliderView: PDColorPickerSliderView = {
     let sliderView = PDColorPickerSliderView()
     sliderView.delegate = self
-
-    if #available(iOS 11.0, *) {
-      sliderView.accessibilityIgnoresInvertColors = true
-    }
-
     return sliderView
   }()
 
-  lazy var selectedColorLabel: UILabel = {
-    let label = UILabel()
-
-    label.clipsToBounds = true
-    label.textAlignment = .center
-
-    label.layer.borderWidth = 1.0
-    label.layer.borderColor = UIColor.black.cgColor
-
-    label.isUserInteractionEnabled = true
-
-    if #available(iOS 11.0, *) {
-      label.accessibilityIgnoresInvertColors = true
-    }
-
-    return label
-  }()
+  var selectedColorLabel = PDSelectedColorLabel()
 
   // MARK: - Properties
 
@@ -103,6 +90,14 @@ open class PDColorPickerViewController: UIViewController {
   open var tintColor: UIColor {
     didSet {
       saveButton.foreColor = tintColor
+    }
+  }
+  
+  /// The background color of the view.
+  /// The default value is `UIColor.lightGray`
+  open var backgroundColor: UIColor = .lightGray {
+    didSet {
+      view.backgroundColor = backgroundColor
     }
   }
 
@@ -115,6 +110,11 @@ open class PDColorPickerViewController: UIViewController {
   /// Whether or not to display the hexadecimal code in the selected color preview.
   /// The default value is `true`.
   open var showHexString = true
+  
+  /// Whether to display the hexadecimal code in `uppercase` or `lowercase`.
+  /// This property has no effect if `showHexString` is set to `false`.
+  /// The default is `uppercase`.
+  open var hexStringCase: HexStringCase = .uppercase
 
   /// Whether or not to support Smart Invert Colors on iOS 11.0+.
   /// It is highly recommended to leave this value set to the default of true as
@@ -134,7 +134,7 @@ open class PDColorPickerViewController: UIViewController {
   /// The font to be used on the **Cancel** button and color preview.
   ///
   /// The default value is the system font at size 18.
-  open var font: UIFont = UIFont.systemFont(ofSize: 18) {
+  open var font: UIFont = .systemFont(ofSize: 18) {
     didSet {
       cancelButton.titleLabel?.font = font
       selectedColorLabel.font = font
@@ -144,7 +144,7 @@ open class PDColorPickerViewController: UIViewController {
   /// The font to be used on the **Save** button.
   ///
   /// The default value is the bold system font at size 18.
-  open var boldFont: UIFont = UIFont.boldSystemFont(ofSize: 18) {
+  open var boldFont: UIFont = .boldSystemFont(ofSize: 18) {
     didSet {
       saveButton.titleLabel?.font = boldFont
     }
@@ -178,11 +178,16 @@ open class PDColorPickerViewController: UIViewController {
   /**
    Creates a `PDColorPickerViewController` with an initial color, a tint color for the *Save* button, and a completion callback to handle the user response.
 
-   - parameter initialColor: The starting color that the color picker should be set to. This parameter can be any `UIColor`. The hue, saturation, and brightness values will be parsed from the given color and used to provide the starting positions of the sliders. The default value is `UIColor.red` which places the hue slider to the left and the saturation/brightness slider in the top left.
+   - parameter initialColor: The starting color that the color picker should be set to. This parameter can be any `UIColor`.
+      The hue, saturation, and brightness values will be parsed from the given color and used to provide the starting positions of the sliders.
+      The default value is `UIColor.red` which places the hue slider to the left and the saturation/brightness slider in the top left.
    - parameter tintColor: Currently this property only affects the text color of the *Save* button. The default value is `UIColor.blue`.
-   - parameter completion: The completion callback that is called when the user taps *Save* or *Cancel*. The callback returns a single `PDColor?` parameter that contains the selected color as a `PDColor` if the user taps *Save*, or `nil` if the user taps *Cancel*. The default completion is a blank closure (this allows implementation after initialization if necessary).
-  */
-  public init(initialColor: UIColor = .red, tintColor: UIColor = .blue, completion: @escaping (PDColor?) -> () = { _ in }) {
+   - parameter completion: The completion callback that is called when the user taps *Save* or *Cancel*. The callback returns a single `PDColor?`
+      parameter that contains the selected color as a `PDColor` if the user taps *Save*, or `nil` if the user taps *Cancel*.
+      The default completion is a blank closure (this allows implementation after initialization if necessary).
+   - parameter selectedColor: The color selected by the user when `PDColorPickerViewController` is displayed. If the user cancels, the value is `nil`.
+   */
+  public init(initialColor: UIColor = .red, tintColor: UIColor = .blue, completion: @escaping (_ selectedColor: PDColor?) -> () = { _ in }) {
     self.currentColor = PDColor(color: initialColor)
     self.tintColor = tintColor
     self.completion = completion
@@ -206,7 +211,7 @@ open class PDColorPickerViewController: UIViewController {
     view.layer.shadowOpacity = 0.6
     view.layer.shadowRadius = 15
     view.layer.shadowOffset = CGSize(width: 0, height: 5)
-    view.backgroundColor = .lightGray
+    view.backgroundColor = backgroundColor
     
     setupViews()
   }
@@ -243,17 +248,7 @@ open class PDColorPickerViewController: UIViewController {
     super.viewDidLayoutSubviews()
 
     if !constraintsHaveBeenSet {
-      guard let pvc = presentingViewController else { return }
-
-      let aspectRatio: CGFloat = 0.7
-
-      view.frame.size.height = pvc.view.frame.height * 0.7
-      view.frame.size.width = min(view.frame.height * aspectRatio, pvc.view.frame.width * 0.9)
-
-      view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
-      view.frame.origin.y = pvc.view.frame.height / 2 - view.frame.height / 2
-
-      view.layoutIfNeeded()
+      updateViewFrame()
 
       selectedColorLabel.layer.cornerRadius = selectedColorLabel.frame.height / 2
 
@@ -264,6 +259,10 @@ open class PDColorPickerViewController: UIViewController {
       colorChanged(to: currentColor)
       constraintsHaveBeenSet = true
     }
+  }
+  
+  override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    updateViewFrame()
   }
 
   // MARK: - Button Targets
@@ -280,6 +279,22 @@ open class PDColorPickerViewController: UIViewController {
 
     completion(nil)
     dismiss(animated: true, completion: nil)
+  }
+  
+  // MARK: - Convenience
+  
+  private func updateViewFrame() {
+    guard let pvc = presentingViewController else { return }
+    
+    let sizeRatio: CGFloat = 0.7
+    
+    view.frame.size.height = pvc.view.frame.height * sizeRatio
+    view.frame.size.width = min(pvc.view.frame.width * sizeRatio, view.frame.height * 0.9)
+    
+    view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
+    view.frame.origin.y = pvc.view.frame.height / 2 - view.frame.height / 2
+    
+    view.layoutIfNeeded()
   }
 
 }
@@ -299,7 +314,7 @@ extension PDColorPickerViewController: PDColorPickerGridDelegate {
     currentColor = newColor
     selectedColorLabel.backgroundColor = currentColor.uiColor
     selectedColorLabel.textColor = newColor.appropriateForegroundColor
-    selectedColorLabel.text = showHexString ? newColor.hex : ""
+    selectedColorLabel.text = showHexString ? hexStringCase.applied(to: newColor.hex) : ""
   }
 }
 

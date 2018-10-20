@@ -1,5 +1,13 @@
+# [PDColorPicker v0.8.1](https://github.com/pdil/PDColorPicker/releases/tag/0.8.1)
+Released on Saturday, October 10, 2018.
+
+* Added ability to select case for hex string (`HexStringCase.uppercase` or `HexStringCase.lowercase`) via the `hexStringCase` property of `PDColorPickerViewController`.
+  * Examples: `#02af93` vs `#02AF93`.
+* Updated to support Swift 4.2, iOS 12, and Xcode 10.
+* Ignore smart invert colors in dimming view to prevent white glow.
+
 # [PDColorPicker v0.8.0](https://github.com/pdil/PDColorPicker/releases/tag/0.8.0)
-Released on Tuesday, April 17, 2017.
+Released on Tuesday, April 17, 2018.
 
 * Added ability to tap grid/slider to change color (without panning) ([PR #12](https://github.com/pdil/PDColorPicker/pull/12) by [@bennyjr33](https://github.com/bennyjr33))
 * Added ability to toggle drag and drop functionality.

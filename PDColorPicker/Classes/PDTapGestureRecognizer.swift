@@ -14,7 +14,7 @@ class PDTapGestureRecognizer: UITapGestureRecognizer {
   let testTarget: Any?
   let testAction: Selector?
 
-  var testState: UIGestureRecognizerState?
+  var testState: UIGestureRecognizer.State?
   var testLocation: CGPoint?
 
   // MARK: - Overrides
@@ -25,12 +25,17 @@ class PDTapGestureRecognizer: UITapGestureRecognizer {
     super.init(target: target, action: action)
   }
 
-  override var state: UIGestureRecognizerState {
-    if let testState = testState {
-      return testState
-    }
+  override var state: UIGestureRecognizer.State {
+    get {
+      if let testState = testState {
+          return testState
+      }
 
-    return super.state
+      return super.state
+    }
+    set {
+      super.state = newValue
+    }
   }
 
   override func location(in view: UIView?) -> CGPoint {
@@ -43,7 +48,7 @@ class PDTapGestureRecognizer: UITapGestureRecognizer {
 
   // MARK: - Test Touches
 
-  func performTouch(location: CGPoint?, state: UIGestureRecognizerState) {
+  func performTouch(location: CGPoint?, state: UIGestureRecognizer.State) {
     testLocation = location
     testState = state
 

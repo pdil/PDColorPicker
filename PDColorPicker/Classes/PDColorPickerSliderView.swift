@@ -12,12 +12,17 @@ protocol PDColorPickerSliderDelegate: class {
   func hueChanged(to newHue: CGFloat)
 }
 
-class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
+class PDColorPickerSliderView: UIView {
 
   // MARK: - Gesture Recognizer
 
-  var panRecognizer: PDPanGestureRecognizer?
-  var tapRecognizer: PDTapGestureRecognizer?
+  lazy var panRecognizer: PDPanGestureRecognizer = {
+    return PDPanGestureRecognizer(target: self, action: #selector(colorDragged(_:)))
+  }()
+  
+  lazy var tapRecognizer: PDTapGestureRecognizer = {
+    return PDTapGestureRecognizer(target: self, action: #selector(colorTapped(_:)))
+  }()
 
   // MARK - Properties
 
@@ -64,20 +69,13 @@ class PDColorPickerSliderView: UIView, UIGestureRecognizerDelegate {
   init() {
     super.init(frame: .zero)
     backgroundColor = .clear
-
-    panRecognizer = PDPanGestureRecognizer(target: self, action: #selector(colorDragged(_:)))
-    panRecognizer?.delegate = self
-
-    if let recognizer = panRecognizer {
-      addGestureRecognizer(recognizer)
-    }
     
-    tapRecognizer = PDTapGestureRecognizer(target: self, action: #selector(colorTapped(_:)))
-    tapRecognizer?.delegate = self
-    
-    if let recognizer = tapRecognizer {
-        addGestureRecognizer(recognizer)
+    if #available(iOS 11.0, *) {
+      accessibilityIgnoresInvertColors = true
     }
+
+    addGestureRecognizer(panRecognizer)
+    addGestureRecognizer(tapRecognizer)
 
     layer.shadowColor = UIColor.black.cgColor
     layer.shadowOpacity = 0.4

@@ -1,15 +1,14 @@
 language: objective-c
-osx_image: xcode9.3
+osx_image: xcode10
 
 before_install:
   - npm install ios-sim -g
-  - ios-sim start --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-8, 11.3"
+  - ios-sim start --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-8, 12.0"
 
 script:
-  - xcodebuild clean build build-for-testing -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator11.3 -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64
-  - xcodebuild test-without-building -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator11.3 -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64 
-# | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
-# - pod lib lint
+  - xcodebuild clean build build-for-testing -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator12.0 -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64
+  - xcodebuild test-without-building -workspace Examples/PDColorPicker.xcworkspace -scheme PDColorPickerExample -sdk iphonesimulator12.0 -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.0' -enableCodeCoverage YES ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64 | xcpretty -f `xcpretty-travis-formatter` && exit ${PIPESTATUS[0]}
+  - pod lib lint
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J '^PDColorPicker$' || echo "Codecov did not collect coverage reports."

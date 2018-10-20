@@ -16,12 +16,17 @@ protocol PDColorPickerGridDataSource: class {
   func selectedHueForColorPicker() -> CGFloat?
 }
 
-class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
+class PDColorPickerGridView: UIView {
 
   // MARK: - Gesture Recognizer
-
-  var panRecognizer: PDPanGestureRecognizer?
-  var tapRecognizer: PDTapGestureRecognizer?
+  
+  lazy var panRecognizer: PDPanGestureRecognizer = {
+    return PDPanGestureRecognizer(target: self, action: #selector(colorDragged(_:)))
+  }()
+  
+  lazy var tapRecognizer: PDTapGestureRecognizer = {
+    return PDTapGestureRecognizer(target: self, action: #selector(colorTapped(_:)))
+  }()
 
   // MARK: - Properties
 
@@ -68,20 +73,13 @@ class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
 
   init() {
     super.init(frame: .zero)
-
-    panRecognizer = PDPanGestureRecognizer(target: self, action: #selector(colorDragged(_:)))
-    panRecognizer?.delegate = self
-
-    if let recognizer = panRecognizer {
-      addGestureRecognizer(recognizer)
-    }
     
-    tapRecognizer = PDTapGestureRecognizer(target: self, action: #selector(colorTapped(_:)))
-    tapRecognizer?.delegate = self
-    
-    if let recognizer = tapRecognizer {
-        addGestureRecognizer(recognizer)
+    if #available(iOS 11.0, *) {
+      accessibilityIgnoresInvertColors = true
     }
+
+    addGestureRecognizer(panRecognizer)
+    addGestureRecognizer(tapRecognizer)
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -124,7 +122,7 @@ class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
     layer.addSublayer(saturationGradient)
     layer.addSublayer(brightnessGradient)
 
-    bringSubview(toFront: sliderCircle)
+    bringSubviewToFront(sliderCircle)
   }
 
   private func gradientLayerWithEndPoints(_ start: CGPoint, _ end: CGPoint, endColor: UIColor) -> CAGradientLayer {
@@ -141,7 +139,7 @@ class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
 
   // MARK: - Gesture
 
-  @objc func colorDragged(_ recognizer: UIPanGestureRecognizer) {
+  @objc func colorDragged(_ recognizer: PDPanGestureRecognizer) {
     let pos = recognizer.location(in: self)
     let comps = colorComponents(at: pos)
     let sliderCenter = constrainPosition(pos, toBounds: bounds)
@@ -163,7 +161,7 @@ class PDColorPickerGridView: UIView, UIGestureRecognizerDelegate {
     }
   }
     
-  @objc func colorTapped(_ recognizer: UITapGestureRecognizer) {
+  @objc func colorTapped(_ recognizer: PDTapGestureRecognizer) {
     let pos = recognizer.location(in: self)
     let comps = colorComponents(at: pos)
     let sliderCenter = constrainPosition(pos, toBounds: bounds)
