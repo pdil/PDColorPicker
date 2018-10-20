@@ -111,7 +111,9 @@
 				C71A1B7414BC9BCD95F608C9 /* Pods */,
 				1906D27A24F23BD34AD7A9F6 /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;

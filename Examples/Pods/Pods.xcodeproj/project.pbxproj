@@ -564,7 +564,9 @@
 				35F83AF273A189C99361352395F9BF7F /* Products */,
 				AF0F422C4C4D6A70A72F34185024E9A5 /* Targets Support Files */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		926C31924772091F3FBE0E8F025C2B0D /* iOS */ = {
 			isa = PBXGroup;
