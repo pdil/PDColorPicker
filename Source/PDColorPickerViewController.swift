@@ -213,7 +213,7 @@ open class PDColorPickerViewController: UIViewController {
 
   // MARK: - Life Cycle
 
-  override open func viewDidLoad() {
+  open override func viewDidLoad() {
     super.viewDidLoad()
 
     view.layer.shadowColor = UIColor.black.cgColor
@@ -253,7 +253,7 @@ open class PDColorPickerViewController: UIViewController {
   }
 
   var constraintsHaveBeenSet = false
-  override open func viewDidLayoutSubviews() {
+  open override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
     if !constraintsHaveBeenSet {
@@ -270,11 +270,11 @@ open class PDColorPickerViewController: UIViewController {
     }
   }
   
-  override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+  open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     updateViewFrame()
   }
 	
-	override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+	open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 		updateViewFrame()
 	}
 
