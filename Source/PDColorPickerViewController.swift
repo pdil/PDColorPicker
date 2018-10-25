@@ -27,7 +27,12 @@ import UIKit
 open class PDColorPickerViewController: UIViewController {
   
   public enum HexStringCase {
-    case uppercase, lowercase
+		case upper, lower
+		
+		@available(*, deprecated, renamed: "upper")
+    case uppercase
+		@available(*, deprecated, renamed: "lower")
+		case lowercase
     
     func applied(to string: String) -> String {
       switch self {
@@ -35,7 +40,11 @@ open class PDColorPickerViewController: UIViewController {
         return string.uppercased()
       case .lowercase:
         return string.lowercased()
-      }
+			case .upper:
+				return string.uppercased()
+			case .lower:
+				return string.lowercased()
+			}
     }
   }
 
@@ -114,7 +123,7 @@ open class PDColorPickerViewController: UIViewController {
   /// Whether to display the hexadecimal code in `uppercase` or `lowercase`.
   /// This property has no effect if `showHexString` is set to `false`.
   /// The default is `uppercase`.
-  open var hexStringCase: HexStringCase = .uppercase
+	open var hexStringCase: HexStringCase = .upper
 
   /// Whether or not to support Smart Invert Colors on iOS 11.0+.
   /// It is highly recommended to leave this value set to the default of true as
