@@ -27,7 +27,12 @@ import UIKit
 open class PDColorPickerViewController: UIViewController {
   
   public enum HexStringCase {
-    case uppercase, lowercase
+		case upper, lower
+		
+		@available(*, deprecated, renamed: "upper")
+    case uppercase
+		@available(*, deprecated, renamed: "lower")
+		case lowercase
     
     func applied(to string: String) -> String {
       switch self {
@@ -35,7 +40,11 @@ open class PDColorPickerViewController: UIViewController {
         return string.uppercased()
       case .lowercase:
         return string.lowercased()
-      }
+			case .upper:
+				return string.uppercased()
+			case .lower:
+				return string.lowercased()
+			}
     }
   }
 
@@ -114,7 +123,7 @@ open class PDColorPickerViewController: UIViewController {
   /// Whether to display the hexadecimal code in `uppercase` or `lowercase`.
   /// This property has no effect if `showHexString` is set to `false`.
   /// The default is `uppercase`.
-  open var hexStringCase: HexStringCase = .uppercase
+	open var hexStringCase: HexStringCase = .upper
 
   /// Whether or not to support Smart Invert Colors on iOS 11.0+.
   /// It is highly recommended to leave this value set to the default of true as
@@ -204,7 +213,7 @@ open class PDColorPickerViewController: UIViewController {
 
   // MARK: - Life Cycle
 
-  override open func viewDidLoad() {
+  open override func viewDidLoad() {
     super.viewDidLoad()
 
     view.layer.shadowColor = UIColor.black.cgColor
@@ -244,7 +253,7 @@ open class PDColorPickerViewController: UIViewController {
   }
 
   var constraintsHaveBeenSet = false
-  override open func viewDidLayoutSubviews() {
+  open override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
 
     if !constraintsHaveBeenSet {
@@ -261,9 +270,13 @@ open class PDColorPickerViewController: UIViewController {
     }
   }
   
-  override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+  open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     updateViewFrame()
   }
+	
+	open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+		updateViewFrame()
+	}
 
   // MARK: - Button Targets
 
@@ -285,14 +298,20 @@ open class PDColorPickerViewController: UIViewController {
   
   private func updateViewFrame() {
     guard let pvc = presentingViewController else { return }
+    let targetWidth = pvc.view.frame.width
+    let targetHeight = pvc.view.frame.height
+		let goldenRatio: CGFloat = 1.618
+		
+    if targetWidth > targetHeight {
+			view.frame.size.height = targetHeight * 0.9
+			view.frame.size.width = min(targetHeight * 0.9 * goldenRatio, targetHeight * 0.9)
+    } else {
+			view.frame.size.width = targetWidth * 0.9
+			view.frame.size.height = min(targetWidth * 0.9 * goldenRatio, targetWidth * 0.9)
+		}
     
-    let sizeRatio: CGFloat = 0.7
-    
-    view.frame.size.height = pvc.view.frame.height * sizeRatio
-    view.frame.size.width = min(pvc.view.frame.width * sizeRatio, view.frame.height * 0.9)
-    
-    view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
-    view.frame.origin.y = pvc.view.frame.height / 2 - view.frame.height / 2
+    view.frame.origin.x = targetWidth / 2 - view.frame.width / 2
+    view.frame.origin.y = targetHeight / 2 - view.frame.height / 2
     
     view.layoutIfNeeded()
   }

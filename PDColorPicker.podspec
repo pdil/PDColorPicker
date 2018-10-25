@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PDColorPicker'
-  s.version          = '0.8.1'
+  s.version          = '0.8.2'
   s.summary          = 'A simple, fast color picker for iOS apps.'
 
   s.description      = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'PDColorPicker/Classes/**/*'
+  s.source_files = 'Source/**/*'
 
   s.frameworks = 'UIKit'
 end

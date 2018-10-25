@@ -1,5 +1,12 @@
+# [PDColorPicker v0.8.2](https://github.com/pdil/PDColorPicker/releases/tag/0.8.2)
+Released on Wednesday, October 24, 2018.
+
+* Renamed `HexStringCase` cases to `upper` and `lower`.
+  * `.uppercase` and `.lowercase` are now marked as deprecated and will be removed at a later date (probably version 1.0).
+* Fixed appearance of color picker on smaller devices and when device orientation changes.
+
 # [PDColorPicker v0.8.1](https://github.com/pdil/PDColorPicker/releases/tag/0.8.1)
-Released on Saturday, October 10, 2018.
+Released on Saturday, October 20, 2018.
 
 * Added ability to select case for hex string (`HexStringCase.uppercase` or `HexStringCase.lowercase`) via the `hexStringCase` property of `PDColorPickerViewController`.
   * Examples: `#02af93` vs `#02AF93`.
