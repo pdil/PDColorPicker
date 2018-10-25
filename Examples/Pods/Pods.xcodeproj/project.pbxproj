@@ -237,7 +237,7 @@
 		4ACA9C9339BCA917903E142110149B35 /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Sources/Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
 		4D57CEB221A15B342D231C55B12C3BDC /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
 		4D83D11B88E69C0F93AF2DC48743A88F /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Sources/Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
-		4F7EDA745C6DB17FB2FB8995A3F2C51E /* PDColorPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PDColorPickerViewController.swift; path = Source/PDColorPickerViewController.swift; sourceTree = "<group>"; };
+		4F7EDA745C6DB17FB2FB8995A3F2C51E /* PDColorPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PDColorPickerViewController.swift; path = Source/PDColorPickerViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		5031EAC9C48CC70F0A495E0C3D142D77 /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Sources/Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
 		5132CB15B91132746844342652270B74 /* CwlMachBadInstructionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlMachBadInstructionHandler.m; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/CwlMachBadInstructionHandler.m; sourceTree = "<group>"; };
 		52190CF22086C1E200DC3B1A /* PDTapGestureRecognizer.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; name = PDTapGestureRecognizer.swift; path = Source/PDTapGestureRecognizer.swift; sourceTree = "<group>"; };
@@ -567,6 +567,7 @@
 			indentWidth = 2;
 			sourceTree = "<group>";
 			tabWidth = 2;
+			usesTabs = 1;
 		};
 		926C31924772091F3FBE0E8F025C2B0D /* iOS */ = {
 			isa = PBXGroup;

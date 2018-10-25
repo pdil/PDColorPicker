@@ -264,6 +264,10 @@ open class PDColorPickerViewController: UIViewController {
   override open func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     updateViewFrame()
   }
+	
+	override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+		updateViewFrame()
+	}
 
   // MARK: - Button Targets
 
@@ -285,14 +289,20 @@ open class PDColorPickerViewController: UIViewController {
   
   private func updateViewFrame() {
     guard let pvc = presentingViewController else { return }
+    let targetWidth = pvc.view.frame.width
+    let targetHeight = pvc.view.frame.height
+		let goldenRatio: CGFloat = 1.618
+		
+    if targetWidth > targetHeight {
+			view.frame.size.height = targetHeight * 0.9
+			view.frame.size.width = min(targetHeight * 0.9 * goldenRatio, targetHeight * 0.9)
+    } else {
+			view.frame.size.width = targetWidth * 0.9
+			view.frame.size.height = min(targetWidth * 0.9 * goldenRatio, targetWidth * 0.9)
+		}
     
-    let sizeRatio: CGFloat = 0.7
-    
-    view.frame.size.height = pvc.view.frame.height * sizeRatio
-    view.frame.size.width = min(pvc.view.frame.width * sizeRatio, view.frame.height * 0.9)
-    
-    view.frame.origin.x = pvc.view.frame.width / 2 - view.frame.width / 2
-    view.frame.origin.y = pvc.view.frame.height / 2 - view.frame.height / 2
+    view.frame.origin.x = targetWidth / 2 - view.frame.width / 2
+    view.frame.origin.y = targetHeight / 2 - view.frame.height / 2
     
     view.layoutIfNeeded()
   }
