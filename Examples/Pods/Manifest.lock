@@ -1,7 +1,7 @@
 PODS:
-  - Nimble (7.1.0)
-  - PDColorPicker (0.7.0)
-  - Quick (1.2.0)
+  - Nimble (8.0.2)
+  - PDColorPicker (0.8.2)
+  - Quick (2.1.0)
 
 DEPENDENCIES:
   - Nimble
@@ -9,7 +9,7 @@ DEPENDENCIES:
   - Quick
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Nimble
     - Quick
 
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Nimble: 9c6651c3021af6de54c3ed90a4a0a87d548f7359
-  PDColorPicker: da14b37e84e6113a706a6f1fe0f2280b78bff8ca
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  PDColorPicker: 6d9af10de6dc956af8824b0b7ecf23ee8cd4a992
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
 
 PODFILE CHECKSUM: 906d5955aa9ad09d83c18afaba564922bdf313d4
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
