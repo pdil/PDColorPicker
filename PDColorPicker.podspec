@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PDColorPicker'
-  s.version          = '0.8.2'
+  s.version          = '0.8.3'
   s.summary          = 'A simple, fast color picker for iOS apps.'
 
   s.description      = <<-DESC
