@@ -11,7 +11,7 @@
 
 | Branch | Status | Coverage |
 | ------ | ------ | -------- |
-| `master` (v0.8.2) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
+| `master` (v0.8.3) | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/master.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/master/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/master) |
 | `develop` | [![CI Status](http://img.shields.io/travis/pdil/PDColorPicker/develop.svg?style=flat)](https://travis-ci.org/pdil/PDColorPicker/branches) | [![codecov](https://codecov.io/gh/pdil/PDColorPicker/branch/develop/graph/badge.svg)](https://codecov.io/gh/pdil/PDColorPicker/branch/develop) |
 
 
@@ -26,8 +26,8 @@
 ## 📄 Requirements
 
 * iOS 9.0 or later (iOS 11.0+ for drag and drop)
-* Xcode 10 or later
-* Swift 4.2 or later
+* Xcode 10.2 or later
+* Swift 5 or later
 
 ## 💻 Installation
 
@@ -57,9 +57,9 @@ end
 
 > **Older Swift Versions**
 >
-> If the project is not built for Swift 4.2, install from the `swift-3.2` or the `swift-4.1` branches:
+> If the project is not built for Swift 4.2, install from the `swift-3.2`, `swift-4.1` or the `swift-4.2` branches:
 > ```ruby
-> pod 'PDColorPicker', :git => 'https://github.com/pdil/PDColorPicker.git', :branch => 'swift-4.1'
+> pod 'PDColorPicker', :git => 'https://github.com/pdil/PDColorPicker.git', :branch => 'swift-4.2'
 > ```
 > Note that this build may not include all of the latest features of `PDColorPicker`.
 
@@ -92,9 +92,9 @@ github "pdil/PDColorPicker"
 
 > **Older Swift Versions**
 >
-> If the project is not built for Swift 4.2, install from the `swift-3.2` or `swift-4.1` branches:
+> If the project is not built for Swift 4.2, install from the `swift-3.2`, `swift-4.1` or the `swift-4.2` branches:
 > ```
-> github "pdil/PDColorPicker" "swift-4.1"
+> github "pdil/PDColorPicker" "swift-4.2"
 > ```
 > Note that this build may not include the latest features of `PDColorPicker`.
 
