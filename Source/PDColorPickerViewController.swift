@@ -61,8 +61,8 @@ open class PDColorPickerViewController: UIViewController {
   lazy var saveButton: PDRoundedRectButton = {
     let button = PDRoundedRectButton(title: "Save", backColor: .white, foreColor: self.tintColor)
     
-    button.addTarget(self, action: #selector(savePressed(_:)), for: .touchUpInside)
-    button.titleLabel?.font = self.boldFont
+    button.addTarget(self, action: #selector(save), for: .touchUpInside)
+    button.titleLabel?.font = boldFont
     
     return button
   }()
@@ -70,8 +70,8 @@ open class PDColorPickerViewController: UIViewController {
   lazy var cancelButton: PDRoundedRectButton = {
     let button = PDRoundedRectButton(title: "Cancel", backColor: .white, foreColor: .red)
     
-    button.addTarget(self, action: #selector(cancelPressed(_:)), for: .touchUpInside)
-    button.titleLabel?.font = self.font
+    button.addTarget(self, action: #selector(cancel), for: .touchUpInside)
+    button.titleLabel?.font = font
     
     return button
   }()
@@ -277,17 +277,17 @@ open class PDColorPickerViewController: UIViewController {
   open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     updateViewFrame()
   }
-  
+
   // MARK: - Button Targets
-  
-  @objc func savePressed(_ sender: UIButton) {
+
+  @objc func save(_ sender: UIButton) {
     colorPickerView.fadeSlider(.out)
     
     completion(currentColor)
     dismiss(animated: true, completion: nil)
   }
   
-  @objc func cancelPressed(_ sender: UIButton) {
+  @objc func cancel(_ sender: UIButton) {
     colorPickerView.fadeSlider(.out)
     
     completion(nil)
@@ -304,10 +304,10 @@ open class PDColorPickerViewController: UIViewController {
     
     if targetWidth > targetHeight {
       view.frame.size.height = targetHeight * 0.9
-      view.frame.size.width = min(targetHeight * 0.9 * goldenRatio, targetHeight * 0.9)
+      view.frame.size.width = min(targetHeight * 0.9 * goldenRatio, targetWidth * 0.9)
     } else {
       view.frame.size.width = targetWidth * 0.9
-      view.frame.size.height = min(targetWidth * 0.9 * goldenRatio, targetWidth * 0.9)
+      view.frame.size.height = min(targetWidth * 0.9 * goldenRatio, targetHeight * 0.9)
     }
     
     view.frame.origin.x = targetWidth / 2 - view.frame.width / 2
