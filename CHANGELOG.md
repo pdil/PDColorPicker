@@ -1,3 +1,9 @@
+# [PDColorPicker v0.8.3](https://github.com/pdil/PDColorPicker/releases/tag/0.8.3)
+Released Friday, June 14, 2019.
+
+* Updated to support Swift 5.
+* Made further fixes to appearance on devices of various orientations and screen sizes.
+
 # [PDColorPicker v0.8.2](https://github.com/pdil/PDColorPicker/releases/tag/0.8.2)
 Released on Wednesday, October 24, 2018.
 

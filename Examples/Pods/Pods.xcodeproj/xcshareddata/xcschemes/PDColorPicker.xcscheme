@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94EBA9AA81D80F89F12FF7C0B32C0F34"
+               BlueprintIdentifier = "FD6452901F2E062055DAED1C2F02DC63"
                BuildableName = "PDColorPicker.framework"
                BlueprintName = "PDColorPicker"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "94EBA9AA81D80F89F12FF7C0B32C0F34"
+            BlueprintIdentifier = "FD6452901F2E062055DAED1C2F02DC63"
             BuildableName = "PDColorPicker.framework"
             BlueprintName = "PDColorPicker"
             ReferencedContainer = "container:Pods.xcodeproj">
