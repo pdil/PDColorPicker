@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PDColorPickerSliderDelegate: class {
+protocol PDColorPickerSliderDelegate: AnyObject {
   func hueChanged(to newHue: CGFloat)
 }
 

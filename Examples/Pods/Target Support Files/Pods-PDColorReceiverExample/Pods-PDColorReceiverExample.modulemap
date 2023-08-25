@@ -1,6 +1,0 @@
-framework module Pods_PDColorReceiverExample {
-  umbrella header "Pods-PDColorReceiverExample-umbrella.h"
-
-  export *
-  module * { export * }
-}
