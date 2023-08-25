@@ -1,3 +1,9 @@
+# [PDColorPicker v0.8.4](https://github.com/pdil/PDColorPicker/releases/tag/0.8.3)
+Released Friday, August 25, 2023.
+
+* Set minimum deployment target to iOS 11.
+* Minor updates to ensure compatibility with modern iOS projects.
+
 # [PDColorPicker v0.8.3](https://github.com/pdil/PDColorPicker/releases/tag/0.8.3)
 Released Friday, June 14, 2019.
 
