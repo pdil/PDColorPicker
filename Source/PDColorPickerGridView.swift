@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol PDColorPickerGridDelegate: class {
+protocol PDColorPickerGridDelegate: AnyObject {
   func colorChanged(to newColor: PDColor)
 }
 
-protocol PDColorPickerGridDataSource: class {
+protocol PDColorPickerGridDataSource: AnyObject {
   func selectedHueForColorPicker() -> CGFloat?
 }
 

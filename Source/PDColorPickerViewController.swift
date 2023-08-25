@@ -177,7 +177,6 @@ open class PDColorPickerViewController: UIViewController {
     }
   }
   
-  @available(iOS 11.0, *)
   private lazy var colorDragInteraction: UIDragInteraction = {
     return UIDragInteraction(delegate: self)
   }()
