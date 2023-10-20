@@ -180,7 +180,7 @@ Drag and drop is also supported in projects that target iOS 11.0 or later.
 
 [<img src="https://raw.githubusercontent.com/pdil/PDColorPicker/master/Resources/drag-drop-demo.gif" width=600>](https://giphy.com/gifs/6TNPgdZ3W4qMo/fullscreen)
 
-See `PDColorReceiverExample` for an example on how to consume a color that is dragged into your app. The drag and drop implementation of `PDColorPicker` exposes a basic `UIColor` so that it can be read by apps that don't necessarily import `PDColorPicker`. 
+See `PDColorReceiverExample` for an example on how to consume a color that is dragged into your app. The drag and drop implementation of `PDColorPicker` exposes a basic `UIColor` so that it can be read by apps that don't necessarily import `PDColorPicker`.
 
 Of course, if the destination app imports `PDColorPicker`, it will have access to the convenient `PDColor` class which it could instantiate with the received `UIColor`:
 
@@ -201,13 +201,13 @@ Here is a list of apps that use **PDColorPicker** to let their users select colo
 * 🌮 [FoodEase](https://foodease.xyz)
 * 🎨 [Paint Shapes](https://itunes.apple.com/us/app/paint-shapes/id1366164052)
 
-If your app is using **PDColorPicker**, [let me know](mailto:paolo@dilorenzo.pl?subject=PDColorPicker) and I'll add it to this list (include an emoji to represent your app in the list, the app name, and a web or download URL)!
+If your app is using **PDColorPicker**, [let me know](mailto:dilorenzo@hey.com?subject=PDColorPicker) and I'll add it to this list (include an emoji to represent your app in the list, the app name, and a web or download URL)!
 
 ## 🙋‍♂️ Author
 
 Paolo Di Lorenzo
 
-[![Email](https://img.shields.io/badge/email-paolo@dilorenzo.pl-red.svg)](mailto:paolo@dilorenzo.pl?subject=PDColorPicker)
+[![Email](https://img.shields.io/badge/email-dilorenzo@hey.com-red.svg)](mailto:dilorenzo@hey.com?subject=PDColorPicker)
 [![Website](https://img.shields.io/badge/web-dilorenzo.pl-red.svg)](https://dilorenzo.pl)
 [![Twitter](https://img.shields.io/badge/twitter-%40dilorenzopl-4099FF.svg)](https://twitter.com/dilorenzopl)
 [![Stackoverflow](https://img.shields.io/badge/stackoverflow-%40Paolo-FF9900.svg)](https://stackoverflow.com/users/7264964/paolo)
