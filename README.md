@@ -208,8 +208,6 @@ If your app is using **PDColorPicker**, [let me know](mailto:dilorenzo@hey.com?s
 Paolo Di Lorenzo
 
 [![Email](https://img.shields.io/badge/email-dilorenzo@hey.com-red.svg)](mailto:dilorenzo@hey.com?subject=PDColorPicker)
-[![Website](https://img.shields.io/badge/web-dilorenzo.pl-red.svg)](https://dilorenzo.pl)
-[![Twitter](https://img.shields.io/badge/twitter-%40dilorenzopl-4099FF.svg)](https://twitter.com/dilorenzopl)
 [![Stackoverflow](https://img.shields.io/badge/stackoverflow-%40Paolo-FF9900.svg)](https://stackoverflow.com/users/7264964/paolo)
 
 ## ⚖️ License
